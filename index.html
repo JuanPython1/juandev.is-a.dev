@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGINA 3ER CORTE LENGUAJES DE PROGRAMACION</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>DOCUMENTO PARCIAL 3</title>
 </head>
 <body>
-    <header>
 
-    </header>
+  <div class="container">
+    <h1>INFORME DE LENGUAJES DE PROGRAMACION</h1>
+    <div class="student-info">
+      <p>Nombre del Estudiante: Juan Camilo Rodriguez CC.1004614611</p>
+    </div>
     
-    <main>
-        <h1>TITULO</h1>
-    </main>
+    <div class="section" id="corte1">
+      <h2>1er Corte</h2>
+      <p>!Haz clic en el contenedor¡</p>
+      <div style="display: none;">
+        <!-- Contenido del 1er Corte -->
+        En el 1er corte vimos la programación funcional donde es un paradigma de programación que trata la computación como una evaluación de funciones matemáticas y evita el cambio de estado y datos mutables. En este primer corte, exploraremos tres funciones fundamentales en programación funcional: <strong>map</strong>, <strong>filter</strong>, y <strong>reduce</strong>. Estas funciones son herramientas poderosas que permiten manipular y transformar colecciones de datos de manera concisa y declarativa.
+        <ul>
+          <li><strong>Función map:</strong> Se utiliza para aplicar una función a cada elemento de una lista y devuelve una nueva lista con los resultados.</li>
+          <li><strong>Función filter:</strong> Se utiliza para filtrar elementos de una lista según una condición dada y retorna una nueva lista con los elementos que cumplen con la condición.</li>
+          <li><strong>Función reduce:</strong> Se utiliza para aplicar una función acumulativa a los elementos de una lista, de izquierda a derecha, para reducir la lista a un solo valor.</li>
+        </ul>
+        Ejemplos en Python:
+        <pre>
+          <code>
+            # Usando map para duplicar cada elemento de una lista
+            original_lista = [1, 2, 3, 4, 5]
+            duplicados = list(map(lambda x: x * 2, original_lista))
+            print(duplicados)
+            # Salida: [2, 4, 6, 8, 10]
 
-    <footer>
+            # Usando filter para obtener solo los números pares de una lista
+            numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            pares = list(filter(lambda x: x % 2 == 0, numeros))
+            print(pares)
+            # Salida: [2, 4, 6, 8, 10]
 
-    </footer>
+            # Usando reduce para obtener la suma de los elementos de una lista
+            from functools import reduce
+            numeros = [1, 2, 3, 4, 5]
+            suma = reduce(lambda x, y: x + y, numeros)
+            print(suma)
+            # Salida: 15
+          </code>
+        </pre>
+      </div>
+    </div>
+    
+    <div class="section" id="corte2">
+      <h2>2do Corte</h2>
+      <p>!Haz clic en el contenedor¡</p>
+      <div style="display: none;">Contenido del 2do Corte...</div>
+    </div>
+    
+    <div class="section" id="corte3">
+      <h2>3er Corte</h2>
+      <p>!Haz clic en el contenedor¡</p>
+      <div style="display: none;">Contenido del 3er Corte...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
