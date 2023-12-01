@@ -438,78 +438,98 @@
         
         En el 3er y ultimo corte hablamos sobre la concurrencia y los hilos. La concurrencia en Java se refiere a la capacidad de ejecutar múltiples tareas de manera simultánea. Los hilos (threads) son la unidad más pequeña de procesamiento que puede ser ejecutada por un sistema operativo. En Java, puedes trabajar con hilos para lograr la concurrencia.
       <br><br>
+        Aqui conceptos claves aprendidos en clase y libros sobre concurrencia y hilos en Java:
+        quí te presento algunos conceptos clave sobre concurrencia e hilos en Java:
+        <br><br>
+        Proceso y Hilo:
+        <br>
+        Un proceso es una instancia de un programa en ejecución. Dentro de un proceso, se pueden crear múltiples hilos de ejecución, donde cada hilo representa una tarea independiente dentro del programa.
+        <br><br>
+        Hilos en Java:
+        <br>
+        En Java, la concurrencia se logra mediante la clase Thread o implementando la interfaz Runnable. La clase Thread permite crear y controlar hilos directamente, mientras que la interfaz Runnable se usa para definir una tarea que puede ser ejecutada por un hilo.
+        Creación de hilos:
+        <br>
+        Puedes crear un hilo extendiendo la clase Thread y sobrescribiendo su método run(), o implementando la interfaz Runnable y pasándola a un objeto Thread.
+        <br><br>
+        Métodos importantes:
+        <br>
+        <strong>start()</strong>: Inicia la ejecución del hilo llamando al método run().
+        <br>
+        <strong>run()</strong>: Define el comportamiento del hilo y es el punto de entrada para la ejecución del mismo.
+        <br>
+        <strong>sleep()</strong>: Pausa la ejecución del hilo durante un período de tiempo especificado.
+        <br>
+        <strong>join()</strong>: Espera a que un hilo termine su ejecución antes de continuar con otro.
+        <br><br>
+        Sincronización:
+        <br>
+        La sincronización es crucial para evitar problemas de concurrencia, como condiciones de carrera y la inconsistencia de datos cuando múltiples hilos acceden y modifican recursos compartidos.
+        Palabras clave como synchronized y los bloques synchronized permiten controlar el acceso a recursos compartidos, evitando la interferencia entre hilos.
+        <br><br>
+        Clases en Java para la concurrencia:
+        <br>
+        java.util.concurrent: Proporciona clases para manejar la concurrencia, como Executor, ThreadPoolExecutor, Semaphore, CountDownLatch, etc.
+        java.util.concurrent.atomic: Ofrece clases atómicas que admiten operaciones atómicas en variables, como AtomicInteger, AtomicBoolean, etc.
+        <br><br>
+        Deadlocks y problemas de concurrencia:
+        <br>
+        Los deadlocks ocurren cuando dos o más hilos quedan bloqueados indefinidamente esperando que otros hilos liberen recursos.
+        Problemas comunes de concurrencia incluyen condiciones de carrera, acceso concurrente a recursos compartidos y problemas de consistencia de datos.
+      <br><br>
       EJEMPLO TRABAJANDO CON JAVA CON CONCURRENCIA Y HILOS:
+        <br><br><br>
+      Descripción de ejemplo:
+      <br><br>
+      Este código en Java EjemploConcurrenciaSimple, ilustra el concepto de concurrencia mediante el uso de hilos y sincronización. La aplicación crea dos hilos concurrentes, cada uno ejecutando una tarea representada por la clase TareaConcurrencia. Estas tareas consisten en incrementar un contador compartido en una sección crítica, protegida por la palabra clave synchronized. La variable contador es compartida entre ambos hilos, y cada hilo realiza 10,000 incrementos en la sección crítica. Después de iniciar los hilos y esperar a que ambos terminen, el programa muestra el valor final del contador. La sincronización garantiza que la sección crítica sea ejecutada por un solo hilo a la vez, evitando condiciones de carrera y produciendo un resultado coherente. Aunque el resultado exacto puede variar debido a la naturaleza concurrente, el valor final del contador debería reflejar la suma total de incrementos de ambos hilos.
 
       <PRE>
         <CODE>
-          import java.util.Random;
-          import java.util.*;
+            public class EjemploConcurrenciaSimple {
 
-          public class SumaMatrices {
-
-              static int[][] matA = new int[4][4];
-              static int[][] matB = new int[4][4];
-              static int[][] matC = new int[4][4];
-
-              public static void main(String[] args) {
-
-                  long startTime = System.currentTimeMillis();
-
-                  ColocarValores(matA);
-                  ColocarValores(matB);
-                  ColocarValores(matC);
-
-                  Thread suma1 = new Thread(() -> SumaMatrices.sumaFila(0));
-                  Thread suma2 = new Thread(() -> SumaMatrices.sumaFila(1));
-                  Thread suma3 = new Thread(() -> SumaMatrices.sumaFila(2));
-                  Thread suma4 = new Thread(() -> SumaMatrices.sumaFila(3));
-
-                  System.out.println("MATRIZ: 1");
-                  imprimirFila(matA);
-
-                  System.out.println("MATRIZ: 2");
-                  imprimirFila(matB);
-
-                  System.out.println("MATRIZ: 3");
-                  imprimirFila(matC);
-
-                  long endTime = System.currentTimeMillis() - startTime;
-                  System.out.println("tiempo " + endTime + " milisegundos");
-
-              }
-
-              public static void sumaFila(int fila) {
-
-                  for (int i = 0; i < 4; i++) {
-                      matC[fila][i] = matA[fila][i] + matB[fila][i];
-                      matC[fila][i] = matA[fila][i] + matB[fila][i];
-                      matC[fila][i] = matA[fila][i] + matB[fila][i];
-                      matC[fila][i] = matA[fila][i] + matB[fila][i];
-                  }
-              }
-
-              public static void imprimirFila(int[][] matriz) {
-                  for (int i = 0; i < 4; i++) {
-                      for (int j = 0; j < 4; j++) {
-                          System.out.print("[" + matriz[i][j] + "]");
-
-                      }
-                      System.out.println("\n");
-                  }
-
-              }
-
-              public static void ColocarValores(int[][] matriz) {
-                  Random aleatorios = new Random();
-                  for (int filas = 0; filas < 4; filas++) {
-                      matriz[filas][0] = 1 + aleatorios.nextInt(101);
-                      matriz[filas][1] = 1 + aleatorios.nextInt(101);
-                      matriz[filas][2] = 1 + aleatorios.nextInt(101);
-                      matriz[filas][3] = 1 + aleatorios.nextInt(101);
-                  }
-              }
-
-          }
+                // Variable compartida entre los hilos
+                private static int contador = 0;
+            
+                public static void main(String[] args) {
+                    // Creamos dos objetos Runnable
+                    Runnable tarea1 = new TareaConcurrencia();
+                    Runnable tarea2 = new TareaConcurrencia();
+            
+                    // Creamos dos hilos y les asignamos las tareas
+                    Thread hilo1 = new Thread(tarea1, "Hilo 1");
+                    Thread hilo2 = new Thread(tarea2, "Hilo 2");
+            
+                    // Iniciamos los hilos
+                    hilo1.start();
+                    hilo2.start();
+            
+                    // Esperamos a que ambos hilos terminen
+                    try {
+                        hilo1.join();
+                        hilo2.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+            
+                    // Mostramos el resultado final del contador
+                    System.out.println("Valor final del contador: " + contador);
+                }
+            
+                // Clase que implementa la interfaz Runnable
+                static class TareaConcurrencia implements Runnable {
+            
+                    @Override
+                    public void run() {
+                        for (int i = 0; i < 10000; i++) {
+                            // Sección crítica: incremento del contador
+                            synchronized (EjemploConcurrenciaSimple.class) {
+                                contador++;
+                            }
+                        }
+                    }
+                }
+            }
+            
 
         </CODE>
       </PRE>
