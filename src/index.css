@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Iosevka Nerd Font";
+  background-color: #242424;
+}
+
+@media (prefers-recuded-motion: no-preference) {
+
+  
+};
+
+.font_juan {
+  color: blanchedalmond;
+  font-family: "Iosevka Nerd Font";
+  font-size: medium;
+}
+
+.font_juan_intro {
+  color: blanchedalmond;
+  font-family: "Iosevka Nerd Font";
+  font-style: italic;
+  font-size: medium;
+  text-align: justify;
+  font-stretch: expanded;
+  line-height: 2;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3em; */
+  transform: skewX(-4deg);
+}
+
+.font_juan_tittle {
+  color: blanchedalmond;
+  font-family: "Iosevka Nerd Font";
+  font-size: xx-large;
+}
+
+.font_juan_tittle_trajectory {
+  color: rgb(255, 255, 255);
+  font-family: "Iosevka Nerd Font";
+  font-size: large;
+}
+
+.font_juan_text_trajectory {
+  color: blanchedalmond;
+  font-family: "Iosevka Nerd Font";
+  font-size: medium;
+  text-align: center;
+}
+
+.font_juan_framework_trajectory {
+  color: #1d6e91;
+  font-family: "Iosevka Nerd Font";
+  font-size: medium;
+  text-align: center;
+}
+
+.font_juan_name {
+  color: #be123c;
+  font-family: "Iosevka Nerd Font";
+  font-size: small;
+  font-weight: bold;
+}
+
+
+.font_juan_footer {
+  color: blanchedalmond;
+  font-family: "Iosevka Nerd Font";
+  font-size: medium;
+  text-align: center;
+}
+
+/* Animaciones Generales */
+
+/* Animaciones Blur In */
+@keyframes fadeIn {
+  0% {
+    backdrop-filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    backdrop-filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Animaciones Blur Out */
+@keyframes fadeOut {
+  0% {
+    backdrop-filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    backdrop-filter: blur(10px);
+    opacity: 0;
+  }
+}
+
+.animationBlurIn {
+  animation: fadeIn 2.5s ease forwards;
+}
+
+
+/** contenedor de proyectos **/
+
+
+

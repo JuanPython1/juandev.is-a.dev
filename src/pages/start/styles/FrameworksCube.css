@@ -1,0 +1,120 @@
+.cube {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-30deg);
+  animation: rotate 6.3s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blanchedalmond;
+  border: 0.5px solid #ccc;
+  transition: background-color 0.3s ease; 
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(50px);
+}
+
+.react-icon-color {
+  color: #242424;
+  transition: color 0.3s ease-in-out;
+}
+
+.front:hover .react-icon-color {
+  color: #3178C6; /* Cambiar el color de fondo al pasar el mouse */
+  transition: background-color 0.3s ease; /* Transición suave para el color */
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.next-icon-color {
+  color: #242424;
+  transition: color 0.3s ease-in-out;
+}
+
+.back:hover .next-icon-color {
+  color: #c0b1b1; /* Cambiar el color del ícono Next.js */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+
+.left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.typescript-icon-color {
+  color: #242424;
+  transition: color 0.3s ease-in-out;
+}
+
+.left:hover .typescript-icon-color {
+  color: #3178C6; /* Cambiar el color del ícono TypeScript */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.expo-icon-color {
+  fill: #242424;
+  transition: fill 0.3s ease-in-out;
+}
+
+.right:hover .expo-icon-color {
+  fill: #961d1d; /* Cambiar el color del ícono Expo */
+  transition: fill 0.3s ease; /* Transición suave para el color */
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.js-icon-color {
+  color: #242424;
+  transition: color 0.3s ease-in-out;
+}
+
+.top:hover .js-icon-color {
+  color: #cdbc3e; /* Cambiar el color del ícono JavaScript */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tooltip {
+    perspective: 500px; /* Añade perspectiva */
+}
+.tooltip > div {
+    transform-origin: bottom; /* Punto de origen para la rotación */
+    transform: rotateX(-90deg); /* Rotación inicial */
+    transition: transform 0.3s, opacity 0.3s;
+}
+.group:hover .tooltip > div {
+    transform: rotateX(0); /* Rotación hacia adelante */
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotateX(-30deg) rotateY(-30deg);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(-390deg);
+  }
+}
