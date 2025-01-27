@@ -11,7 +11,7 @@
 }
 
 ::selection {
-  background-color: #be123c;
+  background-color: #9b6d6d;
   color: #f1f1f1;
 }
 
@@ -66,10 +66,9 @@
 }
 
 .font_juan_name {
-  color: #be123c;
+  color:  blanchedalmond;
   font-family: "Iosevka Nerd Font";
   font-size: small;
-  font-weight: bold;
 }
 
 
