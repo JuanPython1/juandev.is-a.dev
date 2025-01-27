@@ -23,11 +23,11 @@ export default function Nav() {
 
             {/* Indicador rojo de la pagina activa*/}
             <div
-                className="absolute left-[6.8%] top-[11%] transition-all duration-300 ease-in-out bg-rose-700 rounded-lg z-10"
+                className="absolute left-[6%] top-[11%] transition-all duration-300 ease-in-out bg-zinc-700 rounded-lg z-10"
                 style={{
-                    width: '48px',
-                    height: '48px',
-                    transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * 65}px)`,
+                    width: '49px',
+                    height: '49px',
+                    transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * 63}px)`,
                 }}
             ></div>
 
@@ -38,7 +38,7 @@ export default function Nav() {
                     <Link
                         key={to}
                         to={to}
-                        className={`flex flex-row p-3 relative z-10 border rounded-lg hover:text-sky-400 hover:underline ${location.pathname === to ? 'text-sky-400 underline border-sky-400' : 'text-[#ffebcd] border-[#ffebcd]'}`}
+                        className={`flex flex-row p-3 relative z-10  rounded-lg hover:text-red-300 hover:underline ${location.pathname === to ? 'text-red-300 underline ' : 'text-[#ffebcd] '}`}
                     >
                         {icon}
                     </Link>
