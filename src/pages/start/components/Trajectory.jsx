@@ -5,13 +5,13 @@ export default function Trajectory() {
     const events = trayectoriaData.events;
 
     return (
-        <div className="flex flex-col md:flex-row overflow-x-auto space-y-5 md:space-x-14 md:space-y-0">
+        <div className="flex flex-col justify-center items-center w-screen md:flex-row overflow-x-auto space-y-5 md:space-x-14 md:space-y-0">
             {events.map((event, index) => {
                 return (
                     <div key={index} className="flex flex-col justify-center items-center">
 
                         <div
-                            className="flex flex-col gap-2 w-3/4 h-32 bg-zinc-800 justify-center items-center my-3 md:my-5 p-3 min-h-[250px] min-w-[250px]"
+                            className="flex flex-col gap-2  h-32 bg-zinc-800 dark:bg-[#d95a5a]  transition-colors duration-500 justify-center items-center my-3 md:my-5 p-3 w-[250px] min-h-[250px] min-w-[250px]"
                         >
                             <div className="flex h-1/2 items-center">
                                 <p className="font_juan_text_trajectory">{event.description}</p>

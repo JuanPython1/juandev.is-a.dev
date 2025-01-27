@@ -1,0 +1,15 @@
+@keyframes tooltipAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transform: translateX(-50%);
+    }
+}
+
+.animate-tooltip {
+    animation: tooltipAppear 0.3s ease-out forwards;
+}

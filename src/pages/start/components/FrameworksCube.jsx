@@ -9,12 +9,12 @@ export default function FrameworksCuber() {
     return (
 
         <div className="cube">
-            <div className="face front relative group">
+            <div className="face front relative group ">
                 <div className="face front flex justify-center items-center">
                     <FaReact className="w-20 h-20 react-icon-color" />
                 </div>
                 <div className="tooltip absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full opacity-0 rotateX-90 group-hover:opacity-100 group-hover:rotateX-0 transition-all duration-500 pointer-events-none">
-                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg font_text_faces_cube">
                         React
                     </div>
                 </div>
@@ -24,7 +24,7 @@ export default function FrameworksCuber() {
                     <SiNextdotjs className="w-20 h-20 next-icon-color" />
                 </div>
                 <div className="tooltip absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full opacity-0 rotateX-90 group-hover:opacity-100 group-hover:rotateX-0 transition-all duration-500 pointer-events-none">
-                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg font_text_faces_cube">
                         Next.js
                     </div>
                 </div>
@@ -34,7 +34,7 @@ export default function FrameworksCuber() {
                     <BiLogoTypescript className="w-40 h-40 typescript-icon-color" />
                 </div>
                 <div className="tooltip absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full opacity-0 rotateX-90 group-hover:opacity-100 group-hover:rotateX-0 transition-all duration-500 pointer-events-none">
-                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg font_text_faces_cube">
                         Typescript
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function FrameworksCuber() {
                     <SvgExpo className="w-20 h-20 expo-icon-color " />
                 </div>
                 <div className="tooltip absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full opacity-0 rotateX-90 group-hover:opacity-100 group-hover:rotateX-0 transition-all duration-500 pointer-events-none">
-                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg font_text_faces_cube">
                         Expo
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export default function FrameworksCuber() {
                     <FaJs className="w-20 h-20 js-icon-color" />
                 </div>
                 <div className="tooltip absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full opacity-0 rotateX-90 group-hover:opacity-100 group-hover:rotateX-0 transition-all duration-500 pointer-events-none">
-                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+                    <div className="bg-black text-white text-sm px-4 py-2 rounded-lg shadow-lg font_text_faces_cube">
                         JavaScript
                     </div>
                 </div>

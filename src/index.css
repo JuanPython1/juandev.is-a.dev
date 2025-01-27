@@ -5,9 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: "Iosevka Nerd Font";
+.mode-bg-dark {
   background-color: #242424;
+}
+
+.mode-bg-white {
+  background-color: #c04b4b; 
 }
 
 ::selection {
@@ -77,6 +80,17 @@
   font-family: "Iosevka Nerd Font";
   font-size: medium;
   text-align: center;
+}
+
+.font_tooltip {
+  font-family: "Iosevka Nerd Font";
+  font-size: small;
+}
+
+.font_text_faces_cube {
+  color: blanchedalmond;
+  font-family: "Iosevka Nerd Font";
+  font-size: medium;
 }
 
 /* Animaciones Generales */
