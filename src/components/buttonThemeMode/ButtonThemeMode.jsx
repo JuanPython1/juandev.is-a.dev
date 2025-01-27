@@ -35,7 +35,7 @@ export default function ButtonThemeMode() {
         <button
             onClick={toggleTheme}
         >
-            <MdOutlineLightMode className={`${isAnimating ? 'animate-spin' : ''} text-[#c04b4b] dark:text-[#622f2f]  hover:text-red-300`} />
+            <MdOutlineLightMode className={`${isAnimating ? 'animate-spin' : ''} text-[#c04b4b] dark:text-[#622f2f]  hover:text-red-300 dark:hover:text-red-400`} />
         </button>
     );
 }
