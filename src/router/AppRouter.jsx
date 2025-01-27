@@ -2,10 +2,10 @@ import Layout from "@/Layout";
 import About from "@/pages/about/about";
 import Contact from "@/pages/contact/contact";
 import Start from "@/pages/start/start";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/', element: <Layout />,
         children: [
