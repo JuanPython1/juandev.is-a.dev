@@ -10,6 +10,11 @@
   background-color: #242424;
 }
 
+::selection {
+  background-color: #be123c;
+  color: #f1f1f1;
+}
+
 @media (prefers-recuded-motion: no-preference) {
 
   
