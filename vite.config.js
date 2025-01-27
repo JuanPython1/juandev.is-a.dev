@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from 'path';
+import { defineConfig } from "vite";
 
 
 // eslint-disable-next-line no-undef
@@ -9,6 +9,7 @@ const dirname = __dirname;
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: 'https://juanpython1.github.io',
   resolve: {
     alias: {
       '@': path.resolve(dirname, "./src"),
