@@ -30,10 +30,9 @@ The project structure follows a modular scheme to facilitate maintenance and sca
 
 ```
 
-📩 Contacto
-Puedes contactarme a través de mis redes sociales o correo electrónico.
+## Contact
 
-Correo: rodriguezjuanwork1@gmail.com
+You can contact me through my social media or email.
 
-LinkedIn: www.linkedin.com/in/juan-rodriguez-4ba554226
-
+**Email:** rodriguezjuanwork1@gmail.com  
+**LinkedIn:** [www.linkedin.com/in/juan-rodriguez-4ba554226](www.linkedin.com/in/juan-rodriguez-4ba554226)
