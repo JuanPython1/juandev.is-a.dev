@@ -1,21 +1,21 @@
-# Mi Portafolio Web 🌐
+# JuanDev Web
 
-Este es el repositorio de mi portafolio web personal, desarrollado con **React**. Aquí muestro mis proyectos más destacados, habilidades, experiencia y cómo puedes contactarme.
+This is the repository for my personal web portfolio, developed with **React**. Here, I showcase my most notable projects, skills, experience, and how you can contact me.
 
-URL: Proximamente...
+**URL:** Coming soon...
 
-## 🎨 Tecnologías Utilizadas
+## Technologies Used
 
-- **React**: Biblioteca principal para construir la interfaz.
-- **Tailwind CSS**: Para el diseño y la estilización responsiva.
-- **React Router**: Manejo de rutas entre las diferentes secciones del portafolio.
-- **Lucide-react**: Íconos utilizados en la navegación.
-- **CSS 3D Animations**: Animaciones para efectos visuales.
-- **Gestor de paquetes**: Bun
-  
-## 📁 Estructura del Proyecto
+- **React**: Main library for building the interface.
+- **Tailwind CSS**: For responsive design and styling.
+- **React Router**: Handling routes between different sections of the portfolio.
+- **Lucide-react**: Icons used in navigation.
+- **CSS 3D Animations**: Animations for visual effects.
+- **Package Manager**: Bun
 
-La estructura del proyecto sigue un esquema modular para facilitar el mantenimiento y la escalabilidad.
+## Project Structure
+
+The project structure follows a modular scheme to facilitate maintenance and scalability.
 
 ```bash
 ├── public/           # Archivos públicos y estáticos
