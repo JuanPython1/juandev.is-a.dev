@@ -18,15 +18,15 @@ This is the repository for my personal web portfolio, developed with **React**. 
 The project structure follows a modular scheme to facilitate maintenance and scalability.
 
 ```bash
-├── public/           # Archivos públicos y estáticos
+├── public/           # Public and static files
 ├── src/
-│   ├── assets/       # Imágenes, íconos y recursos estáticos
-│   ├── components/   # Componentes reutilizables
-│   ├── pages/        # Páginas principales (Inicio, Proyectos, Contacto)
-│   ├── router/       # Configuración de las rutas
-│   ├── styles/       # Archivos de estilos personalizados
-│   └── App.js        # Componente principal de la aplicación
-└── package.json      # Dependencias del proyecto
+│   ├── assets/       # Images, icons, and static resources
+│   ├── components/   # Reusable components
+│   ├── pages/        # Main pages (Home, Projects, Contact)
+│   ├── router/       # Route configuration
+│   ├── styles/       # Custom style files
+│   └── App.js        # Main application component
+└── package.json      # Project dependencies
 
 ```
 
