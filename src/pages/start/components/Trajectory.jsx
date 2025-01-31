@@ -18,7 +18,7 @@ export default function Trajectory() {
                             </div>
                             <div className="flex flex-col h-1/2 items-center gap-2">
                                 <p className="font_juan_framework_trajectory">{event.toolTitle}</p>
-                                <div className="flex flex-row gap-1">
+                                <div className="flex flex-row gap-1 w-full justify-center items-center">
                                     {Object.keys(event.framework).map((key) => (
                                         <IconsContainer
                                             key={key}

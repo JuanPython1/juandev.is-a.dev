@@ -29,7 +29,7 @@
             "toolTitle" : "Library & RDB",
             "framework": {
                 "react": { 
-                    "icon": "https://skillicons.dev/icons?i=react", 
+                    "icon": "/iconSvg/react.svg", 
                     "alt": "React icon"
                 },
                 "mysql": {
@@ -44,8 +44,8 @@
             "toolTitle" : "Library & BaaS",
             "framework": {
                 "react-native": { 
-                    "icon": "https://skillicons.dev/icons?i=react", 
-                    "alt": "React Native icon"
+                    "icon": "/iconSvg/react.svg", 
+                    "alt": "React icon"
                 },
                 "firebase": {
                     "icon": "/iconSvg/firebase.svg",

@@ -31,14 +31,13 @@
 
 .font_juan_intro {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
+  font-family: "Iosevka Nerd Font", sans-serif;
+  font-display: swap;
   font-style: italic;
   font-size: medium;
   text-align: justify;
   font-stretch: expanded;
   line-height: 2;
-  /* text-decoration: underline;
-  text-underline-offset: 0.3em; */
   transform: skewX(-4deg);
 }
 
@@ -62,7 +61,7 @@
 }
 
 .font_juan_framework_trajectory {
-  color: #1d6e91;
+  color: #76d0f6;
   font-family: "Iosevka Nerd Font";
   font-size: medium;
   text-align: center;

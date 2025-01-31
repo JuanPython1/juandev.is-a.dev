@@ -5,9 +5,9 @@ import ButtonLanguage from './buttonLanguage/ButtonLanguage';
 import ButtonThemeMode from './buttonThemeMode/ButtonThemeMode';
 
 const links = [
-    { to: '/', label: 'Sr. Juan', icon: <TentTree /> },
-    { to: '/about', label: 'About', icon: <BookUser /> },
-    { to: '/contact', label: 'Contact', icon: <UserSearch /> },
+    { to: '/', alt: 'Home', label: 'Sr. Juan', icon: <TentTree /> },
+    { to: '/about', alt: 'About', label: 'About', icon: <BookUser /> },
+    { to: '/contact', alt: 'Contact', label: 'Contact', icon: <UserSearch /> },
 ];
 
 export default function Nav() {
@@ -38,10 +38,11 @@ export default function Nav() {
             {/* Links */}
             <div className="relative flex flex-row items-center space-x-4 font_juan ">
 
-                {links.map(({ to, icon }) => (
+                {links.map(({ to, alt, icon }) => (
                     <Link
                         key={to}
                         to={to}
+                        aria-label={alt}
                         className={`flex flex-row p-3 relative z-10  rounded-lg dark:hover:text-red-500 hover:text-red-300 hover:underline ${location.pathname === to ? 'text-red-300 dark:text-red-500 underline ' : 'text-[#ffebcd] '}`}
                     >
                         {icon}
