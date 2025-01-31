@@ -1,9 +1,10 @@
-import Layout from "@/Layout";
-import About from "@/pages/about/about";
-import Contact from "@/pages/contact/contact";
-import Start from "@/pages/start/start";
+import { lazy } from "react";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
+const Layout = lazy(() => import("@/Layout"));
+const About = lazy(() => import('@pages/about/about'));
+const Contact = lazy(() => import('@pages/contact/contact'));
+const Start = lazy(() => import('@pages/start/start'));
 
 const router = createHashRouter([
     {

@@ -1,6 +1,8 @@
 import Footer from '@/components/Footer'
 import Nav from '@/components/Nav'
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+import Loading from './Loading'
 
 
 export default function Layout() {
@@ -10,7 +12,9 @@ export default function Layout() {
                 <Nav />
             </header>
 
-            <Outlet />
+            <Suspense fallback={<Loading />}>
+                <Outlet />
+            </Suspense>
 
             <footer className='mt-auto'>
                 <Footer />
