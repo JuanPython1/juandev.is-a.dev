@@ -4,7 +4,7 @@ import Trajectory from "@/pages/start/components/Trajectory.jsx";
 export default function Start() {
 
     return (
-        <main className="mt-16 flex-grow space-y-32">
+        <main className="mt-16 flex-grow space-y-36">
 
             <section className={`flex flex-col gap-32 justify-center items-center min-w-3 max-w-2xl p-10 mx-auto rounded-e-3xl animationBlurIn`}>
                 <p className="font_juan_intro">
@@ -15,8 +15,8 @@ export default function Start() {
                 <FrameworksCube />
             </section>
 
-            <section className="flex flex-col md:flex-row flex-grow gap-16 md:gap-24 justify-center items-center max-w-[1200px] p-10 mx-auto animationBlurIn">
-                <h1 className="text-center md:text-2xl font_juan_tittle">Learning Trajectory</h1>
+            <section className="flex flex-col gap-16 md:gap-24 justify-center items-center max-w-[1000px] p-10 mx-auto animationBlurIn">
+                <h1 className="text-center md:text-3xl font_juan_tittle">Learning Trajectory</h1>
                 <Trajectory />
             </section>
 

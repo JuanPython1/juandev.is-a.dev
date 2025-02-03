@@ -1,0 +1,36 @@
+.triangle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 25px solid #ffebcd;
+  /* animation: moveAlongVerticalTimeline 1s infinite linear; */
+}
+
+.animation {
+  animation-timeline: scroll();
+  animation-duration: 2000ms;
+  animation-name: appear;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 500ms;
+}
+
+
+@keyframes appear {
+  0% {
+    top: 0;
+    border-top-color: #ffebcd; /* Color inicial */
+  }
+  50% {
+    top: 50%;
+    border-top-color: #f5a597; /* Cambio de color en la mitad */
+  }
+  100% {
+    top: 100%;
+    border-top-color: #ff6347; /* Regreso al color original */
+  }
+}
