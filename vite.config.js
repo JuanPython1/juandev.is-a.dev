@@ -9,7 +9,7 @@ const dirname = __dirname;
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://juanpython1.github.io',
+  base: 'https://juandev.is-a.dev',
   resolve: {
     alias: {
       '@': path.resolve(dirname, "./src"),
