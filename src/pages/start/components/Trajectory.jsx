@@ -18,19 +18,26 @@ export default function Trajectory() {
 
 
                     {/* Tarjeta de evento */}
-                    <div className="flex flex-col gap-2 bg-zinc-800 dark:bg-[#d95a5a] transition-colors duration-500 p-5 w-[250px] min-h-[250px] shadow-lg z-10">
-                        <p className="font_juan_text_trajectory">{event.description}</p>
-                        <p className="font_juan_framework_trajectory text-center">{event.toolTitle}</p>
-                        <div className="flex flex-row gap-1 w-full justify-center items-center">
-                            {Object.keys(event.framework).map((key) => (
-                                <IconsContainer
-                                    key={key}
-                                    url={event.framework[key].icon}
-                                    alt={event.framework[key].alt}
-                                />
-                            ))}
+                    <div
+                        className="flex flex-col gap-2  h-32 bg-zinc-800 dark:bg-[#d95a5a]  transition-colors duration-500 justify-center items-center my-3 md:my-5 p-3 w-[250px] min-h-[250px] min-w-[250px]"
+                    >
+                        <div className="flex h-1/2 items-center">
+                            <p className="font_juan_text_trajectory">{event.description}</p>
                         </div>
-                        <h1 className="text-2xl font_juan_tittle_trajectory text-center">{event.year}</h1>
+                        <div className="flex flex-col h-1/2 items-center gap-2">
+                            <p className="font_juan_framework_trajectory">{event.toolTitle}</p>
+                            <div className="flex flex-row gap-1 w-full justify-center items-center">
+                                {Object.keys(event.framework).map((key) => (
+                                    <IconsContainer
+                                        key={key}
+                                        url={event.framework[key].icon}
+                                        alt={event.framework[key].alt}
+                                    />
+                                ))}
+                            </div>
+
+                            <h1 className="text-2xl font_juan_tittle_trajectory">{event.year}</h1>
+                        </div>
                     </div>
                 </div>
             ))}
