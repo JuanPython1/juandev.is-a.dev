@@ -1,0 +1,1 @@
+import{j as t}from"./index-Cbm3s_uw.js";function o(){return t.jsx("section",{className:"flex w-max h-max my-56 mx-auto animationBlurIn",children:t.jsx("h1",{className:"text-2xl md:text-4xl text-red-300 font-iosevka",children:"About  Coming Soon...."})})}export{o as default};
