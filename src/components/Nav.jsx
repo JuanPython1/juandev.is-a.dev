@@ -22,7 +22,7 @@ export default function Nav() {
     return (
         //Componente de Navegacion
         //background modo claro: bg-[#c04b4b]
-        <nav className="flex flex-col gap-3 fixed bottom-[5%] left-1/2 transform -translate-x-1/2  transition-colors duration-500 justify-center rounded-md p-3 items-center text-lg h-auto bg-[#242424] dark:bg-[#c04b4b] shadow-md z-10 border border-zinc-700">
+        <nav className="flex flex-col gap-3 fixed bottom-[5%] left-1/2 transform -translate-x-1/2  transition-colors duration-500 justify-center rounded-md p-3 items-center text-lg h-auto bg-[#242424] dark:bg-[#c04b4b] shadow-md z-10 ">
 
             {/* Indicador rojo de la pagina activa*/}
             <div
