@@ -40,7 +40,7 @@
 }
 
 .back:hover .next-icon-color {
-  color: #9db5ea; /* Cambiar el color del ícono Next.js */
+  color: #c0b1b1; /* Cambiar el color del ícono Next.js */
   transition: color 0.3s ease; /* Transición suave para el color */
 }
 
