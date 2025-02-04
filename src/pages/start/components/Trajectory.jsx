@@ -14,7 +14,7 @@ export default function Trajectory() {
             <div className="triangle animation"></div>
 
             {events.map((event, index) => (
-                <div key={index} className={`relative flex w-full md:w-3/4 py-5 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                <div key={index} className={`relative flex  md:w-3/4 py-5 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
 
 
                     {/* Tarjeta de evento */}
