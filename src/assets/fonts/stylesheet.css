@@ -1,4 +1,5 @@
 @font-face{
     font-family: 'Iosevka Nerd Font';
-    src: url('./IosevkaNerdFont-Italic.ttf') format('truetype');
+    src: url('./IosevkaNerdFont-Italic.woff2') format('woff2');
+    font-display: swap;
 }
