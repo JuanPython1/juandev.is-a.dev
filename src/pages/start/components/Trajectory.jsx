@@ -19,7 +19,7 @@ export default function Trajectory() {
 
                     {/* Tarjeta de evento */}
                     <div
-                        className="flex flex-col gap-2 bg-[#242424] dark:bg-[#c04b4b]  transition-colors duration-500 justify-center items-center my-3 md:my-5 p-3 w-[250px]  h-[250px]  min-h-[250px] min-w-[250px]"
+                        className="flex flex-col gap-2 bg-[#242424] dark:bg-[#c04b4b]  transition-colors duration-500 justify-center items-center my-3 md:my-5 p-3 w-[250px]  h-[250px]  min-h-[250px] min-w-[250px] bg-[radial-gradient(circle,_#000_0.5px,_transparent_0.1px)] bg-[size:10px_10px]"
                     >
                         <h1 className="text-2xl font_juan_tittle_trajectory">{event.year}</h1>
                         <div className="flex h-1/2 items-center">
