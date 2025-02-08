@@ -26,8 +26,8 @@
 }
 
 .front:hover .react-icon-color {
-  color: #3178C6; /* Cambiar el color de fondo al pasar el mouse */
-  transition: background-color 0.3s ease; /* Transición suave para el color */
+  color: #3178C6; 
+  transition: background-color 0.3s ease; 
 }
 
 .back {
@@ -40,8 +40,8 @@
 }
 
 .back:hover .next-icon-color {
-  color: #c0b1b1; /* Cambiar el color del ícono Next.js */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  color: #c0b1b1; 
+  transition: color 0.3s ease;
 }
 
 
@@ -55,8 +55,8 @@
 }
 
 .left:hover .typescript-icon-color {
-  color: #3178C6; /* Cambiar el color del ícono TypeScript */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  color: #3178C6; 
+  transition: color 0.3s ease; 
 }
 
 .right {
@@ -69,8 +69,8 @@
 }
 
 .right:hover .expo-icon-color {
-  fill: #961d1d; /* Cambiar el color del ícono Expo */
-  transition: fill 0.3s ease; /* Transición suave para el color */
+  fill: #961d1d; 
+  transition: fill 0.3s ease; 
 }
 
 .top {
@@ -83,8 +83,8 @@
 }
 
 .top:hover .js-icon-color {
-  color: #cdbc3e; /* Cambiar el color del ícono JavaScript */
-  transition: color 0.3s ease; /* Transición suave para el color */
+  color: #cdbc3e; 
+  transition: color 0.3s ease; 
 }
 
 .bottom {
@@ -98,15 +98,15 @@ img {
 }
 
 .tooltip {
-    perspective: 500px; /* Añade perspectiva */
+    perspective: 500px; 
 }
 .tooltip > div {
-    transform-origin: bottom; /* Punto de origen para la rotación */
-    transform: rotateX(-90deg); /* Rotación inicial */
+    transform-origin: bottom; 
+    transform: rotateX(-90deg); 
     transition: transform 0.3s, opacity 0.3s;
 }
 .group:hover .tooltip > div {
-    transform: rotateX(0); /* Rotación hacia adelante */
+    transform: rotateX(0); 
 }
 
 
