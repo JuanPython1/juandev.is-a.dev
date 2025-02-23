@@ -1,4 +1,5 @@
 import FrameworksCube from "@/pages/start/components/FrameworksCube.jsx";
+import RecentProyectsContainer from "@/pages/start/components/RecentProjectsContainer";
 import Trajectory from "@/pages/start/components/Trajectory.jsx";
 import './styles/start.css';
 
@@ -23,6 +24,10 @@ export default function Start() {
                     </p>
                     <FrameworksCube />
                 </div>
+            </section>
+
+            <section className="flex flex-col gap-16 md:gap-24 justify-center items-center max-w-[500px] p-10 mx-auto animationBlurIn">
+                <RecentProyectsContainer />
             </section>
 
             <section className="flex flex-col gap-16 md:gap-24 justify-center items-center max-w-[1000px] p-10 mx-auto animationBlurIn">
