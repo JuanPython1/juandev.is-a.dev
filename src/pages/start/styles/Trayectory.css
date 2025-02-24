@@ -10,14 +10,12 @@
 }
 
 .animation {
-  animation-timeline: scroll(); /* Sincroniza con el scroll (experimental) */
-  animation-delay: 8s;
-  animation-duration: 10s;       /* Duración mayor para suavizar la animación */
+  animation-timeline: scroll(); 
+  animation-delay: 4.8s;
+  animation-duration: 5s;   
   animation-name: appear;
   animation-fill-mode: both;
-  animation-timing-function: ease-in-out; /* Suaviza la transición */
-  /* Puedes ajustar o eliminar el delay si no es necesario */
-  /* animation-delay: 105s; */
+  animation-timing-function: ease-in-out; 
 }
 
 @keyframes appear {
