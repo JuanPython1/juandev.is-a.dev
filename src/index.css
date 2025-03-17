@@ -23,21 +23,22 @@
   
 };
 
+body {
+  font-family: "Iosevka Nerd Font", sans-serif;
+}
+
 .font_juan {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: medium;
 }
 
 .font_juan_tittle_SrJuan {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: large;
 }
 
 .font_juan_intro {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font", sans-serif;
   font-display: swap;
   font-style: italic;
   font-size: medium;
@@ -49,58 +50,50 @@
 
 .font_juan_tittle {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: xx-large;
 }
 
-.font_juan_tittle_projects {
+.font_juan_title_projects {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: large;
 }
 
+
 .font_juan_tittle_trajectory {
   color: rgb(255, 255, 255);
-  font-family: "Iosevka Nerd Font";
   font-size: large;
 }
 
 .font_juan_text_trajectory {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: medium;
   text-align: center;
 }
 
 .font_juan_framework_trajectory {
   color: #76d0f6;
-  font-family: "Iosevka Nerd Font";
   font-size: medium;
   text-align: center;
 }
 
 .font_juan_name {
   color:  blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: small;
 }
 
 
 .font_juan_footer {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: medium;
   text-align: center;
 }
 
 .font_tooltip {
-  font-family: "Iosevka Nerd Font";
   font-size: small;
 }
 
 .font_text_faces_cube {
   color: blanchedalmond;
-  font-family: "Iosevka Nerd Font";
   font-size: medium;
 }
 
