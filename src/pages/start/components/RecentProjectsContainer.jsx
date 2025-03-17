@@ -18,7 +18,9 @@ export default function ProyectContainer() {
                         <ContainerProject_Recent
                             Tittle={project.title}
                             Description={project.description}
-                            Image={project.url}
+                            Image={project.img}
+                            Github={project.github}
+                            Deploy={project.deploy}
                         />
                     </div>
                 ))

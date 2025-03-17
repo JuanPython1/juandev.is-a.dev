@@ -4,8 +4,10 @@
             "ProjectsRecent" : [
                 {
                     "title": "juandev website",
-                    "description": "My personal portfolio", 
-                    "url": "https://juandev.is-a.dev/"
+                    "description": "This website is more than just a portfolio—it's a dynamic showcase of my skills and projects, built with React and Vite for optimal performance and modern web development practices.", 
+                    "img": "./imgProjects/pageSrjuan.png",
+                    "github": "https://github.com/JuanPython1/juandev.is-a.dev",
+                    "deploy": "https://juandev.is-a.dev/"
                 }
             ]
         }
