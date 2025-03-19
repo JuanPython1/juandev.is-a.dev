@@ -1,13 +1,37 @@
+import { useState, useEffect } from "react";
 import { IoGitBranchOutline } from "react-icons/io5";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import ButtonProject from "@components/buttonProject/ButtonProject";
 
-const ContainerProject_Recent = ({ Tittle, Description, Image, Github, Deploy }) => {
+const ContainerProject_Recent = ({ Tittle, Description, Image, ImageLight, Github, Deploy }) => {
+    const [theme, setTheme] = useState(document.documentElement.classList.contains("dark") ? "dark" : "light");
+    const [imageSrc, setImageSrc] = useState(theme === "dark" ? ImageLight : Image);
+    const [fade, setFade] = useState(false);
+
+    useEffect(() => {
+        const observer = new MutationObserver(() => {
+            setFade(true);
+            setTimeout(() => {
+                setTheme(document.documentElement.classList.contains("dark") ? "dark" : "light");
+                setImageSrc(document.documentElement.classList.contains("dark") ? ImageLight : Image);
+                setFade(false); 
+            }, 70); 
+        });
+
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+        return () => observer.disconnect();
+    }, [Image, ImageLight]);
+
     return (
         <div className="flex sm:flex-row flex-col justify-center gap-6 items-center sm:w-[672px] sm:h-[480px] w-full h-auto border border-red-300 dark:border-red-200 rounded-lg p-4">
-            {/* Imagen del Proyecto */}
-            <div className="flex justify-center items-center sm:w-[570px] sm:h-[500px] w-full h-[300px] bg-slate-500 border border-red-300 dark:border-red-200 rounded-md overflow-hidden">
-                <img src={Image} alt={Tittle} className="w-full h-full object-cover" />
+            {/* Imagen del Proyecto con Transición */}
+            <div className="flex justify-center items-center sm:w-[570px] sm:h-[500px] w-full h-[300px]  border border-red-300 dark:border-red-200 rounded-md overflow-hidden">
+                <img
+                    src={imageSrc}
+                    alt={Tittle}
+                    className={`w-full h-full object-cover transition-opacity duration-300 ${fade ? "opacity-0" : "opacity-100"}`}
+                />
             </div>
 
             {/* Contenido del Proyecto */}

@@ -19,6 +19,7 @@ export default function ProyectContainer() {
                             Tittle={project.title}
                             Description={project.description}
                             Image={project.img}
+                            ImageLight={project.imgLight}
                             Github={project.github}
                             Deploy={project.deploy}
                         />
