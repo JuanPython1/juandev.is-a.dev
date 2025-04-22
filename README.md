@@ -2,7 +2,7 @@
 
 This is the repository for my personal web portfolio, developed with **React**. Here, I showcase my most notable projects, skills, experience, and how you can contact me.
 
-**URL:** Coming soon...
+**URL:** [Visita el sitio de JuanDev](https://juandev.is-a.dev)
 
 ## Technologies Used
 
