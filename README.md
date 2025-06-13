@@ -35,4 +35,4 @@ The project structure follows a modular scheme to facilitate maintenance and sca
 You can contact me through my social media or email.
 
 **Email:** rodriguezjuanwork1@gmail.com  
-**LinkedIn:** [www.linkedin.com/in/juan-rodriguez-4ba554226](www.linkedin.com/in/juan-rodriguez-4ba554226)
+**LinkedIn:** [www.linkedin.com/in/juan-rodriguez-4ba554226]([www.linkedin.com/in/juan-rodriguez-4ba554226](https://www.linkedin.com/in/juan-rodriguez-4ba554226/))
