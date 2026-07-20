@@ -1,4 +1,5 @@
 import IconsContainer from "@/components/IconsContainer";
+import { cn } from '@/lib/utils';
 import trayectoriaData from "@data/Trajectory.json";
 import '@pages/start/styles/Trayectory.css';
 
@@ -8,18 +9,18 @@ export default function Trajectory() {
     return (
         <div className="relative flex flex-col items-center w-full ">
             {/* Línea de tiempo central */}
-            <div className="absolute left-1/2 w-0.5 h-full bg-zinc-500 dark:bg-[#d95a5a] transform -translate-x-1/2"></div>
+            <div className="absolute left-1/2 w-0.5 h-full bg-zinc-500 dark:bg-brick-light transform -translate-x-1/2"></div>
 
             {/* Punto en la línea de tiempo */}
             <div className="triangle animation"></div>
 
             {events.map((event, index) => (
-                <div key={index} className={`relative flex  md:w-3/4 py-5 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                <div key={index} className={cn('relative flex md:w-3/4 py-5', index % 2 === 0 ? 'justify-start' : 'justify-end')}>
 
 
                     {/* Tarjeta de evento */}
                     <div
-                        className="flex flex-col gap-2 bg-[#242424] dark:bg-[#c04b4b]  transition-colors duration-500 justify-center items-center my-3 md:my-5 p-3 w-[250px]  h-[250px]  min-h-[250px] min-w-[250px] bg-[radial-gradient(circle,_#000_1px,_transparent_1px)] bg-[size:20px_20px]"
+                        className="flex flex-col gap-2 surface-panel bg-dot-grid justify-center items-center my-3 md:my-5 p-3 w-[250px] h-[250px] min-h-[250px] min-w-[250px]"
                     >
                         <h1 className="text-2xl font_juan_tittle_trajectory">{event.year}</h1>
                         <div className="flex h-1/2 items-center">

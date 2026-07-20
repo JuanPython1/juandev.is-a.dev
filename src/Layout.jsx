@@ -7,7 +7,7 @@ import Loading from './Loading'
 
 export default function Layout() {
     return (
-        <div className="flex flex-col min-h-screen bg-[#242424] dark:bg-[#c04b4b] transition-colors duration-500 bg-[radial-gradient(circle,_#000_1px,_transparent_1px)] bg-[size:20px_20px]">
+        <div className="flex flex-col min-h-screen surface-panel bg-dot-grid">
 
             <header>
                 <Nav />
