@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { MdOutlineLightMode } from "react-icons/md";
+import { cn } from '@/lib/utils';
 import "./iconThemeMode.css";
 
 const THEME_KEY = 'theme';
@@ -36,7 +37,7 @@ export default function ButtonThemeMode() {
             aria-label='toggle theme'
             onClick={toggleTheme}
         >
-            <MdOutlineLightMode className={`${isAnimating ? 'animate-spin' : ''} text-[#c04b4b] dark:text-[#622f2f]  hover:text-red-300 dark:hover:text-red-400`} />
+            <MdOutlineLightMode className={cn(isAnimating && 'animate-spin', 'icon-brick-toggle')} />
         </button>
     );
 }
