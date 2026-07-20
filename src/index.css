@@ -5,23 +5,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.mode-bg-dark {
-  background-color: #242424;
-}
+@layer components {
+  /* Panel/superficie con transición de tema (Layout, Nav, Trajectory card) */
+  .surface-panel {
+    @apply bg-charcoal dark:bg-brick transition-colors duration-500;
+  }
 
-.mode-bg-white {
-  background-color: #c04b4b; 
+  /* Patrón de puntos de fondo (Layout, Trajectory card) */
+  .bg-dot-grid {
+    @apply bg-[radial-gradient(circle,_#000_1px,_transparent_1px)] bg-[size:20px_20px];
+  }
+
+  /* Esquema rojo de ícono con hover (ButtonLanguage, ButtonThemeMode) */
+  .icon-brick-toggle {
+    @apply text-brick dark:text-brick-dark hover:text-red-300 dark:hover:text-red-400;
+  }
+
+  /* Borde rojo de tarjeta (ContainerProject_Recent) */
+  .frame-red {
+    @apply border border-red-300 dark:border-red-200;
+  }
+
+  /* Wrapper de secciones (start.jsx) — combinar con la clase animationBlurIn */
+  .section-blur {
+    @apply flex flex-col gap-16 md:gap-24 justify-center items-center p-10 mx-auto;
+  }
 }
 
 ::selection {
   background-color: #9b6d6d;
   color: #f1f1f1;
 }
-
-@media (prefers-recuded-motion: no-preference) {
-
-  
-};
 
 body {
   font-family: "Iosevka Nerd Font", sans-serif;

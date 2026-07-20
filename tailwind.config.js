@@ -8,6 +8,15 @@ export default {
 		extend: {
 			fontFamily: {
 				'iosevka': ['Iosevka Nerd Font', 'sans-serif']
+			},
+			colors: {
+				charcoal: '#242424',
+				brick: {
+					DEFAULT: '#c04b4b',
+					dark: '#622f2f',
+					light: '#d95a5a',
+				},
+				cream: '#ffebcd',
 			}
 		}
 	},
