@@ -1,6 +1,7 @@
 import { BookUser, TentTree, UserSearch } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 import ButtonLanguage from './buttonLanguage/ButtonLanguage';
 import ButtonThemeMode from './buttonThemeMode/ButtonThemeMode';
 
@@ -21,8 +22,7 @@ export default function Nav() {
 
     return (
         //Componente de Navegacion
-        //background modo claro: bg-[#c04b4b]
-        <nav className="flex flex-col gap-3 fixed bottom-[5%] left-1/2 transform -translate-x-1/2  transition-colors duration-500 justify-center rounded-md p-3 items-center text-lg h-auto bg-[#242424] dark:bg-[#c04b4b] shadow-sm  dark:shadow-zinc-700 z-10 ">
+        <nav className="flex flex-col gap-3 fixed bottom-[5%] left-1/2 transform -translate-x-1/2 justify-center rounded-md p-3 items-center text-lg h-auto surface-panel shadow-sm dark:shadow-zinc-700 z-10">
 
             {/* Indicador rojo de la pagina activa*/}
             <div
@@ -43,7 +43,10 @@ export default function Nav() {
                         key={to}
                         to={to}
                         aria-label={alt}
-                        className={`flex flex-row p-3 relative z-10  rounded-lg dark:hover:text-red-500 hover:text-red-300 hover:underline ${location.pathname === to ? 'text-red-300 dark:text-red-500 underline ' : 'text-[#ffebcd] '}`}
+                        className={cn(
+                            'flex flex-row p-3 relative z-10 rounded-lg dark:hover:text-red-500 hover:text-red-300 hover:underline',
+                            location.pathname === to ? 'text-red-300 dark:text-red-500 underline' : 'text-cream'
+                        )}
                     >
                         {icon}
                     </Link>

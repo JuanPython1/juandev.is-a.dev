@@ -26,11 +26,11 @@ export default function Start() {
                 </div>
             </section>
 
-            <section className="flex flex-col gap-16 md:gap-24 justify-center items-center max-w-[500px] p-10 mx-auto animationBlurIn">
+            <section className="section-blur animationBlurIn max-w-[500px]">
                 <RecentProyectsContainer />
             </section>
 
-            <section className="flex flex-col gap-16 md:gap-24 justify-center items-center max-w-[1000px] p-10 mx-auto animationBlurIn">
+            <section className="section-blur animationBlurIn max-w-[1000px]">
                 <h1 className="text-center md:text-3xl font_juan_tittle">Learning Trajectory</h1>
                 <Trajectory />
             </section>

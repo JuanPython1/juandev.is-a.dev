@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { IoGitBranchOutline } from "react-icons/io5";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { cn } from "@/lib/utils";
 import ButtonProject from "@components/buttonProject/ButtonProject";
 
 const ContainerProject_Recent = ({ Tittle, Description, Image, ImageLight, Github, Deploy }) => {
@@ -24,13 +25,13 @@ const ContainerProject_Recent = ({ Tittle, Description, Image, ImageLight, Githu
     }, [Image, ImageLight]);
 
     return (
-        <div className="flex sm:flex-row flex-col justify-center gap-6 items-center sm:w-[672px] sm:h-[480px] w-full h-auto border border-red-300 dark:border-red-200 rounded-lg p-4">
+        <div className="flex sm:flex-row flex-col justify-center gap-6 items-center sm:w-[672px] sm:h-[480px] w-full h-auto frame-red rounded-lg p-4">
             {/* Imagen del Proyecto con Transición */}
-            <div className="flex justify-center items-center sm:w-[570px] sm:h-[500px] w-full h-[300px]  border border-red-300 dark:border-red-200 rounded-md overflow-hidden">
+            <div className="flex justify-center items-center sm:w-[570px] sm:h-[500px] w-full h-[300px]  frame-red rounded-md overflow-hidden">
                 <img
                     src={imageSrc}
                     alt={Tittle}
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${fade ? "opacity-0" : "opacity-100"}`}
+                    className={cn("w-full h-full object-cover transition-opacity duration-300", fade ? "opacity-0" : "opacity-100")}
                 />
             </div>
 

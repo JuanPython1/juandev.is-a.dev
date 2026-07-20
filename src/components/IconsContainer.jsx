@@ -1,5 +1,6 @@
 import '@components/cssComponents/iconsContainerCss.css';
 import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 export default function IconsContainer(props) {
     const { url, alt } = props;
@@ -21,7 +22,7 @@ export default function IconsContainer(props) {
             <img
                 src={url}
                 alt={alt}
-                className={`w-7 h-7 transform ${isAnimating ? 'animate-jump' : ''}`}
+                className={cn('w-7 h-7 transform', isAnimating && 'animate-jump')}
             />
         </div>
     );
