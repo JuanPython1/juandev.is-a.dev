@@ -1,0 +1,1 @@
+import{j as t}from"./index-CXDItGz2.js";import{u as a}from"./useTranslation-C-Y0Xlr4.js";function s(){const{t:o}=a();return t.jsx("section",{className:"flex w-max h-max my-56 mx-auto animationBlurIn",children:t.jsx("h1",{className:"text-2xl md:text-4xl text-red-300 font-iosevka",children:o("contact.comingSoon")})})}export{s as default};
