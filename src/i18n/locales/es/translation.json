@@ -50,6 +50,6 @@
         "comingSoon": "Contacto Próximamente..."
     },
     "footer": {
-        "copyright": "©2025 SrJuan.dev - Desarrollador Web y Móvil. Todos los derechos reservados."
+        "copyright": "©{{year}} SrJuan.dev - Desarrollador Web y Móvil. Todos los derechos reservados."
     }
 }

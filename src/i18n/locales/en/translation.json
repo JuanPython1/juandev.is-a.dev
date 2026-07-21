@@ -50,6 +50,6 @@
         "comingSoon": "Contact Coming Soon..."
     },
     "footer": {
-        "copyright": "©2025 SrJuan.dev - Developer Web & Mobile. All rights reserved."
+        "copyright": "©{{year}} SrJuan.dev - Developer Web & Mobile. All rights reserved."
     }
 }
