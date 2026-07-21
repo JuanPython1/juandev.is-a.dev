@@ -22,6 +22,6 @@ Portafolio personal de Juan, construido con **React 18 + Vite**. Esta carpeta do
 - **Qué es:** portafolio personal (home / about / contact) desplegado en `https://juandev.is-a.dev`.
 - **Stack:** React 18.3 + Vite 5 (SWC) + React Router DOM 6 (hash router) + Tailwind CSS 3.4.
 - **Gestor de paquetes:** Bun (`bun.lockb`).
-- **Estado general:** la página **Start (Home)** está completa (hero, cubo 3D de stacks, proyectos recientes, línea de tiempo). Las páginas **About** y **Contact** son placeholders ("Coming Soon"). El botón de idioma también es un placeholder.
+- **Estado general:** la página **Start (Home)** está completa (hero, cubo 3D de stacks, proyectos recientes, línea de tiempo). Las páginas **About** y **Contact** son placeholders ("Coming Soon"). El sitio soporta i18n (inglés/español) con detección automática del idioma del navegador — ver [01-arquitectura.md](01-arquitectura.md#i18n).
 
 Para el detalle de cada pieza, entra al documento correspondiente en la tabla de arriba. Para la lista priorizada de trabajo pendiente, ve directo a [08-pendientes-roadmap.md](08-pendientes-roadmap.md).

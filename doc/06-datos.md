@@ -16,8 +16,7 @@ Estructura (anidada innecesariamente en un array de un solo elemento — `Projec
     {
       "ProjectsRecent": [
         {
-          "title": "string",
-          "description": "string",
+          "id": "string (clave usada para buscar title/description en las traducciones i18n)",
           "img": "ruta a imagen (tema claro)",
           "imgLight": "ruta a imagen (tema oscuro)",
           "github": "url",
@@ -31,6 +30,8 @@ Estructura (anidada innecesariamente en un array de un solo elemento — `Projec
 
 **Estado actual:** un único proyecto listado (el propio sitio `juandev website`). Ver nota sobre naming invertido de `img`/`imgLight` vs las props `Image`/`ImageLight` en [04-componentes.md](04-componentes.md#container_project_recentcontainerproject_recentjsx).
 
+`title`/`description` ya no viven en este JSON: se traducen vía `t(\`projects.items.${id}.title\`)` / `t(\`projects.items.${id}.description\`)` — ver [i18n](01-arquitectura.md#i18n). Al agregar un proyecto nuevo, hay que sumar su entrada tanto acá (con un `id` único) como en `src/i18n/locales/{en,es}/translation.json`.
+
 ## `Trajectory.json`
 
 Consumido por [`Trajectory`](05-paginas.md#trajectoryjsx).
@@ -41,9 +42,7 @@ Estructura:
 {
   "events": [
     {
-      "year": "string",
-      "description": "string",
-      "toolTitle": "string",
+      "year": "string (también usado como clave para buscar description/toolTitle en las traducciones i18n)",
       "framework": {
         "<key>": { "icon": "ruta SVG en /public/iconSvg", "alt": "string" }
       }
@@ -53,6 +52,8 @@ Estructura:
 ```
 
 **Estado actual:** 5 eventos, de **2018 a 2024** (semántica, básicos web → React/MySQL → React Native/Firebase → Expo/Firebase → IA + Next.js/Supabase). No incluye 2025/2026.
+
+`description`/`toolTitle` ya no viven en este JSON: se traducen vía `t(\`trajectory.${year}.description\`)` / `t(\`trajectory.${year}.toolTitle\`)` — ver [i18n](01-arquitectura.md#i18n). Al agregar un evento nuevo, hay que sumarlo acá y en `src/i18n/locales/{en,es}/translation.json`. Los `alt` de los íconos de `framework` se mantienen en este JSON (no traducidos, texto descriptivo menor).
 
 ## Qué falta
 

@@ -11,6 +11,7 @@
 | Estilos | Tailwind CSS | 3.4 | Utilidades CSS + `tailwindcss-animate` |
 | Iconos | `lucide-react`, `react-icons` | — | Iconografía de UI y stacks tecnológicos |
 | Utilidades de clases | `clsx` + `tailwind-merge` | — | Helper `cn()` estilo shadcn/ui |
+| i18n | `i18next` + `react-i18next` + `i18next-browser-languagedetector` | — | Traducción EN/ES, ver sección [i18n](#i18n) |
 | UI Kit (preparado, no usado) | `components.json` (shadcn/ui) + `@radix-ui/react-navigation-menu` | — | Ver nota en [08-pendientes-roadmap.md](08-pendientes-roadmap.md) |
 | Gestor de paquetes | Bun | — | `bun.lockb` presente |
 | Deploy | `gh-pages` | 6.3 | Publica `dist/` a GitHub Pages |
@@ -29,6 +30,9 @@ No hay TypeScript real: el proyecto es JSX puro. `jsconfig.json` existe solo par
 │   ├── Layout.jsx                # Shell visual: Nav + Outlet + Footer
 │   ├── Loading.jsx               # Fallback de Suspense (placeholder vacío)
 │   ├── index.css                  # Estilos globales, fuentes, clases de animación
+│   ├── i18n/
+│   │   ├── index.js                 # Config de i18next (detección de idioma + init)
+│   │   └── locales/{en,es}/translation.json  # Diccionarios de textos
 │   ├── router/
 │   │   └── AppRouter.jsx           # Definición de rutas (hash router) + lazy loading
 │   ├── pages/
@@ -74,3 +78,12 @@ index.html
 ```
 
 Todas las páginas y el propio `Layout` se cargan con `React.lazy()` — cada ruta es un chunk separado que Vite parte automáticamente en el build.
+
+## i18n
+
+Soporta inglés (`en`, idioma por defecto) y español (`es`). Configuración en [`src/i18n/index.js`](../src/i18n/index.js), importada una sola vez en `main.jsx` antes de montar la app.
+
+- **Detección**: `i18next-browser-languagedetector` primero busca el idioma guardado en `localStorage` (clave `language`) y, si no hay ninguno, usa `navigator.language` del navegador del usuario. `load: 'languageOnly'` normaliza variantes regionales (`es-CO`, `en-GB`, etc.) a `es`/`en`.
+- **Persistencia**: al cambiar de idioma con el botón [`ButtonLanguage`](04-componentes.md#buttonlanguagebuttonlanguagejsx), `i18next-browser-languagedetector` guarda la elección en `localStorage` automáticamente.
+- **Textos**: todo el contenido traducible vive en `src/i18n/locales/{en,es}/translation.json`, consumido por componentes vía el hook `useTranslation()` de `react-i18next` (`t('clave.anidada')`).
+- **Datos + i18n**: `Projects.json` y `Trajectory.json` (en `src/data/`) ya **no** contienen textos traducibles (título, descripción) — solo datos estructurales (ids, años, imágenes, íconos, links). Los textos correspondientes se buscan en las traducciones usando el `id` del proyecto o el `year` del evento como clave (p. ej. `projects.items.juandev-website.title`, `trajectory.2018.description`).

@@ -22,7 +22,7 @@ Contenedor circular reutilizable para un ícono (`<img>`), con una animación de
 
 ## `buttonLanguage/ButtonLanguage.jsx`
 
-Botón de cambio de idioma. **No tiene funcionalidad real**: al hacer hover muestra un tooltip `"Coming Soon..."`. No cambia ningún estado ni contenido de la app. Ver [08-pendientes-roadmap.md](08-pendientes-roadmap.md).
+Selector de idioma. Usa `useTranslation` de `react-i18next` para leer `i18n.resolvedLanguage` y cambiar de idioma con `i18n.changeLanguage()`. Al hacer hover (o foco por teclado, vía `group-focus-within`) sobre el ícono `IoLanguageOutline` aparece un tooltip (mismo estilo/animación `animate-tooltip` que el placeholder original) con dos botones, `EN`/`ES`, resaltando el idioma activo. Ver [`src/i18n/`](01-arquitectura.md#i18n) para la configuración completa.
 
 ## `buttonThemeMode/ButtonThemeMode.jsx`
 
