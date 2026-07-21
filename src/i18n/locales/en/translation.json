@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "language": {
+        "toggle": "Change language"
+    },
+    "start": {
+        "greeting": "Hi, it's Juan's website 🐋",
+        "intro": "I am a Systems Engineering student, currently in my tenth semester. I specialize in web and mobile development with React with the Next.js framework and React Native with the Expo framework. Recently, I have been exploring the integration of artificial intelligence in my projects, leveraging AI technologies to improve user experiences and streamline development processes.",
+        "trajectoryTitle": "Learning Trajectory"
+    },
+    "projects": {
+        "recentTitle": "Recent Projects 2025",
+        "items": {
+            "juandev-website": {
+                "title": "juandev website",
+                "description": "This website is more than just a portfolio—it's a dynamic showcase of my skills and projects, built with React and Vite for optimal performance and modern web development practices."
+            }
+        }
+    },
+    "trajectory": {
+        "2018": {
+            "toolTitle": "Basic languages",
+            "description": "I started by acquiring essential knowledge of semantics, style and web programming."
+        },
+        "2021": {
+            "toolTitle": "Library & RDB",
+            "description": "I started to work on React projects."
+        },
+        "2022": {
+            "toolTitle": "Library & BaaS",
+            "description": "I learned about mobile development with React Native."
+        },
+        "2023": {
+            "toolTitle": "Framework & BaaS",
+            "description": "I developed a mobile application with Expo."
+        },
+        "2024": {
+            "toolTitle": "IA & Framework & BaaS",
+            "description": "I began working on artificial intelligence and Next.js projects."
+        }
+    },
+    "about": {
+        "comingSoon": "About Coming Soon...."
+    },
+    "contact": {
+        "comingSoon": "Contact Coming Soon..."
+    },
+    "footer": {
+        "copyright": "©2025 SrJuan.dev - Developer Web & Mobile. All rights reserved."
+    }
+}
