@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import IconsContainer from "@/components/IconsContainer";
 import { cn } from '@/lib/utils';
 import trayectoriaData from "@data/Trajectory.json";
 import '@pages/start/styles/Trayectory.css';
 
 export default function Trajectory() {
+    const { t } = useTranslation();
     const events = trayectoriaData.events;
 
     return (
@@ -24,10 +26,10 @@ export default function Trajectory() {
                     >
                         <h1 className="text-2xl font_juan_tittle_trajectory">{event.year}</h1>
                         <div className="flex h-1/2 items-center">
-                            <p className="font_juan_text_trajectory">{event.description}</p>
+                            <p className="font_juan_text_trajectory">{t(`trajectory.${event.year}.description`)}</p>
                         </div>
                         <div className="flex flex-col h-1/2 items-center gap-2">
-                            <p className="font_juan_framework_trajectory">{event.toolTitle}</p>
+                            <p className="font_juan_framework_trajectory">{t(`trajectory.${event.year}.toolTitle`)}</p>
                             <div className="flex flex-row gap-2 w-full justify-center items-center">
                                 {Object.keys(event.framework).map((key) => (
                                     <IconsContainer

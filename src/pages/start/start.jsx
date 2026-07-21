@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import FrameworksCube from "@/pages/start/components/FrameworksCube.jsx";
 import RecentProyectsContainer from "@/pages/start/components/RecentProjectsContainer";
 import Trajectory from "@/pages/start/components/Trajectory.jsx";
 import './styles/start.css';
 
 export default function Start() {
+    const { t } = useTranslation();
 
     return (
         <main className="flex-grow space-y-40">
@@ -12,15 +14,13 @@ export default function Start() {
 
                 <div className="absolute flex justify-center items-center w-full h-full top-0 left-0">
                     <h1 className="font_juan_tittle_SrJuan title-animation">
-                        {`Hi, it's Juan's website 🐋`}
+                        {t('start.greeting')}
                     </h1>
                 </div>
 
                 <div className=" flex flex-col gap-28 mt-16 md:h-[500px] items-center content-animation">
                     <p className="font_juan_intro">
-                        {
-                            `"I am a Systems Engineering student, currently in my tenth semester. I specialize in web and mobile development with React with the Next.js framework and React Native with the Expo framework. Recently, I have been exploring the integration of artificial intelligence in my projects, leveraging AI technologies to improve user experiences and streamline development processes."`
-                        }
+                        {`"${t('start.intro')}"`}
                     </p>
                     <FrameworksCube />
                 </div>
@@ -31,7 +31,7 @@ export default function Start() {
             </section>
 
             <section className="section-blur animationBlurIn max-w-[1000px]">
-                <h1 className="text-center md:text-3xl font_juan_tittle">Learning Trajectory</h1>
+                <h1 className="text-center md:text-3xl font_juan_tittle">{t('start.trajectoryTitle')}</h1>
                 <Trajectory />
             </section>
 

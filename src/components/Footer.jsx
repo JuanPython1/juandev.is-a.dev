@@ -1,10 +1,11 @@
-
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+    const { t } = useTranslation();
 
     return (
         <div className='w-full flex justify-center h-56 mt-20 font_juan_footer'>
-            <p>©2025 SrJuan.dev - Developer Web & Mobile. All rights reserved.</p>
+            <p>{t('footer.copyright')}</p>
         </div>
     )
 }

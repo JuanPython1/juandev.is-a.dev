@@ -1,17 +1,19 @@
 import { BookUser, TentTree, UserSearch } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import ButtonLanguage from './buttonLanguage/ButtonLanguage';
 import ButtonThemeMode from './buttonThemeMode/ButtonThemeMode';
 
 const links = [
-    { to: '/', alt: 'Home', label: 'Sr. Juan', icon: <TentTree /> },
-    { to: '/about', alt: 'About', label: 'About', icon: <BookUser /> },
-    { to: '/contact', alt: 'Contact', label: 'Contact', icon: <UserSearch /> },
+    { to: '/', altKey: 'nav.home', labelKey: null, label: 'Sr. Juan', icon: <TentTree /> },
+    { to: '/about', altKey: 'nav.about', labelKey: 'nav.about', icon: <BookUser /> },
+    { to: '/contact', altKey: 'nav.contact', labelKey: 'nav.contact', icon: <UserSearch /> },
 ];
 
 export default function Nav() {
+    const { t } = useTranslation();
     const location = useLocation();
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -38,11 +40,11 @@ export default function Nav() {
             {/* Links */}
             <div className="relative flex flex-row items-center space-x-4 font_juan ">
 
-                {links.map(({ to, alt, icon }) => (
+                {links.map(({ to, altKey, icon }) => (
                     <Link
                         key={to}
                         to={to}
-                        aria-label={alt}
+                        aria-label={t(altKey)}
                         className={cn(
                             'flex flex-row p-3 relative z-10 rounded-lg dark:hover:text-red-500 hover:text-red-300 hover:underline',
                             location.pathname === to ? 'text-red-300 dark:text-red-500 underline' : 'text-cream'
@@ -57,7 +59,9 @@ export default function Nav() {
             <div className='flex flex-row items-center justify-center space-x-3'>
                 <ButtonLanguage />
                 <div className='flex items-center justify-center w-[60px]'>
-                    <h3 className="text-2xl font_juan_name">{links[activeIndex]?.label ? links[activeIndex]?.label : '???'}</h3>
+                    <h3 className="text-2xl font_juan_name">
+                    {links[activeIndex] ? (links[activeIndex].labelKey ? t(links[activeIndex].labelKey) : links[activeIndex].label) : '???'}
+                </h3>
                 </div>
                 <ButtonThemeMode />
             </div>
