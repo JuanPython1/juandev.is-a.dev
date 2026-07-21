@@ -3,8 +3,7 @@
         {
             "ProjectsRecent" : [
                 {
-                    "title": "juandev website",
-                    "description": "This website is more than just a portfolio—it's a dynamic showcase of my skills and projects, built with React and Vite for optimal performance and modern web development practices.", 
+                    "id": "juandev-website",
                     "img": "./imgProjects/pageSrjuan.png",
                     "imgLight": "./imgProjects/pageSrjuanLight.jpeg",
                     "github": "https://github.com/JuanPython1/juandev.is-a.dev",

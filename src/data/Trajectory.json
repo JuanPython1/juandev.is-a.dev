@@ -1,16 +1,14 @@
 {
     "events": [
-        { 
-            "year": "2018", 
-            "description": "I started by acquiring essential knowledge of semantics, style and web programming.", 
-            "toolTitle" : "Basic languages",
-            "framework": { 
+        {
+            "year": "2018",
+            "framework": {
                 "html": {
                     "icon": "/iconSvg/html5.svg",
                     "alt": "HTML icon"
                 },
-                "css": { 
-                    "icon": "/iconSvg/css.svg", 
+                "css": {
+                    "icon": "/iconSvg/css.svg",
                     "alt": "CSS icon"
                 },
                 "js": {
@@ -23,13 +21,11 @@
                 }
             }
         },
-        { 
-            "year": "2021", 
-            "description": "I started to work on React projects.", 
-            "toolTitle" : "Library & RDB",
+        {
+            "year": "2021",
             "framework": {
-                "react": { 
-                    "icon": "/iconSvg/react.svg", 
+                "react": {
+                    "icon": "/iconSvg/react.svg",
                     "alt": "React icon"
                 },
                 "mysql": {
@@ -38,13 +34,11 @@
                 }
             }
         },
-        { 
-            "year": "2022", 
-            "description": "I learned about mobile development with React Native.", 
-            "toolTitle" : "Library & BaaS",
+        {
+            "year": "2022",
             "framework": {
-                "react-native": { 
-                    "icon": "/iconSvg/react.svg", 
+                "react-native": {
+                    "icon": "/iconSvg/react.svg",
                     "alt": "React icon"
                 },
                 "firebase": {
@@ -53,13 +47,11 @@
                 }
             }
         },
-        { 
-            "year": "2023", 
-            "description": "I developed a mobile application with Expo.", 
-            "toolTitle" : "Framework & BaaS",
+        {
+            "year": "2023",
             "framework": {
-                "expo": { 
-                    "icon": "/iconSvg/expo.svg", 
+                "expo": {
+                    "icon": "/iconSvg/expo.svg",
                     "alt": "Expo icon"
                 },
                 "firebase": {
@@ -68,13 +60,11 @@
                 }
             }
         },
-        { 
-            "year": "2024", 
-            "description": "I began working on artificial intelligence and Next.js projects.", 
-            "toolTitle" : "IA & Framework & BaaS",
+        {
+            "year": "2024",
             "framework": {
-                "ai": { 
-                    "icon": "/iconSvg/claude.svg", 
+                "ai": {
+                    "icon": "/iconSvg/claude.svg",
                     "alt": "Artificial Intelligence icon"
                 },
                 "nextjs" :{
