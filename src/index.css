@@ -41,12 +41,20 @@
 
   /* Borde rojo de tarjeta (ContainerProject_Recent) */
   .frame-red {
-    @apply border border-red-300 dark:border-red-200;
+    @apply border-[0.0625em] border-red-300 dark:border-red-200;
   }
 
   /* Wrapper de secciones (start.jsx) — combinar con la clase animationBlurIn */
   .section-blur {
-    @apply flex flex-col gap-16 md:gap-24 justify-center items-center p-10 mx-auto;
+    @apply flex flex-col gap-[4em] md:gap-[6em] justify-center items-center p-[2.5em] mx-auto;
+  }
+
+  /* Raíz de escala: todo lo que esté en em dentro de un elemento con esta
+     clase crece/decrece junto con --zoom-scale. Se aplica a las secciones
+     de start.jsx (hero, proyectos recientes, trayectoria) y al Footer,
+     que vive en el Layout global y se renderiza en todas las rutas. */
+  .zoom-scale-root {
+    font-size: var(--zoom-scale);
   }
 }
 
@@ -81,29 +89,29 @@ body {
 
 .font_juan_tittle {
   color: blanchedalmond;
-  font-size: xx-large;
+  font-size: 2em;
 }
 
 .font_juan_title_projects {
   color: blanchedalmond;
-  font-size: large;
+  font-size: 1.15em;
 }
 
 
 .font_juan_tittle_trajectory {
   color: rgb(255, 255, 255);
-  font-size: large;
+  font-size: 1.15em;
 }
 
 .font_juan_text_trajectory {
   color: blanchedalmond;
-  font-size: medium;
+  font-size: 1em;
   text-align: center;
 }
 
 .font_juan_framework_trajectory {
   color: #76d0f6;
-  font-size: medium;
+  font-size: 1em;
   text-align: center;
 }
 
@@ -115,7 +123,6 @@ body {
 
 .font_juan_footer {
   color: blanchedalmond;
-  font-size: medium;
   text-align: center;
 }
 
@@ -125,7 +132,7 @@ body {
 
 .font_text_faces_cube {
   color: blanchedalmond;
-  font-size: medium;
+  font-size: 1em;
 }
 
 /* Animaciones Generales */

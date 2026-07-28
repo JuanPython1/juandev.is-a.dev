@@ -110,7 +110,15 @@ img {
 }
 
 .tooltip {
-    perspective: 500px; 
+    perspective: 500px;
+}
+
+/* Sombra del tooltip en unidades relativas a --zoom-scale (equivalente a
+   shadow-lg de Tailwind, que usa px fijos y no escala con el zoom). */
+.tooltip-shadow {
+    box-shadow:
+        0 calc(var(--zoom-scale) * 0.625) calc(var(--zoom-scale) * 0.9375) calc(var(--zoom-scale) * -0.1875) rgb(0 0 0 / 0.1),
+        0 calc(var(--zoom-scale) * 0.25) calc(var(--zoom-scale) * 0.375) calc(var(--zoom-scale) * -0.25) rgb(0 0 0 / 0.1);
 }
 .tooltip > div {
     transform-origin: bottom; 

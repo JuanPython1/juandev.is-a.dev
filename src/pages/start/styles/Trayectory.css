@@ -4,9 +4,9 @@
   width: 0;
   height: 0;
   transform: translateX(-50%);
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 25px solid #ffebcd;
+  border-left: 0.375em solid transparent;
+  border-right: 0.375em solid transparent;
+  border-top: 1.5625em solid #ffebcd;
 }
 
 .animation {

@@ -3,7 +3,7 @@
         transform: translateY(0) rotateY(0deg); /* Sin movimiento ni rotación */
     }
     50% {
-        transform: translateY(-8px) rotateY(180deg); /* Salto hacia arriba y giro de 180 grados en el eje Y */
+        transform: translateY(-0.5em) rotateY(180deg); /* Salto hacia arriba y giro de 180 grados en el eje Y */
     }
     100% {
         transform: translateY(0) rotateY(360deg); /* Vuelve a su posición original con un giro completo */

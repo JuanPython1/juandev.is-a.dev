@@ -10,7 +10,7 @@ export default function Start() {
     return (
         <main className="flex-grow space-y-40">
 
-            <section className="relative flex flex-col gap-[3em] min-w-3 max-w-[32em] min-h-screen p-[2em] mx-auto overflow-hidden hero-scale">
+            <section className="relative flex flex-col gap-[3em] min-w-3 max-w-[32em] min-h-screen p-[2em] mx-auto overflow-hidden zoom-scale-root">
 
                 <div className="absolute flex justify-center items-center w-full h-full top-0 left-0">
                     <h1 className="font_juan_tittle_SrJuan title-animation">
@@ -26,12 +26,12 @@ export default function Start() {
                 </div>
             </section>
 
-            <section className="section-blur animationBlurIn max-w-[500px]">
+            <section className="section-blur animationBlurIn max-w-[31.25em] zoom-scale-root">
                 <RecentProyectsContainer />
             </section>
 
-            <section className="section-blur animationBlurIn max-w-[1000px]">
-                <h1 className="text-center md:text-3xl font_juan_tittle">{t('start.trajectoryTitle')}</h1>
+            <section className="section-blur animationBlurIn max-w-[62.5em] zoom-scale-root">
+                <h1 className="text-center font_juan_tittle">{t('start.trajectoryTitle')}</h1>
                 <Trajectory />
             </section>
 

@@ -16,13 +16,13 @@ export default function IconsContainer(props) {
 
     return (
         <div
-            className="flex w-12 h-12 border border-zinc-700 rounded-full justify-center items-center"
+            className="flex w-[3em] h-[3em] border-[0.0625em] border-zinc-700 rounded-full justify-center items-center"
             onMouseEnter={handleMouseEnter}
         >
             <img
                 src={url}
                 alt={alt}
-                className={cn('w-7 h-7 transform', isAnimating && 'animate-jump')}
+                className={cn('w-[1.75em] h-[1.75em] transform', isAnimating && 'animate-jump')}
             />
         </div>
     );

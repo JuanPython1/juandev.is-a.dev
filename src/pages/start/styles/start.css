@@ -53,9 +53,3 @@
     animation: fadeUpAppear 1s ease-in-out forwards;
     animation-delay: 1.5s;
   }
-
-  /* Escala maestra del hero: todo lo que esté en em dentro de esta sección
-     (cita, saludo, cubo) crece/decrece junto con --zoom-scale (ver index.css). */
-  .hero-scale {
-    font-size: var(--zoom-scale);
-  }

@@ -25,9 +25,9 @@ const ContainerProject_Recent = ({ Tittle, Description, Image, ImageLight, Githu
     }, [Image, ImageLight]);
 
     return (
-        <div className="flex sm:flex-row flex-col justify-center gap-6 items-center sm:w-[672px] sm:h-[480px] w-full h-auto frame-red rounded-lg p-4">
+        <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[30em] w-full h-auto frame-red rounded-[0.5em] p-[1em]">
             {/* Imagen del Proyecto con Transición */}
-            <div className="flex justify-center items-center sm:w-[570px] sm:h-[500px] w-full h-[300px]  frame-red rounded-md overflow-hidden">
+            <div className="flex justify-center items-center sm:w-[35.625em] sm:h-[31.25em] w-full h-[18.75em]  frame-red rounded-[0.375em] overflow-hidden">
                 <img
                     src={imageSrc}
                     alt={Tittle}
@@ -36,22 +36,22 @@ const ContainerProject_Recent = ({ Tittle, Description, Image, ImageLight, Githu
             </div>
 
             {/* Contenido del Proyecto */}
-            <div className="flex flex-col justify-center gap-4 sm:gap-12 items-center sm:items-start sm:w-[200px] sm:h-auto w-full h-auto">
+            <div className="flex flex-col justify-center gap-[1em] sm:gap-[3em] items-center sm:items-start sm:w-[12.5em] sm:h-auto w-full h-auto">
                 {/* Título */}
-                <div className="flex flex-col justify-center items-center sm:items-start h-[50px]">
+                <div className="flex flex-col justify-center items-center sm:items-start h-[3.125em]">
                     <h2 className="font_juan_title_projects">{Tittle}</h2>
                 </div>
                 {/* Descripción */}
-                <div className="flex flex-col justify-center items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[100px] mt-2 mb-4">
-                    <p className="text-red-400 dark:text-red-200 text-sm">{Description}</p>
+                <div className="flex flex-col justify-center items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[6.25em] mt-[0.5em] mb-[1em]">
+                    <p className="text-red-400 dark:text-red-200 text-[0.875em]">{Description}</p>
                 </div>
                 {/* Botones */}
-                <div className="flex flex-row gap-2 justify-center sm:justify-start items-last w-[180px] h-[70px] sm:w-full">
+                <div className="flex flex-row gap-[0.5em] justify-center sm:justify-start items-last w-[11.25em] h-[4.375em] sm:w-full">
                     <ButtonProject url={Github}>
-                        <IoGitBranchOutline size={18} />
+                        <IoGitBranchOutline size="1.125em" />
                     </ButtonProject>
                     <ButtonProject url={Deploy}>
-                        <MdOutlineArrowOutward size={18} />
+                        <MdOutlineArrowOutward size="1.125em" />
                     </ButtonProject>
                 </div>
             </div>

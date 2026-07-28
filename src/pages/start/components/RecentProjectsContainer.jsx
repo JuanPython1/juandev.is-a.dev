@@ -8,7 +8,7 @@ export default function ProyectContainer() {
 
     return (
         <>
-            <h2 className="text-center md:text-3xl font_juan_tittle">
+            <h2 className="text-center font_juan_tittle">
                 {t('projects.recentTitle')}
             </h2>
 
