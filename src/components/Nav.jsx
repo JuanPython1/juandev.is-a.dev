@@ -1,7 +1,7 @@
 import { BookUser, TentTree, UserSearch } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import ButtonLanguage from './buttonLanguage/ButtonLanguage';
 import ButtonThemeMode from './buttonThemeMode/ButtonThemeMode';
@@ -15,16 +15,43 @@ const links = [
 export default function Nav() {
     const { t } = useTranslation();
     const location = useLocation();
+    const navigate = useNavigate();
+    const navRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const lastNavigate = useRef(0);
 
     useEffect(() => {
         const currentLinkIndex = links.findIndex(link => link.to === location.pathname);
         setActiveIndex(currentLinkIndex);
     }, [location]);
 
+    const handleWheel = useCallback((e) => {
+        if (Math.abs(e.deltaX) < Math.abs(e.deltaY) * 1.5) return;
+
+        e.preventDefault();
+
+        const now = Date.now();
+        if (now - lastNavigate.current < 1000) return;
+
+        const direction = e.deltaX > 0 ? 1 : -1;
+        const currentIndex = links.findIndex(link => link.to === location.pathname);
+        const nextIndex = Math.max(0, Math.min(links.length - 1, currentIndex + direction));
+
+        if (nextIndex !== currentIndex) {
+            lastNavigate.current = now;
+            navigate(links[nextIndex].to);
+        }
+    }, [location.pathname, navigate]);
+
+    useEffect(() => {
+        window.addEventListener('wheel', handleWheel, { passive: false });
+        return () => window.removeEventListener('wheel', handleWheel);
+    }, [handleWheel]);
+
     return (
         //Componente de Navegacion
         <nav
+            ref={navRef}
             className="flex flex-col gap-[0.75em] fixed bottom-[5%] left-1/2 transform -translate-x-1/2 justify-center rounded-[0.375em] p-[0.75em] items-center h-auto surface-panel nav-shadow z-10"
             style={{ fontSize: 'var(--zoom-scale)' }}
         >
