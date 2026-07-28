@@ -12,31 +12,31 @@ export default function FrameworksCuber() {
         <div className="cube">
             <div className="face front relative group ">
                 <div className="face front flex justify-center items-center">
-                    <FaReact className="w-20 h-20 react-icon-color" />
+                    <FaReact className="cube-icon react-icon-color" />
                 </div>
                 <Tooltip3D label="React" />
             </div>
             <div className="face back relative group">
                 <div className="face front flex justify-center items-center">
-                    <SiNextdotjs className="w-20 h-20 next-icon-color" />
+                    <SiNextdotjs className="cube-icon next-icon-color" />
                 </div>
                 <Tooltip3D label="Next.js" />
             </div>
             <div className="face left relative group">
                 <div className="face front flex justify-center items-center pointer-events-none">
-                    <BiLogoTypescript className="w-40 h-40 typescript-icon-color" />
+                    <BiLogoTypescript className="cube-icon-lg typescript-icon-color" />
                 </div>
                 <Tooltip3D label="Typescript" />
             </div>
             <div className="face right relative group">
                 <div className="face front flex justify-center items-center">
-                    <SvgExpo className="w-20 h-20 expo-icon-color " />
+                    <SvgExpo className="cube-icon expo-icon-color " />
                 </div>
                 <Tooltip3D label="Expo" />
             </div>
             <div className="face top relative group">
                 <div className="face front flex justify-center items-center">
-                    <FaJs className="w-20 h-20 js-icon-color" />
+                    <FaJs className="cube-icon js-icon-color" />
                 </div>
                 <Tooltip3D label="JavaScript" />
             </div>

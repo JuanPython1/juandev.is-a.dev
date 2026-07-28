@@ -11,13 +11,13 @@ export default function ButtonLanguage() {
 
     return (
         <div className="relative group" aria-label={t('language.toggle')}>
-            <IoLanguageOutline className="icon-brick-toggle" size={20} />
+            <IoLanguageOutline className="icon-brick-toggle" size="1.25em" />
 
             {/* Puente invisible: mantiene el hover activo en el espacio entre el ícono y el tooltip */}
-            <div className="absolute z-10 bottom-full left-1/2 -translate-x-1/2 w-10 h-3"></div>
+            <div className="absolute z-10 bottom-full left-1/2 -translate-x-1/2 w-[2.5em] h-[0.75em]"></div>
 
-            <div className="absolute z-20 bottom-full left-1/2 transform -translate-x-1/2 mb-3 hidden group-hover:flex group-focus-within:flex flex-row gap-1 bg-zinc-700 text-cream font_tooltip text-xs rounded py-1 px-2 transition-all opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 animate-tooltip">
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-zinc-700 rotate-45"></span>
+            <div className="absolute z-20 bottom-full left-1/2 transform -translate-x-1/2 mb-[0.75em] hidden group-hover:flex group-focus-within:flex flex-row gap-[0.25em] bg-zinc-700 text-cream font_tooltip rounded-[0.25em] py-[0.25em] px-[0.5em] transition-all opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 animate-tooltip">
+                <span className="absolute -bottom-[0.25em] left-1/2 -translate-x-1/2 w-[0.5em] h-[0.5em] bg-zinc-700 rotate-45"></span>
                 {LANGUAGES.map((lang) => (
                     <button
                         key={lang}
@@ -28,7 +28,7 @@ export default function ButtonLanguage() {
                             event.currentTarget.blur();
                         }}
                         className={cn(
-                            'px-2 py-1 rounded uppercase transition-colors',
+                            'px-[0.5em] py-[0.25em] rounded-[0.25em] uppercase transition-colors',
                             lang === currentLanguage ? 'bg-red-300 text-zinc-900' : 'hover:bg-zinc-600'
                         )}
                     >

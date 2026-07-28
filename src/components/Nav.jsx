@@ -7,9 +7,9 @@ import ButtonLanguage from './buttonLanguage/ButtonLanguage';
 import ButtonThemeMode from './buttonThemeMode/ButtonThemeMode';
 
 const links = [
-    { to: '/', altKey: 'nav.home', labelKey: null, label: 'Sr. Juan', icon: <TentTree /> },
-    { to: '/about', altKey: 'nav.about', labelKey: 'nav.about', icon: <BookUser /> },
-    { to: '/contact', altKey: 'nav.contact', labelKey: 'nav.contact', icon: <UserSearch /> },
+    { to: '/', altKey: 'nav.home', labelKey: null, label: 'Sr. Juan', icon: <TentTree size="1.5em" /> },
+    { to: '/about', altKey: 'nav.about', labelKey: 'nav.about', icon: <BookUser size="1.5em" /> },
+    { to: '/contact', altKey: 'nav.contact', labelKey: 'nav.contact', icon: <UserSearch size="1.5em" /> },
 ];
 
 export default function Nav() {
@@ -24,21 +24,24 @@ export default function Nav() {
 
     return (
         //Componente de Navegacion
-        <nav className="flex flex-col gap-3 fixed bottom-[5%] left-1/2 transform -translate-x-1/2 justify-center rounded-md p-3 items-center text-lg h-auto surface-panel shadow-sm dark:shadow-zinc-700 z-10">
+        <nav
+            className="flex flex-col gap-[0.75em] fixed bottom-[5%] left-1/2 transform -translate-x-1/2 justify-center rounded-[0.375em] p-[0.75em] items-center h-auto surface-panel nav-shadow z-10"
+            style={{ fontSize: 'var(--zoom-scale)' }}
+        >
 
             {/* Indicador rojo de la pagina activa*/}
             <div
                 //backgroud modo claro: bg-red-500
-                className="absolute left-[6%] top-[11%] transition-all duration-300 ease-in-out bg-zinc-700 dark:bg-red-300 rounded-lg z-10"
+                className="absolute left-[6%] top-[11%] transition-all duration-300 ease-in-out bg-zinc-700 dark:bg-red-300 rounded-[0.5em] z-10"
                 style={{
-                    width: '49px',
-                    height: '49px',
-                    transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * 63}px)`,
+                    width: '3.0625em',
+                    height: '3.0625em',
+                    transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * 3.9375}em)`,
                 }}
             ></div>
 
             {/* Links */}
-            <div className="relative flex flex-row items-center space-x-4 font_juan ">
+            <div className="relative flex flex-row items-center gap-[1em] font_juan ">
 
                 {links.map(({ to, altKey, icon }) => (
                     <Link
@@ -46,7 +49,7 @@ export default function Nav() {
                         to={to}
                         aria-label={t(altKey)}
                         className={cn(
-                            'flex flex-row p-3 relative z-10 rounded-lg dark:hover:text-red-500 hover:text-red-300 hover:underline',
+                            'flex flex-row p-[0.75em] relative z-10 rounded-[0.5em] dark:hover:text-red-500 hover:text-red-300 hover:underline',
                             location.pathname === to ? 'text-red-300 dark:text-red-500 underline' : 'text-cream'
                         )}
                     >
@@ -56,10 +59,10 @@ export default function Nav() {
             </div>
 
             {/* Nombre de la pagina activa */}
-            <div className='flex flex-row items-center justify-center space-x-3'>
+            <div className='flex flex-row items-center justify-center gap-[0.75em]'>
                 <ButtonLanguage />
-                <div className='flex items-center justify-center w-[60px]'>
-                    <h3 className="text-2xl font_juan_name">
+                <div className='flex items-center justify-center min-w-[3.75em]'>
+                    <h3 className="font_juan_name whitespace-nowrap">
                     {links[activeIndex] ? (links[activeIndex].labelKey ? t(links[activeIndex].labelKey) : links[activeIndex].label) : '???'}
                 </h3>
                 </div>

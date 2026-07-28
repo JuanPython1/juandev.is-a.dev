@@ -1,8 +1,9 @@
 .cube {
+  --cube-size: 4.4em;
   display: flex;
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: var(--cube-size);
+  height: var(--cube-size);
   transform-style: preserve-3d;
   transform: rotateX(-30deg) rotateY(-30deg);
   animation: rotate 6.3s infinite linear;
@@ -10,15 +11,25 @@
 
 .face {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: var(--cube-size);
+  height: var(--cube-size);
   background-color: blanchedalmond;
   border: 0.5px solid #ccc;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
+}
+
+.cube-icon {
+  width: calc(var(--cube-size) * 0.8);
+  height: calc(var(--cube-size) * 0.8);
+}
+
+.cube-icon-lg {
+  width: calc(var(--cube-size) * 1.6);
+  height: calc(var(--cube-size) * 1.6);
 }
 
 .front {
-  transform: rotateY(0deg) translateZ(50px);
+  transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .react-icon-color {
@@ -32,7 +43,7 @@
 }
 
 .back {
-  transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .next-icon-color {
@@ -47,7 +58,7 @@
 
 
 .left {
-  transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .typescript-icon-color {
@@ -61,7 +72,7 @@
 }
 
 .right {
-  transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .expo-icon-color {
@@ -75,7 +86,7 @@
 }
 
 .top {
-  transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .js-icon-color {
@@ -89,7 +100,7 @@
 }
 
 .bottom {
-  transform: rotateX(-90deg) translateZ(50px);
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 img {

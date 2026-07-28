@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Escala que contrarresta el zoom del navegador: crece en vmin (ancho
+     y alto) sin tope, para que el tamaño percibido de la UI (hero, nav,
+     puntitos de fondo) se mantenga igual sin importar el zoom. Piso de
+     13px solo para legibilidad en pantallas chicas. */
+  --zoom-scale: max(13px, 2.2vmin);
+}
+
 @layer components {
   /* Panel/superficie con transición de tema (Layout, Nav, Trajectory card) */
   .surface-panel {
@@ -13,7 +21,17 @@
 
   /* Patrón de puntos de fondo (Layout, Trajectory card) */
   .bg-dot-grid {
-    @apply bg-[radial-gradient(circle,_#000_1px,_transparent_1px)] bg-[size:20px_20px];
+    background-image: radial-gradient(circle, #000 calc(var(--zoom-scale) * 0.0625), transparent calc(var(--zoom-scale) * 0.0625));
+    background-size: calc(var(--zoom-scale) * 1.25) calc(var(--zoom-scale) * 1.25);
+  }
+
+  /* Sombra del Nav en unidades relativas a --zoom-scale: shadow-sm de Tailwind
+     usa px fijos y se pierde ópticamente al alejar el zoom (ver bg-dot-grid). */
+  .nav-shadow {
+    box-shadow: 0 calc(var(--zoom-scale) * 0.0625) calc(var(--zoom-scale) * 0.125) 0 rgb(0 0 0 / 0.05);
+  }
+  .dark .nav-shadow {
+    box-shadow: 0 calc(var(--zoom-scale) * 0.0625) calc(var(--zoom-scale) * 0.125) 0 rgb(63 63 70 / 1);
   }
 
   /* Esquema rojo de ícono con hover (ButtonLanguage, ButtonThemeMode) */
@@ -43,19 +61,18 @@ body {
 
 .font_juan {
   color: blanchedalmond;
-  font-size: medium;
 }
 
 .font_juan_tittle_SrJuan {
   color: blanchedalmond;
-  font-size: large;
+  font-size: 1.15em;
 }
 
 .font_juan_intro {
   color: blanchedalmond;
   font-display: swap;
   font-style: italic;
-  font-size: medium;
+  font-size: 0.9em;
   text-align: justify;
   font-stretch: expanded;
   line-height: 2;
@@ -92,7 +109,7 @@ body {
 
 .font_juan_name {
   color:  blanchedalmond;
-  font-size: small;
+  font-size: 0.85em;
 }
 
 
@@ -103,7 +120,7 @@ body {
 }
 
 .font_tooltip {
-  font-size: small;
+  font-size: 0.75em;
 }
 
 .font_text_faces_cube {
