@@ -4,8 +4,8 @@ export default function about() {
     const { t } = useTranslation();
 
     return (
-        <section className="flex w-max h-max my-56 mx-auto animationBlurIn">
-            <h1 className="text-2xl md:text-4xl text-red-300 font-iosevka">{t('about.comingSoon')}</h1>
+        <section className="flex w-max h-max my-[14em] mx-auto animationBlurIn zoom-scale-root">
+            <h1 className="text-[1.5em] md:text-[2.25em] text-red-300 font-iosevka">{t('about.comingSoon')}</h1>
         </section>
     )
 }
