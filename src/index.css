@@ -44,6 +44,32 @@
     @apply border-[0.0625em] border-red-300 dark:border-red-200;
   }
 
+  /* Scroll interno acorde al tema, en vez del scrollbar nativo del navegador
+     (descripción de ContainerProject_Recent) */
+  .scrollbar-theme {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.red.300') transparent;
+  }
+  .dark .scrollbar-theme {
+    scrollbar-color: theme('colors.red.200') transparent;
+  }
+  .scrollbar-theme::-webkit-scrollbar {
+    width: 0.375em;
+  }
+  .scrollbar-theme::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-theme::-webkit-scrollbar-thumb {
+    background-color: theme('colors.red.300');
+    border-radius: 999px;
+  }
+  .dark .scrollbar-theme::-webkit-scrollbar-thumb {
+    background-color: theme('colors.red.200');
+  }
+  .scrollbar-theme::-webkit-scrollbar-thumb:hover {
+    background-color: theme('colors.red.400');
+  }
+
   /* Wrapper de secciones (start.jsx) — combinar con la clase animationBlurIn */
   .section-blur {
     @apply flex flex-col gap-[4em] md:gap-[6em] justify-center items-center p-[2.5em] mx-auto;

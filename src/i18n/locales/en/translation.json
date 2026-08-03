@@ -23,8 +23,8 @@
         "description": "This website is more than just a portfolio—it's a dynamic showcase of my skills and projects, built with React and Vite for optimal performance and modern web development practices."
       },
       "unabase": {
-        "title": "unabase ERP",
-        "description": "A business management platform that centralizes sales, purchases, expenses, accounting, and financial reporting in a single dashboard, helping businesses make real-time, data-driven decisions."
+        "title": "VxPro unabase",
+        "description": "A new version of the ERP business management platform that centralizes sales, purchases, expenses, accounting, and financial reporting in a single dashboard, helping businesses make real-time, data-driven decisions."
       }
     }
   },

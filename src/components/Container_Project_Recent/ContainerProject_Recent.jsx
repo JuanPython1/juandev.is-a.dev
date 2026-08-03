@@ -101,7 +101,7 @@ const ContainerProject_Recent = ({ Projects }) => {
         <>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-0">
             {/* Recuadro del Proyecto */}
-            <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[30em] w-full h-auto frame-red rounded-[0.5em] p-[1em]">
+            <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red rounded-[0.5em] p-[1em]">
                 {/* Imagen del Proyecto con Transición */}
                 <div className="relative flex justify-center items-center sm:w-[35.625em] w-full aspect-[1.62] frame-red rounded-[0.375em] overflow-hidden">
                     <img
@@ -126,20 +126,20 @@ const ContainerProject_Recent = ({ Projects }) => {
                 {/* Contenido del Proyecto */}
                 <div
                     className={cn(
-                        "flex flex-col justify-center gap-[1em] sm:gap-[3em] items-center sm:items-start sm:w-[12.5em] sm:h-auto w-full h-auto transition-opacity duration-300",
+                        "flex flex-col justify-center gap-[1em] sm:gap-0 items-center sm:items-start sm:w-[12.5em] sm:h-auto w-full h-auto transition-opacity duration-300",
                         fade ? "opacity-0" : "opacity-100"
                     )}
                 >
                     {/* Título */}
-                    <div className="flex flex-col justify-center items-center sm:items-start h-[3.125em]">
+                    <div className="flex flex-col justify-center items-center sm:items-start h-[3.125em] sm:h-auto sm:mb-[0.25em]">
                         <h2 className="font_juan_title_projects">{t(`projects.items.${activeProject.id}.title`)}</h2>
                     </div>
                     {/* Descripción */}
-                    <div className="flex flex-col justify-center items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[6.25em] mt-[0.5em] mb-[1em]">
+                    <div className="flex flex-col justify-start items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[15.75em] mt-0 mb-0 sm:mb-[0.5em] overflow-y-auto scrollbar-theme pr-[0.5em]">
                         <p className="text-red-400 dark:text-red-200 text-[0.875em]">{t(`projects.items.${activeProject.id}.description`)}</p>
                     </div>
                     {/* Botones */}
-                    <div className="flex flex-row gap-[0.5em] justify-center sm:justify-start items-last w-[11.25em] h-[4.375em] sm:w-full mt-[0.375em] sm:mt-[0.5em]">
+                    <div className="flex flex-row gap-[0.5em] justify-center sm:justify-start items-last w-[11.25em] h-[4.375em] sm:h-auto sm:w-full mt-[0.375em] sm:mt-0">
                         <ButtonProject url={activeProject.github}>
                             <IoGitBranchOutline size="1.125em" />
                         </ButtonProject>
