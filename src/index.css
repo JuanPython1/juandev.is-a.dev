@@ -168,5 +168,18 @@ body {
 
 /** contenedor de proyectos **/
 
+@keyframes projectSelectorProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 
+.animate-project-selector-progress {
+  animation-name: projectSelectorProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
 

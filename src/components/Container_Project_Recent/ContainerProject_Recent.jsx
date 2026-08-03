@@ -5,11 +5,14 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { cn } from "@/lib/utils";
 import ButtonProject from "@components/buttonProject/ButtonProject";
 
+const AUTO_ADVANCE_MS = 8000;
+
 const ContainerProject_Recent = ({ Projects }) => {
     const { t } = useTranslation();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [theme, setTheme] = useState(document.documentElement.classList.contains("dark") ? "dark" : "light");
     const [fade, setFade] = useState(false);
+    const [autoPlay, setAutoPlay] = useState(true);
 
     const activeProject = Projects[selectedIndex];
     const imageSrc = theme === "dark" ? activeProject.imgLight : activeProject.img;
@@ -28,7 +31,22 @@ const ContainerProject_Recent = ({ Projects }) => {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        if (!autoPlay || Projects.length <= 1) return;
+
+        const timer = setTimeout(() => {
+            setFade(true);
+            setTimeout(() => {
+                setSelectedIndex((prev) => (prev + 1) % Projects.length);
+                setFade(false);
+            }, 150);
+        }, AUTO_ADVANCE_MS);
+
+        return () => clearTimeout(timer);
+    }, [autoPlay, selectedIndex, Projects.length]);
+
     const handleSelect = (index) => {
+        setAutoPlay(false);
         if (index === selectedIndex) return;
         setFade(true);
         setTimeout(() => {
@@ -89,13 +107,20 @@ const ContainerProject_Recent = ({ Projects }) => {
                             onClick={() => handleSelect(index)}
                             aria-current={index === selectedIndex}
                             className={cn(
-                                "flex items-center justify-center sm:justify-start px-[0.625em] py-[0.375em] w-[7em] sm:w-[10em] min-h-[2em] sm:min-h-[3em] text-center sm:text-start break-words rounded-[0.375em] sm:rounded-l-none sm:rounded-r-[0.5em] border-[0.0625em] sm:border-l-0 border-red-300 dark:border-red-200 font_juan_title_projects leading-snug transition-colors duration-300",
+                                "relative overflow-hidden flex items-center justify-center sm:justify-start px-[0.625em] py-[0.375em] w-[7em] sm:w-[10em] min-h-[2em] sm:min-h-[3em] text-center sm:text-start break-words rounded-[0.375em] sm:rounded-l-none sm:rounded-r-[0.5em] border-[0.0625em] sm:border-l-0 border-red-300 dark:border-red-200 font_juan_title_projects leading-snug transition-colors duration-300",
                                 index === selectedIndex
                                     ? "bg-brick dark:bg-red-300"
                                     : "bg-transparent hover:bg-red-300/20 dark:hover:bg-red-400/20"
                             )}
                         >
                             <h2>{t(`projects.items.${project.id}.title`)}</h2>
+                            {index === selectedIndex && autoPlay && (
+                                <span
+                                    aria-hidden="true"
+                                    className="absolute left-0 bottom-0 h-[0.1875em] bg-cream/80 dark:bg-white/80 animate-project-selector-progress"
+                                    style={{ animationDuration: `${AUTO_ADVANCE_MS}ms` }}
+                                />
+                            )}
                         </button>
                     ))}
                 </div>
