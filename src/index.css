@@ -27,11 +27,11 @@
 
   /* Sombra del Nav en unidades relativas a --zoom-scale: shadow-sm de Tailwind
      usa px fijos y se pierde ópticamente al alejar el zoom (ver bg-dot-grid). */
-  .nav-shadow {
-    box-shadow: 0 calc(var(--zoom-scale) * 0.0625) calc(var(--zoom-scale) * 0.125) 0 rgb(0 0 0 / 0.05);
-  }
   .dark .nav-shadow {
-    box-shadow: 0 calc(var(--zoom-scale) * 0.0625) calc(var(--zoom-scale) * 0.125) 0 rgb(63 63 70 / 1);
+    box-shadow: 0 calc(var(--zoom-scale) * 0.0625) calc(var(--zoom-scale) * 0.125) 0 rgb(0 0 0 / 0.3);
+  }
+   .nav-shadow {
+    box-shadow: 0 calc(var(--zoom-scale) * 0.0625) calc(var(--zoom-scale) * 0.125) 0 rgb(255 255 255 / 0.15);
   }
 
   /* Esquema rojo de ícono con hover (ButtonLanguage, ButtonThemeMode) */
