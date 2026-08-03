@@ -92,7 +92,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                         attached && "sm:justify-start sm:min-h-[3em] sm:text-start sm:rounded-l-none sm:rounded-r-[0.5em] sm:border-l-0",
                         index === selectedIndex
                             ? "bg-brick dark:bg-red-300"
-                            : "bg-transparent hover:bg-red-300/20 dark:hover:bg-red-400/20"
+                            : "bg-charcoal dark:bg-brick hover:bg-red-300 dark:hover:bg-red-400"
                     )}
                 >
                     <h2>{t(`projects.items.${project.id}.title`)}</h2>
@@ -112,7 +112,7 @@ const ContainerProject_Recent = ({ Projects }) => {
         <>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-0">
             {/* Recuadro del Proyecto */}
-            <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red rounded-[0.5em] p-[1em]">
+            <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red surface-panel rounded-[0.5em] p-[1em]">
                 {/* Imagen del Proyecto con Transición */}
                 <div className="relative flex justify-center items-center sm:w-[35.625em] w-full aspect-[1.62] frame-red rounded-[0.375em] overflow-hidden">
                     <img
