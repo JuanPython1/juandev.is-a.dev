@@ -15,6 +15,8 @@
   "projects": {
     "recentTitle": "Proyectos recientes",
     "private": "Privado",
+    "viewFullscreen": "Ver en pantalla completa",
+    "closeFullscreen": "Cerrar",
     "items": {
       "juandev-website": {
         "title": "sitio web juandev",

@@ -15,6 +15,8 @@
   "projects": {
     "recentTitle": "Recent Projects",
     "private": "Private",
+    "viewFullscreen": "View fullscreen",
+    "closeFullscreen": "Close",
     "items": {
       "juandev-website": {
         "title": "juandev website",
