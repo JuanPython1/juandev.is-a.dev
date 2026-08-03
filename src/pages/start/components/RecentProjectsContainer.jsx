@@ -4,7 +4,7 @@ import ProjectsRecentsLocal from "@data/Projects.json";
 
 export default function ProyectContainer() {
     const { t } = useTranslation();
-    const projectsRecents = ProjectsRecentsLocal.Projects;
+    const projects = ProjectsRecentsLocal.Projects.flatMap((group) => group.ProjectsRecent);
 
     return (
         <>
@@ -12,20 +12,7 @@ export default function ProyectContainer() {
                 {t('projects.recentTitle')}
             </h2>
 
-            {projectsRecents.map((projectGroup, index) =>
-                projectGroup.ProjectsRecent.map((project, subIndex) => (
-                    <div key={`${index}-${subIndex}`}>
-                        <ContainerProject_Recent
-                            Tittle={t(`projects.items.${project.id}.title`)}
-                            Description={t(`projects.items.${project.id}.description`)}
-                            Image={project.img}
-                            ImageLight={project.imgLight}
-                            Github={project.github}
-                            Deploy={project.deploy}
-                        />
-                    </div>
-                ))
-            )}
+            <ContainerProject_Recent Projects={projects} />
         </>
     );
 }

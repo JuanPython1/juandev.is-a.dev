@@ -13,11 +13,15 @@
     "trajectoryTitle": "Trayectoria de aprendizaje"
   },
   "projects": {
-    "recentTitle": "Proyectos recientes 2025",
+    "recentTitle": "Proyectos recientes",
     "items": {
       "juandev-website": {
         "title": "sitio web juandev",
         "description": "Este sitio web es mucho más que un portafolio: es una muestra dinámica de mis habilidades y proyectos, construido con React y Vite para lograr un rendimiento óptimo y seguir las prácticas modernas de desarrollo web."
+      },
+      "unabase": {
+        "title": "unabase ERP",
+        "description": "Plataforma de gestión empresarial que centraliza ventas, compras, gastos, contabilidad y reportes financieros en un solo dashboard, ayudando a los negocios a tomar decisiones basadas en datos en tiempo real."
       }
     }
   },
