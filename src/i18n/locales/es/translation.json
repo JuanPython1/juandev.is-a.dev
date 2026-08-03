@@ -1,55 +1,55 @@
 {
-    "nav": {
-        "home": "Inicio",
-        "about": "Sobre mí",
-        "contact": "Contacto"
-    },
-    "language": {
-        "toggle": "Cambiar idioma"
-    },
-    "start": {
-        "greeting": "Hola, este es el sitio web de Juan 🐋",
-        "intro": "Soy estudiante de Ingeniería de Sistemas, actualmente cursando décimo semestre. Me especializo en desarrollo web y móvil con React, usando el framework Next.js, y con React Native usando el framework Expo. Recientemente he estado explorando la integración de inteligencia artificial en mis proyectos, aprovechando tecnologías de IA para mejorar la experiencia de usuario y agilizar los procesos de desarrollo.",
-        "trajectoryTitle": "Trayectoria de aprendizaje"
-    },
-    "projects": {
-        "recentTitle": "Proyectos recientes 2025",
-        "items": {
-            "juandev-website": {
-                "title": "sitio web juandev",
-                "description": "Este sitio web es mucho más que un portafolio: es una muestra dinámica de mis habilidades y proyectos, construido con React y Vite para lograr un rendimiento óptimo y seguir las prácticas modernas de desarrollo web."
-            }
-        }
-    },
-    "trajectory": {
-        "2018": {
-            "toolTitle": "Lenguajes básicos",
-            "description": "Empecé adquiriendo conocimientos esenciales de semántica, estilos y programación web."
-        },
-        "2021": {
-            "toolTitle": "Librería y RDB",
-            "description": "Empecé a trabajar en proyectos con React."
-        },
-        "2022": {
-            "toolTitle": "Librería y BaaS",
-            "description": "Aprendí sobre desarrollo móvil con React Native."
-        },
-        "2023": {
-            "toolTitle": "Framework y BaaS",
-            "description": "Desarrollé una aplicación móvil con Expo."
-        },
-        "2024": {
-            "toolTitle": "IA, framework y BaaS",
-            "description": "Empecé a trabajar con inteligencia artificial y proyectos en Next.js."
-        }
-    },
-    "about": {
-        "comingSoon": "Sobre mí Próximamente...."
-    },
-    "contact": {
-        "comingSoon": "Contacto Próximamente..."
-    },
-    "footer": {
-        "copyright": "©{{year}} SrJuan.dev - Desarrollador Web y Móvil. Todos los derechos reservados."
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "language": {
+    "toggle": "Cambiar idioma"
+  },
+  "start": {
+    "greeting": "Hola, este es el sitio web de Juan 🐋",
+    "intro": "¡Hola! Soy Juan, Ingeniero de Sistemas y desarrollador Full Stack con experiencia desarrollando software para una empresa multinacional. Me especializo principalmente en el desarrollo de aplicaciones web con Nuxt y Vue, y aplicaciones móviles con React Native y Expo. También desarrollo APIs con Express.js y MongoDB, e integro soluciones de inteligencia artificial para crear software escalable y optimizar procesos.",
+    "trajectoryTitle": "Trayectoria de aprendizaje"
+  },
+  "projects": {
+    "recentTitle": "Proyectos recientes 2025",
+    "items": {
+      "juandev-website": {
+        "title": "sitio web juandev",
+        "description": "Este sitio web es mucho más que un portafolio: es una muestra dinámica de mis habilidades y proyectos, construido con React y Vite para lograr un rendimiento óptimo y seguir las prácticas modernas de desarrollo web."
+      }
     }
+  },
+  "trajectory": {
+    "2018": {
+      "toolTitle": "Lenguajes básicos",
+      "description": "Empecé adquiriendo conocimientos esenciales de semántica, estilos y programación web."
+    },
+    "2021": {
+      "toolTitle": "Librería y RDB",
+      "description": "Empecé a trabajar en proyectos con React."
+    },
+    "2022": {
+      "toolTitle": "Librería y BaaS",
+      "description": "Aprendí sobre desarrollo móvil con React Native."
+    },
+    "2023": {
+      "toolTitle": "Framework y BaaS",
+      "description": "Desarrollé una aplicación móvil con Expo."
+    },
+    "2024": {
+      "toolTitle": "IA, framework y BaaS",
+      "description": "Empecé a trabajar con inteligencia artificial y proyectos en Next.js."
+    }
+  },
+  "about": {
+    "comingSoon": "Sobre mí Próximamente...."
+  },
+  "contact": {
+    "comingSoon": "Contacto Próximamente..."
+  },
+  "footer": {
+    "copyright": "©{{year}} SrJuan.dev - Desarrollador Web y Móvil. Todos los derechos reservados."
+  }
 }
