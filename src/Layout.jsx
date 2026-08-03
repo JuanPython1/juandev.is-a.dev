@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer'
 import Nav from '@/components/Nav'
 import { Suspense } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import Loading from './Loading'
 
 
@@ -20,6 +20,8 @@ export default function Layout() {
             <footer className='mt-auto'>
                 <Footer />
             </footer>
+
+            <ScrollRestoration />
 
         </div>
 
