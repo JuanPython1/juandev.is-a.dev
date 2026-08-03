@@ -88,7 +88,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                     onClick={() => handleSelect(index)}
                     aria-current={index === selectedIndex}
                     className={cn(
-                        "relative overflow-hidden flex items-center justify-center px-[0.625em] py-[0.375em] w-[7em] sm:w-[10em] min-h-[2em] text-center break-words rounded-[0.375em] border-[0.0625em] border-red-300 dark:border-red-200 font_juan_title_projects leading-snug transition-colors duration-300",
+                        "relative overflow-hidden flex items-center justify-center px-[0.625em] py-[0.375em] w-[7em] sm:w-[10em] min-h-[2em] text-center break-words rounded-[0.375em] border-[0.09375em] border-red-300 dark:border-red-200 font_juan_title_projects leading-snug transition-colors duration-300",
                         attached && "sm:justify-start sm:min-h-[3em] sm:text-start sm:rounded-l-none sm:rounded-r-[0.5em] sm:border-l-0",
                         index === selectedIndex
                             ? "bg-brick dark:bg-red-300"

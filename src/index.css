@@ -41,7 +41,7 @@
 
   /* Borde rojo de tarjeta (ContainerProject_Recent) */
   .frame-red {
-    @apply border-[0.0625em] border-red-300 dark:border-red-200;
+    @apply border-[0.09375em] border-red-300 dark:border-red-200;
   }
 
   /* Scroll global acorde al tema, en vez del scrollbar nativo del navegador */
