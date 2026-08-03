@@ -1,1 +1,0 @@
-import{j as t}from"./index-5yo8OxVy.js";import{u as e}from"./useTranslation-DU5UBUw2.js";function s(){const{t:o}=e();return t.jsx("section",{className:"flex w-max h-max my-[14em] mx-auto animationBlurIn zoom-scale-root",children:t.jsx("h1",{className:"text-[1.5em] md:text-[2.25em] text-red-300 font-iosevka",children:o("about.comingSoon")})})}export{s as default};
