@@ -110,7 +110,7 @@ const ContainerProject_Recent = ({ Projects }) => {
 
     return (
         <>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-0">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-[1em] sm:gap-0">
             {/* Recuadro del Proyecto */}
             <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red surface-panel rounded-[0.5em] p-[1em]">
                 {/* Imagen del Proyecto con Transición */}
@@ -164,7 +164,7 @@ const ContainerProject_Recent = ({ Projects }) => {
             </div>
 
             {/* Selector de Proyectos */}
-            {renderProjectSelector("flex sm:flex-col flex-row gap-[0.5em] sm:gap-[0.375em]")}
+            {renderProjectSelector("flex sm:flex-col flex-row gap-[1em] sm:gap-[0.375em]")}
         </div>
 
         {isLightboxOpen &&
