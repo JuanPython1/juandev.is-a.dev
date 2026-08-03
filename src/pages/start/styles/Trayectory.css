@@ -1,3 +1,5 @@
+/* Posición (top) y color (border-top-color) se controlan por JS en
+   Trajectory.jsx, en función del scroll — ver FOCUS_RATIO. */
 .triangle {
   position: absolute;
   left: 50%;
@@ -7,25 +9,4 @@
   border-left: 0.375em solid transparent;
   border-right: 0.375em solid transparent;
   border-top: 1.5625em solid #ffebcd;
-}
-
-.animation {
-  animation-timeline: scroll(); 
-  animation-delay: 4.8s;
-  animation-duration: 5s;   
-  animation-name: appear;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out; 
-}
-
-@keyframes appear {
-  0% {
-    top: 0%;
-    border-top-color: #ffebcd;
-  }
- 
-  100% {
-    top: 100%;
-    border-top-color: #ff6347;
-  }
 }
