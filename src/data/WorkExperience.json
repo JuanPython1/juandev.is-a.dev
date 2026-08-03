@@ -1,0 +1,18 @@
+{
+    "experiences": [
+        {
+            "id": "unabase",
+            "period": "Feb 2025",
+            "current": true,
+            "type": "work",
+            "tech": ["Nuxt 3", "Express.js", "MongoDB", "Google OAuth", "CI/CD", "Claude Code", "OpenAI API"]
+        },
+        {
+            "id": "usc-comba",
+            "period": "2020 – 2025",
+            "current": false,
+            "type": "academic",
+            "tech": ["Next.js", "Laravel", "Investigación aplicada"]
+        }
+    ]
+}

@@ -28,6 +28,33 @@
       }
     }
   },
+  "experience": {
+    "sectionTitle": "Work Experience",
+    "current": "Present",
+    "items": {
+      "unabase": {
+        "role": "Full Stack Developer — VxPro Project",
+        "company": "UNABASE SPA",
+        "location": "Remote — Chilean Multinational",
+        "bullets": [
+          "Building a new version of a creative-industry ERP with Nuxt 3, modern interfaces and a scalable architecture.",
+          "Backend with Express.js and MongoDB: REST APIs, Google OAuth authentication and business logic.",
+          "AI integration (Claude Code, OpenAI API) to automate file analysis and code generation.",
+          "CI/CD and Git under Feature/Hotfix strategies, with Scrum, Notion and GitHub for team collaboration."
+        ]
+      },
+      "usc-comba": {
+        "role": "Web Development Lead — COMBA I+D Research Group",
+        "company": "Universidad Santiago de Cali",
+        "location": "Cali, Colombia",
+        "bullets": [
+          "Graduated in Systems Engineering.",
+          "Web development lead at the COMBA I+D research group, working with Next.js.",
+          "Research Assistant at the DGI (General Directorate of Research) as a Laravel web developer."
+        ]
+      }
+    }
+  },
   "trajectory": {
     "2018": {
       "toolTitle": "Basic languages",

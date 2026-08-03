@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import FrameworksCube from "@/pages/start/components/FrameworksCube.jsx";
 import RecentProyectsContainer from "@/pages/start/components/RecentProjectsContainer";
+import WorkExperience from "@/pages/start/components/WorkExperience.jsx";
 import Trajectory from "@/pages/start/components/Trajectory.jsx";
 import './styles/start.css';
 
@@ -28,6 +29,11 @@ export default function Start() {
 
             <section className="section-blur animationBlurIn max-w-[31.25em] zoom-scale-root mt-10 md:mt-24">
                 <RecentProyectsContainer />
+            </section>
+
+            <section className="section-blur animationBlurIn max-w-[50em] zoom-scale-root mt-16 md:mt-40">
+                <h1 className="text-center font_juan_tittle">{t('experience.sectionTitle')}</h1>
+                <WorkExperience />
             </section>
 
             <section className="section-blur animationBlurIn max-w-[62.5em] zoom-scale-root mt-16 md:mt-40">
