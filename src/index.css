@@ -44,29 +44,56 @@
     @apply border-[0.0625em] border-red-300 dark:border-red-200;
   }
 
-  /* Scroll interno acorde al tema, en vez del scrollbar nativo del navegador
-     (descripción de ContainerProject_Recent) */
-  .scrollbar-theme {
+  /* Scroll global acorde al tema, en vez del scrollbar nativo del navegador */
+  /* Scrolls dentro de la página (ej. descripción de ContainerProject_Recent): fondo transparente */
+  *:not(html) {
     scrollbar-width: thin;
     scrollbar-color: theme('colors.red.300') transparent;
   }
-  .dark .scrollbar-theme {
+  .dark *:not(html) {
     scrollbar-color: theme('colors.red.200') transparent;
   }
-  .scrollbar-theme::-webkit-scrollbar {
-    width: 0.375em;
+  /* Scroll del navegador (html): fondo sólido, porque "transparent" cae al blanco por defecto */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.red.300') theme('colors.charcoal');
   }
-  .scrollbar-theme::-webkit-scrollbar-track {
-    background: transparent;
+  html.dark {
+    scrollbar-color: theme('colors.red.200') theme('colors.charcoal');
   }
-  .scrollbar-theme::-webkit-scrollbar-thumb {
+  *::-webkit-scrollbar {
+    width: 0.75em;
+    height: 0.75em;
+  }
+  /* Track: transparente dentro de la página, sólido para el navegador */
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  html::-webkit-scrollbar-track {
+    background-color: theme('colors.charcoal');
+  }
+  /* Thumb: mismo gutter transparente/sólido según sea dentro de la página o el navegador */
+  *::-webkit-scrollbar-thumb {
     background-color: theme('colors.red.300');
+    border: 0.1875em solid transparent;
     border-radius: 999px;
+    background-clip: padding-box;
   }
-  .dark .scrollbar-theme::-webkit-scrollbar-thumb {
+  html::-webkit-scrollbar-thumb {
+    border-color: theme('colors.charcoal');
+  }
+  /* Esquina donde se cruzan los dos scrolls: misma regla que el track */
+  *::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  html::-webkit-scrollbar-corner {
+    background-color: theme('colors.charcoal');
+  }
+  .dark *::-webkit-scrollbar-thumb,
+  html.dark::-webkit-scrollbar-thumb {
     background-color: theme('colors.red.200');
   }
-  .scrollbar-theme::-webkit-scrollbar-thumb:hover {
+  *::-webkit-scrollbar-thumb:hover {
     background-color: theme('colors.red.400');
   }
 

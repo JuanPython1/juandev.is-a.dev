@@ -146,7 +146,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                         <h2 className="font_juan_title_projects">{t(`projects.items.${activeProject.id}.title`)}</h2>
                     </div>
                     {/* Descripción */}
-                    <div className="flex flex-col justify-start items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[15.75em] mt-0 mb-0 sm:mb-[0.5em] overflow-y-auto scrollbar-theme pr-[0.5em]">
+                    <div className="flex flex-col justify-start items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[15.75em] mt-0 mb-0 sm:mb-[0.5em] overflow-y-auto pr-[0.5em]">
                         <p className="text-red-400 dark:text-red-200 text-[0.875em]">{t(`projects.items.${activeProject.id}.description`)}</p>
                     </div>
                     {/* Botones */}
