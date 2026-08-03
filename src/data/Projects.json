@@ -13,7 +13,8 @@
           "id": "unabase",
           "img": "./imgProjects/unabase/unabase.png",
           "imgLight": "./imgProjects/unabase/unabaseLight.png",
-          "github": "private"
+          "github": "private",
+          "deploy": "private"
         }
       ]
     }

@@ -66,7 +66,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                         <p className="text-red-400 dark:text-red-200 text-[0.875em]">{t(`projects.items.${activeProject.id}.description`)}</p>
                     </div>
                     {/* Botones */}
-                    <div className="flex flex-row gap-[0.5em] justify-center sm:justify-start items-last w-[11.25em] h-[4.375em] sm:w-full">
+                    <div className="flex flex-row gap-[0.5em] justify-center sm:justify-start items-last w-[11.25em] h-[4.375em] sm:w-full mt-[0.375em] sm:mt-[0.5em]">
                         <ButtonProject url={activeProject.github}>
                             <IoGitBranchOutline size="1.125em" />
                         </ButtonProject>
