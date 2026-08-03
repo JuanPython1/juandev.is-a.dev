@@ -8,9 +8,9 @@ export default function Start() {
     const { t } = useTranslation();
 
     return (
-        <main className="flex-grow space-y-40">
+        <main className="flex-grow space-y-16 md:space-y-40">
 
-            <section className="relative flex flex-col gap-[3em] min-w-3 max-w-[32em] min-h-screen p-[2em] mx-auto overflow-hidden zoom-scale-root">
+            <section className="relative flex flex-col gap-[3em] min-w-3 max-w-[32em] sm:min-h-screen p-[2em] mx-auto overflow-hidden zoom-scale-root">
 
                 <div className="absolute flex justify-center items-center w-full h-full top-0 left-0">
                     <h1 className="font_juan_tittle_SrJuan title-animation">
