@@ -58,6 +58,17 @@ const ContainerProject_Recent = ({ Projects }) => {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [isLightboxOpen]);
 
+    useEffect(() => {
+        if (!isLightboxOpen) return;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [isLightboxOpen]);
+
     const handleSelect = (index) => {
         setAutoPlay(false);
         if (index === selectedIndex) return;
@@ -173,7 +184,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                     </button>
 
                     <div
-                        className="flex flex-col items-center gap-[1.5em] w-full max-w-[50em] my-auto"
+                        className="flex flex-col items-center gap-[1.5em] w-full max-w-[min(90vw,81vh,90em)] my-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Imagen grande */}
