@@ -75,6 +75,14 @@
     "2024": {
       "toolTitle": "IA, framework y BaaS",
       "description": "Empecé a trabajar con inteligencia artificial y proyectos en Next.js."
+    },
+    "2025": {
+      "toolTitle": "Framework, backend y NoSQL",
+      "description": "Empecé a trabajar profesionalmente en UNABASE, desarrollando un ERP con Nuxt 3 y Express."
+    },
+    "2026": {
+      "toolTitle": "App móvil y BaaS",
+      "description": "Desarrollé FoodSaver, una app Android enfocada en reducir el desperdicio de alimentos."
     }
   },
   "about": {

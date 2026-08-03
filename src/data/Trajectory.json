@@ -4,19 +4,15 @@
             "year": "2018",
             "framework": {
                 "html": {
-                    "icon": "/iconSvg/html5.svg",
                     "alt": "HTML icon"
                 },
                 "css": {
-                    "icon": "/iconSvg/css.svg",
                     "alt": "CSS icon"
                 },
                 "js": {
-                    "icon": "/iconSvg/js.svg",
                     "alt": "JavaScript icon"
                 },
                 "ts": {
-                    "icon": "/iconSvg/typescript.svg",
                     "alt": "TypeScript icon"
                 }
             }
@@ -25,11 +21,9 @@
             "year": "2021",
             "framework": {
                 "react": {
-                    "icon": "/iconSvg/react.svg",
                     "alt": "React icon"
                 },
                 "mysql": {
-                    "icon": "/iconSvg/mysql.svg",
                     "alt": "MySQL icon"
                 }
             }
@@ -38,11 +32,9 @@
             "year": "2022",
             "framework": {
                 "react-native": {
-                    "icon": "/iconSvg/react.svg",
                     "alt": "React icon"
                 },
                 "firebase": {
-                    "icon": "/iconSvg/firebase.svg",
                     "alt": "Firebase icon"
                 }
             }
@@ -51,11 +43,9 @@
             "year": "2023",
             "framework": {
                 "expo": {
-                    "icon": "/iconSvg/expo.svg",
                     "alt": "Expo icon"
                 },
                 "firebase": {
-                    "icon": "/iconSvg/firebase.svg",
                     "alt": "Firebase icon"
                 }
             }
@@ -64,16 +54,41 @@
             "year": "2024",
             "framework": {
                 "ai": {
-                    "icon": "/iconSvg/claude.svg",
                     "alt": "Artificial Intelligence icon"
                 },
                 "nextjs" :{
-                    "icon": "/iconSvg/nextjs.svg",
                     "alt": "Next.js icon"
                 },
                 "supabase": {
-                    "icon": "/iconSvg/supabase.svg",
                     "alt": "Supabase icon"
+                }
+            }
+        },
+        {
+            "year": "2025",
+            "framework": {
+                "nuxt": {
+                    "alt": "Nuxt icon"
+                },
+                "express": {
+                    "alt": "Express icon"
+                },
+                "mongodb": {
+                    "alt": "MongoDB icon"
+                }
+            }
+        },
+        {
+            "year": "2026",
+            "framework": {
+                "expo": {
+                    "alt": "Expo icon"
+                },
+                "firebase": {
+                    "alt": "Firebase icon"
+                },
+                "ts": {
+                    "alt": "TypeScript icon"
                 }
             }
         }

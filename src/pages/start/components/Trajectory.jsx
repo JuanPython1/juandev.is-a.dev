@@ -1,8 +1,42 @@
 import { useTranslation } from "react-i18next";
+import {
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiTypescript,
+    SiReact,
+    SiMysql,
+    SiFirebase,
+    SiExpo,
+    SiClaude,
+    SiNextdotjs,
+    SiSupabase,
+    SiNuxtdotjs,
+    SiExpress,
+    SiMongodb,
+} from "react-icons/si";
 import IconsContainer from "@/components/IconsContainer";
 import { cn } from '@/lib/utils';
 import trayectoriaData from "@data/Trajectory.json";
 import '@pages/start/styles/Trayectory.css';
+
+const COMPONENT_ICONS = {
+    html: SiHtml5,
+    css: SiCss3,
+    js: SiJavascript,
+    ts: SiTypescript,
+    react: SiReact,
+    "react-native": SiReact,
+    mysql: SiMysql,
+    firebase: SiFirebase,
+    expo: SiExpo,
+    ai: SiClaude,
+    nextjs: SiNextdotjs,
+    supabase: SiSupabase,
+    nuxt: SiNuxtdotjs,
+    express: SiExpress,
+    mongodb: SiMongodb,
+};
 
 export default function Trajectory() {
     const { t } = useTranslation();
@@ -34,8 +68,8 @@ export default function Trajectory() {
                                 {Object.keys(event.framework).map((key) => (
                                     <IconsContainer
                                         key={key}
-                                        url={event.framework[key].icon}
                                         alt={event.framework[key].alt}
+                                        Icon={COMPONENT_ICONS[key]}
                                     />
                                 ))}
                             </div>
