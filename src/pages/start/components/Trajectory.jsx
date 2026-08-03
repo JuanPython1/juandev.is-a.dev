@@ -183,15 +183,15 @@ export default function Trajectory() {
     return (
         <div ref={containerRef} className="relative flex flex-col items-center w-full">
             {/* Línea de tiempo central (desktop: recta) */}
-            <div className="hidden sm:block absolute left-1/2 w-[0.125em] h-full bg-zinc-500 dark:bg-brick-light transform -translate-x-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 w-[0.125em] h-full bg-zinc-500 dark:bg-brick-light transform -translate-x-1/2"></div>
 
             {/* Punto en la línea de tiempo (desktop) */}
-            <div ref={triangleRef} className="triangle hidden sm:block"></div>
+            <div ref={triangleRef} className="triangle hidden md:block"></div>
 
-            {/* Línea serpenteante + cursor triangular animado (solo mobile) */}
+            {/* Línea serpenteante + cursor triangular animado (mobile/tablet, mismo breakpoint que el layout apilado de las tarjetas) */}
             {snakePathD && (
                 <svg
-                    className="absolute inset-0 w-full h-full sm:hidden overflow-visible"
+                    className="absolute inset-0 w-full h-full md:hidden overflow-visible"
                     viewBox={`0 0 ${size.width} ${size.height}`}
                     aria-hidden="true"
                 >
