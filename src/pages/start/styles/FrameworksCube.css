@@ -61,14 +61,14 @@
   transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
-.typescript-icon-color {
+.nuxt-icon-color {
   color: #242424;
   transition: color 0.3s ease-in-out;
 }
 
-.left:hover .typescript-icon-color {
-  color: #3178C6; 
-  transition: color 0.3s ease; 
+.left:hover .nuxt-icon-color {
+  color: #00DC82;
+  transition: color 0.3s ease;
 }
 
 .right {

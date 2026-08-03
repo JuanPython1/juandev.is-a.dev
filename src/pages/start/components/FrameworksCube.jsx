@@ -1,6 +1,5 @@
-import { BiLogoTypescript } from "react-icons/bi";
 import { FaJs, FaReact } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs, SiNuxtdotjs } from "react-icons/si";
 // import { SiAstro } from "react-icons/si";
 import SvgExpo from '@components/icons/Expo';
 import '@pages/start/styles/FrameworksCube.css';
@@ -24,9 +23,9 @@ export default function FrameworksCuber() {
             </div>
             <div className="face left relative group">
                 <div className="face front flex justify-center items-center pointer-events-none">
-                    <BiLogoTypescript className="cube-icon-lg typescript-icon-color" />
+                    <SiNuxtdotjs className="cube-icon nuxt-icon-color" />
                 </div>
-                <Tooltip3D label="Typescript" />
+                <Tooltip3D label="Nuxt.js" />
             </div>
             <div className="face right relative group">
                 <div className="face front flex justify-center items-center">
