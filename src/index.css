@@ -99,7 +99,7 @@
 
   /* Wrapper de secciones (start.jsx) — combinar con la clase animationBlurIn */
   .section-blur {
-    @apply flex flex-col gap-[4em] md:gap-[6em] justify-center items-center p-[2.5em] mx-auto;
+    @apply flex flex-col gap-[2.5em] md:gap-[4em] justify-center items-center p-[2.5em] mx-auto;
   }
 
   /* Raíz de escala: todo lo que esté en em dentro de un elemento con esta
