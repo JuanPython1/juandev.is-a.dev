@@ -1,5 +1,8 @@
 .cube {
   --cube-size: 4.4em;
+  --cube-radius: 0.4em;
+  --cube-face-bg: blanchedalmond;
+  --cube-overlap: 2px;
   display: flex;
   position: relative;
   width: var(--cube-size);
@@ -11,10 +14,13 @@
 
 .face {
   position: absolute;
-  width: var(--cube-size);
-  height: var(--cube-size);
-  background-color: blanchedalmond;
-  border: 0.5px solid #ccc;
+  /* Cada cara se agranda un poco más allá del tamaño real del cubo y se
+     recentra con inset negativo. Al rotarla, ese excedente se mete en el
+     espacio de la cara vecina (solape físico en 3D), así la unión entre
+     caras queda cubierta de verdad y no depende de un color de borde. */
+  inset: calc(var(--cube-overlap) / -2);
+  background-color: var(--cube-face-bg);
+  border-radius: var(--cube-radius);
   transition: background-color 0.3s ease;
 }
 
