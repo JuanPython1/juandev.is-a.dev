@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SiNuxtdotjs, SiReact, SiExpress, SiMongodb, SiTypescript, SiNextdotjs, SiGit, SiOpenai, SiVuedotjs, SiTailwindcss, SiExpo, SiNodedotjs, SiDocker, SiGithub } from "react-icons/si";
-import { MdWeb, MdPhoneIphone, MdAccountTree, MdAutoAwesome, MdLocationOn, MdSchool, MdLocalCafe, MdGridOn } from "react-icons/md";
+import { MdWeb, MdPhoneIphone, MdAccountTree, MdAutoAwesome, MdLocationOn, MdSchool, MdLocalDrink, MdGridOn } from "react-icons/md";
 import { SiRiotgames } from "react-icons/si";
 import skillsData from "@data/Skills.json";
 
@@ -42,7 +42,7 @@ const CATEGORY_ICONS = {
 
 const WHATIDO_ICONS = [MdWeb, MdPhoneIphone, MdAccountTree, MdAutoAwesome];
 
-const INTRO_ICONS = [MdLocationOn, MdSchool, SiRiotgames, MdGridOn, MdLocalCafe];
+const INTRO_ICONS = [MdLocationOn, MdSchool, SiRiotgames, MdGridOn, MdLocalDrink];
 
 export default function About() {
     const { t } = useTranslation();
