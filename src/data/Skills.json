@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "skills": ["Nuxt", "Vue", "Next.js", "React", "TypeScript", "Tailwind CSS", "HTML/CSS"]
+    },
+    {
+      "id": "mobile",
+      "skills": ["React Native", "Expo", "JavaScript"]
+    },
+    {
+      "id": "backend",
+      "skills": ["Express.js", "Node.js", "MongoDB", "REST APIs", "Google OAuth"]
+    },
+    {
+      "id": "tools",
+      "skills": ["Git", "GitHub", "CI/CD", "Notion", "Scrum", "Docker"]
+    },
+    {
+      "id": "ai",
+      "skills": ["OpenAI API", "Claude", "AI Integration", "Automation"]
+    }
+  ]
+}

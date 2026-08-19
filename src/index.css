@@ -236,3 +236,49 @@ body {
   animation-fill-mode: forwards;
 }
 
+/* About — philosophy block */
+.philosophy-block {
+  @apply border-t-[0.0625em] border-b-[0.0625em] border-red-300 dark:border-red-200;
+}
+
+/* About — stagger animation for intro items */
+@keyframes aboutSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-0.75em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-item {
+  opacity: 0;
+  animation: aboutSlideIn 0.5s ease forwards;
+}
+
+.about-item:nth-child(1) { animation-delay: 0.1s; }
+.about-item:nth-child(2) { animation-delay: 0.2s; }
+.about-item:nth-child(3) { animation-delay: 0.3s; }
+.about-item:nth-child(4) { animation-delay: 0.4s; }
+.about-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* About — name entrance */
+@keyframes aboutNameReveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.about-name {
+  animation: aboutNameReveal 0.8s ease forwards;
+}
+

@@ -86,7 +86,52 @@
     }
   },
   "about": {
-    "comingSoon": "About Coming Soon...."
+    "name": "Juan Camilo Rodriguez P.",
+    "bio": "A slightly different person who spends too much time between code and ranked until they get silently angry. I enjoy pixel art, coconut juice and building things that actually work. Introspective by nature, more of an observer than a talker, analyzing how the world works.",
+    "intro": [
+      "24 years old — Cali, Colombia",
+      "Systems Engineering — USC",
+      "League of Legends player",
+      "I like pixel art",
+      "I like coconut juice"
+    ],
+    "whatIDoTitle": "What I Do",
+    "whatIDo": {
+      "items": [
+        {
+          "icon": "🌐",
+          "title": "Web Development",
+          "description": "Web apps that look good and actually work. Nuxt, Vue, Next.js — the usual suspects."
+        },
+        {
+          "icon": "📱",
+          "title": "Mobile Apps",
+          "description": "Curious mobile apps with React Native and Expo. I like exploring what's possible on a phone screen."
+        },
+        {
+          "icon": "🔌",
+          "title": "Backend & APIs",
+          "description": "REST APIs with Express.js and MongoDB. Still improving, but they get the job done."
+        },
+        {
+          "icon": "🤖",
+          "title": "AI Integration",
+          "description": "Slowly becoming a robot. Integrating AI into workflows even though I don't fully trust it yet."
+        }
+      ]
+    },
+    "skillsTitle": "Skills & Tech Stack",
+    "skills": {
+      "categories": {
+        "frontend": "Frontend",
+        "mobile": "Mobile",
+        "backend": "Backend",
+        "tools": "Tools & Workflow",
+        "ai": "AI & Automation"
+      }
+    },
+    "philosophyTitle": "My Philosophy",
+    "philosophy": "I believe good software is built with empathy — understanding the user's needs, writing code that others can maintain, and always staying curious about better ways to solve problems."
   },
   "contact": {
     "comingSoon": "Contact Coming Soon..."

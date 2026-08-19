@@ -86,7 +86,52 @@
     }
   },
   "about": {
-    "comingSoon": "Sobre mí Próximamente...."
+    "name": "Juan Camilo Rodriguez P.",
+    "bio": "Una persona un poco diferente que pasa demasiado tiempo entre código y ranked hasta que se enoja calladamente. Disfruto el pixel art, el jugo de coco y construir cosas que realmente funcionen. Introspectivo por naturaleza, más observador que decir cualquier cosa, analizando cómo funciona el mundo.",
+    "intro": [
+      "24 años — Cali, Colombia",
+      "Ingeniería de Sistemas — USC",
+      "Jugador de League of Legends",
+      "Me gusta el pixel art",
+      "Me gusta el jugo de coco"
+    ],
+    "whatIDoTitle": "Qué Hago",
+    "whatIDo": {
+      "items": [
+        {
+          "icon": "🌐",
+          "title": "Desarrollo Web",
+          "description": "Apps web que se ven bien y funcionan de verdad. Nuxt, Vue, Next.js — los de siempre."
+        },
+        {
+          "icon": "📱",
+          "title": "Apps Móviles",
+          "description": "Apps móviles curiosas con React Native y Expo. Me gusta explorar qué es posible en una pantalla pequeña."
+        },
+        {
+          "icon": "🔌",
+          "title": "Backend y APIs",
+          "description": "APIs REST con Express.js y MongoDB. Todavía mejorando, pero cumplen."
+        },
+        {
+          "icon": "🤖",
+          "title": "Integración de IA",
+          "description": "Poco a poco convirtiéndome en robot. Integrando IA en flujos aunque no confío del todo en ella todavía."
+        }
+      ]
+    },
+    "skillsTitle": "Habilidades y Tecnologías",
+    "skills": {
+      "categories": {
+        "frontend": "Frontend",
+        "mobile": "Móvil",
+        "backend": "Backend",
+        "tools": "Herramientas y Flujo",
+        "ai": "IA y Automatización"
+      }
+    },
+    "philosophyTitle": "Mi Filosofía",
+    "philosophy": "Creo que el buen software se construye con empatía — entendiendo las necesidades del usuario, escribiendo código que otros puedan mantener y siempre manteniendo curiosidad por mejores formas de resolver problemas."
   },
   "contact": {
     "comingSoon": "Contacto Próximamente..."
