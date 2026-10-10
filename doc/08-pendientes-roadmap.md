@@ -4,8 +4,8 @@ Lista consolidada de todo lo que falta o está incompleto, ordenada por priorida
 
 ## 🔴 Alta prioridad — contenido faltante
 
-1. **Página `About` sin contenido.** Solo muestra "Coming Soon...." ([05-paginas.md](05-paginas.md#aboutaboutjsx)). Es una de las 3 rutas principales del sitio.
-2. **Página `Contact` sin contenido.** Solo muestra "Coming Soon..." ([05-paginas.md](05-paginas.md#contactcontactjsx)). El email y LinkedIn ya existen en `README.md` pero no están conectados a la UI.
+1. **Página `About` sin contenido.** ~~Solo muestra "Coming Soon...."~~ — ✅ **Completada** (biografía, qué hago, skills y filosofía en `about/about.jsx`).
+2. **Página `Contact` sin contenido.** ~~Solo muestra "Coming Soon..."~~ — ✅ **Completada** (intro + tarjetas de contacto enlazables: email/LinkedIn/GitHub desde `README.md`, más ubicación).
 3. **`Projects.json` con un solo proyecto.** La sección "Recent Projects" del Home necesita más proyectos reales para cumplir su propósito ([06-datos.md](06-datos.md#projectsjson)).
 4. **`Trajectory.json` desactualizado.** Los eventos terminan en 2024; falta agregar 2025/2026 ([06-datos.md](06-datos.md#trajectoryjson)).
 

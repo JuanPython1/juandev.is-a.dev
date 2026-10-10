@@ -134,7 +134,28 @@
     "philosophy": "I believe good software is built with empathy — understanding the user's needs, writing code that others can maintain, and always staying curious about better ways to solve problems."
   },
   "contact": {
-    "comingSoon": "Contact Coming Soon..."
+    "greeting": "Let's Talk",
+    "intro": "My inbox is always open. If you have a project in mind, a question, or just want to say hi, reach out and I'll get back to you as soon as I can.",
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "3185731148"
+    },
+    "email": {
+      "label": "Email",
+      "value": "rodriguezjuanwork1@gmail.com"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "@juan-rodriguez-4ba554226"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "@JuanPython1"
+    },
+    "location": {
+      "label": "Location",
+      "value": "Cali, Colombia"
+    }
   },
   "footer": {
     "copyright": "©{{year}} SrJuan.dev - Developer Web & Mobile. All rights reserved."

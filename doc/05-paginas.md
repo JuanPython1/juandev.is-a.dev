@@ -35,11 +35,19 @@ Línea de tiempo vertical (`styles/Trayectory.css`) que lee [`Trajectory.json`](
 
 ## `contact/contact.jsx` — Contact (`/contact`)
 
-**Estado: 🚧 Placeholder.** Solo renderiza el texto `Contact Coming Soon...`. Sin formulario, ni enlaces a redes/email (esa info hoy solo vive en el `README.md` del repo, no en la UI).
+**Estado: ✅ Completa.** Sigue el lenguaje visual de `about` (panel `surface-panel` con `frame-red`, texto `font_juan_intro`/`font_juan_tittle`, iconos sobre `bg-brick` y animación `animationBlurIn`). Es una **única sección**: título grande (`about-name` style) con `Let's Talk` / `Hablemos`, párrafo de introducción (`font_juan_intro`) y una grilla de tarjetas de contacto.
+
+### Grilla de medios de contacto
+
+- **WhatsApp** (destacado): tarjeta full-width (`sm:col-span-2`, disposición horizontal) con enlace `https://wa.me/573185731148` y punto pulsante de disponibilidad.
+- **Correo**: `mailto:rodriguezjuanwork1@gmail.com`.
+- **LinkedIn** y **GitHub**: enlaces externos que abren en pestaña nueva con `rel="noopener noreferrer"`.
+- **Ubicación**: tarjeta estática (Cali, Colombia).
+
+El `id` de cada tarjeta es clave i18n: `contact.email`, `contact.linkedin`, `contact.whatsapp`, etc. (datos tomados del `README.md` de la raíz, salvo WhatsApp/ubicación que estaban ausentes).
 
 ## Qué falta
 
-- Contenido real de `About` y `Contact` — son las dos páginas más incompletas del proyecto.
-- `Contact` podría reutilizar el email/LinkedIn que ya están en el `README.md` de la raíz, pero eso no está conectado a la UI.
+- Contenido real de `About` ahora sí completo.
 - Quitar el `console.log` de `RecentProjectsContainer.jsx`.
 - Ver más detalle priorizado en [08-pendientes-roadmap.md](08-pendientes-roadmap.md).
