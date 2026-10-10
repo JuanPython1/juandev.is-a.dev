@@ -7,10 +7,15 @@ import ButtonLanguage from './buttonLanguage/ButtonLanguage';
 import ButtonThemeMode from './buttonThemeMode/ButtonThemeMode';
 
 const links = [
-    { to: '/', altKey: 'nav.home', labelKey: null, label: 'Sr. Juan', icon: <TentTree size="1.5em" /> },
-    { to: '/about', altKey: 'nav.about', labelKey: 'nav.about', icon: <BookUser size="1.5em" /> },
-    { to: '/contact', altKey: 'nav.contact', labelKey: 'nav.contact', icon: <UserSearch size="1.5em" /> },
+    { to: '/', altKey: 'nav.home', labelKey: null, label: 'Sr. Juan', icon: <TentTree size="1.25em" /> },
+    { to: '/about', altKey: 'nav.about', labelKey: 'nav.about', icon: <BookUser size="1.25em" /> },
+    { to: '/contact', altKey: 'nav.contact', labelKey: 'nav.contact', icon: <UserSearch size="1.25em" /> },
 ];
+
+// Caja del botón de icono (padding + icono) y paso del indicador (caja + gap)
+const BUTTON_SIZE = 2.25;
+const BUTTON_GAP = 0.375;
+const INDICATOR_STEP = BUTTON_SIZE + BUTTON_GAP;
 
 export default function Nav() {
     const { t } = useTranslation();
@@ -49,26 +54,24 @@ export default function Nav() {
     }, [handleWheel]);
 
     return (
-        //Componente de Navegacion
+        //Componente de Navegacion — barra horizontal fina y ancha
         <nav
             ref={navRef}
-            className="flex flex-col gap-[0.75em] fixed bottom-[5%] left-1/2 transform -translate-x-1/2 justify-center rounded-[0.375em] p-[0.75em] items-center h-auto surface-panel nav-shadow z-10"
+            className="flex flex-row items-center gap-[0.625em] fixed bottom-[5%] left-1/2 transform -translate-x-1/2 rounded-[0.5em] py-[0.4375em] px-[0.875em] surface-panel nav-shadow z-10"
             style={{ fontSize: 'var(--zoom-scale)' }}
         >
 
-            {/* Indicador rojo de la pagina activa*/}
-            <div
-                //backgroud modo claro: bg-red-500
-                className="absolute left-[6%] top-[11%] transition-all duration-300 ease-in-out bg-zinc-700 dark:bg-red-300 rounded-[0.5em] z-10"
-                style={{
-                    width: '3.0625em',
-                    height: '3.0625em',
-                    transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * 3.9375}em)`,
-                }}
-            ></div>
-
-            {/* Links */}
-            <div className="relative flex flex-row items-center gap-[1em] font_juan ">
+            {/* Links e indicador rojo de la pagina activa */}
+            <div className="relative flex flex-row items-center gap-[0.375em]">
+                <div
+                    //backgroud modo claro: bg-red-500
+                    className="absolute left-0 top-0 transition-all duration-300 ease-in-out bg-zinc-700 dark:bg-red-300 rounded-[0.375em] z-10"
+                    style={{
+                        width: `${BUTTON_SIZE}em`,
+                        height: `${BUTTON_SIZE}em`,
+                        transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * INDICATOR_STEP}em)`,
+                    }}
+                ></div>
 
                 {links.map(({ to, altKey, icon }) => (
                     <Link
@@ -76,7 +79,7 @@ export default function Nav() {
                         to={to}
                         aria-label={t(altKey)}
                         className={cn(
-                            'flex flex-row p-[0.75em] relative z-10 rounded-[0.5em] dark:hover:text-red-500 hover:text-red-300 hover:underline',
+                            'flex flex-row p-[0.5em] relative z-10 rounded-[0.375em] dark:hover:text-red-500 hover:text-red-300 hover:underline',
                             location.pathname === to ? 'text-red-300 dark:text-red-500 underline' : 'text-cream'
                         )}
                     >
@@ -85,8 +88,11 @@ export default function Nav() {
                 ))}
             </div>
 
-            {/* Nombre de la pagina activa */}
-            <div className='flex flex-row items-center justify-center gap-[0.75em]'>
+            {/* Separador */}
+            <div className="w-[0.0625em] h-[1.375em] bg-zinc-600 dark:bg-red-200/40"></div>
+
+            {/* Idioma / Nombre de la pagina activa / Tema */}
+            <div className="flex flex-row items-center justify-center gap-[0.625em]">
                 <ButtonLanguage />
                 <div className='flex items-center justify-center min-w-[3.75em]'>
                     <h3 className="font_juan_name whitespace-nowrap">
