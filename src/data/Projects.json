@@ -15,6 +15,13 @@
           "imgLight": "./imgProjects/unabase/unabaseLight.png",
           "github": "private",
           "deploy": "private"
+        },
+        {
+          "id": "precioDeColombia",
+          "img": "./imgProjects/precioDeColombia/precioDeColombia.png",
+          "imgLight": "./imgProjects/precioDeColombia/precioDeColombiaLight.png",
+          "github": "private",
+          "deploy": "private"
         }
       ]
     }

@@ -25,6 +25,10 @@
       "unabase": {
         "title": "VxPro unabase",
         "description": "A new version of the ERP business management platform that centralizes sales, purchases, expenses, accounting, and financial reporting in a single dashboard, helping businesses make real-time, data-driven decisions."
+      },
+      "precioDeColombia": {
+        "title": "El Precio de Colombia",
+        "description": "Live bidding platform where brands and startups compete for 100 visibility slots on a ranked wall, with real-time payments via Wompi."
       }
     }
   },
