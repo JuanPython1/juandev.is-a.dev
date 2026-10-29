@@ -55,7 +55,7 @@ export default function WorkExperience() {
                             </span>
                         </div>
 
-                        <ul className="flex flex-col gap-[0.5em] text-red-400 dark:text-red-200 text-[0.875em] text-justify">
+                        <ul className="flex flex-col gap-[0.5em] text-red-400 dark:text-red-200 text-[0.875em] text-left">
                             {bullets.map((bullet, index) => (
                                 <li key={index} className="flex gap-[0.5em]">
                                     <span className="text-cream mt-[0.15em]">▹</span>
