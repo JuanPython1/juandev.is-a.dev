@@ -4,22 +4,22 @@
       "ProjectsRecent": [
         {
           "id": "juandev-website",
-          "img": "./imgProjects/pageSrJuan/pageSrjuan.png",
-          "imgLight": "./imgProjects/pageSrJuan/pageSrjuanLight.jpeg",
+          "img": "./imgProjects/pageSrJuan/pageSrjuan.webp",
+          "imgLight": "./imgProjects/pageSrJuan/pageSrjuanLight.webp",
           "github": "https://github.com/JuanPython1/juandev.is-a.dev",
           "deploy": "https://juandev.is-a.dev/"
         },
         {
           "id": "unabase",
-          "img": "./imgProjects/unabase/unabase.png",
-          "imgLight": "./imgProjects/unabase/unabaseLight.png",
+          "img": "./imgProjects/unabase/unabase.webp",
+          "imgLight": "./imgProjects/unabase/unabaseLight.webp",
           "github": "private",
           "deploy": "private"
         },
         {
           "id": "precioDeColombia",
-          "img": "./imgProjects/precioDeColombia/precioDeColombia.png",
-          "imgLight": "./imgProjects/precioDeColombia/precioDeColombiaLight.png",
+          "img": "./imgProjects/precioDeColombia/precioDeColombia.webp",
+          "imgLight": "./imgProjects/precioDeColombia/precioDeColombiaLight.webp",
           "github": "private",
           "deploy": "https://el-precio-de-colombia.forjadelcibercafe.workers.dev/"
         }
