@@ -11,7 +11,7 @@ export default function Start() {
     return (
         <main className="flex-grow">
 
-            <section className="relative flex flex-col gap-[1.5em] min-w-3 max-w-[32em] p-[2em] mx-auto overflow-hidden zoom-scale-root">
+            <section className="relative flex flex-col gap-[1.5em] min-w-3 max-w-[32em] py-[2em] px-[3em] md:px-[2em] mx-auto overflow-hidden zoom-scale-root">
 
                 <div className="absolute flex justify-center items-center w-full h-full top-0 left-0">
                     <h1 className="font_juan_tittle_SrJuan title-animation">
