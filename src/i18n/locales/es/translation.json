@@ -9,7 +9,7 @@
   },
   "start": {
     "greeting": "Hola, este es el sitio web de Juan 🐋",
-    "intro": "Ingeniero de Sistemas con experiencia en desarrollo Full Stack para empresas multinacionales. Especializado en arquitectura de software, soluciones cloud y orquestación de IA para la construcción de productos escalables y automatización de procesos.",
+    "intro": "Ingeniero de Sistemas con experiencia en desarrollo Full Stack para empresas multinacionales. Especializado en arquitectura de software, soluciones cloud y orquestación de IA para la construcción de productos escalables y automatización de procesos. Desarrollo aplicaciones web con Nuxt y Vue, apps móviles con React Native y Expo, y APIs con Express.js y MongoDB.",
     "trajectoryTitle": "Trayectoria de aprendizaje"
   },
   "projects": {

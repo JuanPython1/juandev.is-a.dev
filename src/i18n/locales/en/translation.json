@@ -9,7 +9,7 @@
   },
   "start": {
     "greeting": "Hi, it's Juan's website 🐋",
-    "intro": "Systems Engineer with experience in Full Stack development for multinational companies. Specialized in software architecture, cloud solutions and AI orchestration for building scalable products and process automation.",
+    "intro": "Systems Engineer with experience in Full Stack development for multinational companies. Specialized in software architecture, cloud solutions and AI orchestration for building scalable products and process automation. I build web apps with Nuxt and Vue, mobile apps with React Native and Expo, and APIs with Express.js and MongoDB.",
     "trajectoryTitle": "Learning Trajectory"
   },
   "projects": {
