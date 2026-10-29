@@ -1,9 +1,16 @@
 {
     "experiences": [
         {
-            "id": "unabase",
-            "period": "Feb 2025",
+            "id": "popul",
+            "period": "2026",
             "current": true,
+            "type": "work",
+            "tech": ["Nuxt", "Express.js", "MongoDB", "OpenAI API", "Wompi"]
+        },
+        {
+            "id": "unabase",
+            "period": "Feb 2025 – Ago 2026",
+            "current": false,
             "type": "work",
             "tech": ["Nuxt 3", "Express.js", "MongoDB", "Google OAuth", "CI/CD", "Claude Code", "OpenAI API"]
         },

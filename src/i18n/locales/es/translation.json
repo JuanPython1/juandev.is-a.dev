@@ -36,15 +36,24 @@
     "sectionTitle": "Experiencia laboral",
     "current": "Actualidad",
     "items": {
+      "popul": {
+        "role": "Fundador y Desarrollador Full Stack",
+        "company": "Popul",
+        "location": "Cali, Colombia",
+        "bullets": [
+          "Fundé Popul, un emprendimiento de desarrollo de software a medida para empresas y marcas, orquestando soluciones de IA para optimizar procesos.",
+          "Proyecto destacado: El Precio de Colombia, plataforma de pujas para marcas."
+        ]
+      },
       "unabase": {
         "role": "Desarrollador Full Stack — Proyecto VxPro",
         "company": "UNABASE SPA",
         "location": "Remoto — Multinacional Chilena",
         "bullets": [
-          "Desarrollo de una nueva versión de un ERP para la industria creativa con Nuxt 3, interfaces modernas y arquitectura escalable.",
-          "Backend con Express.js y MongoDB: APIs REST, autenticación con Google OAuth y lógica de negocio.",
-          "Integración de IA (Claude Code, API de OpenAI) para el análisis de archivos y generación de código.",
-          "CI/CD y Git bajo estrategias Feature/Hotfix, con Scrum, Notion y GitHub para el trabajo en equipo."
+          "Desarrollo de VxPro, ERP para cine usado por Amazon Studios México, Paramount Colombia y Netflix.",
+          "Arquitectura y desarrollo con Nuxt, Express.js y MongoDB.",
+          "Automatización de módulos financieros con Claude Code y OpenAI.",
+          "CI/CD con Git (Feature/Hotfix), Scrum, GitHub y Notion."
         ]
       },
       "usc-comba": {
