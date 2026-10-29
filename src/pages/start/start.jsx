@@ -11,7 +11,7 @@ export default function Start() {
     return (
         <main className="flex-grow">
 
-            <section className="relative flex flex-col gap-[3em] min-w-3 max-w-[32em] sm:min-h-screen p-[2em] mx-auto overflow-hidden zoom-scale-root">
+            <section className="relative flex flex-col gap-[1.5em] min-w-3 max-w-[32em] p-[2em] mx-auto overflow-hidden zoom-scale-root">
 
                 <div className="absolute flex justify-center items-center w-full h-full top-0 left-0">
                     <h1 className="font_juan_tittle_SrJuan title-animation">
@@ -19,7 +19,7 @@ export default function Start() {
                     </h1>
                 </div>
 
-                <div className=" flex flex-col gap-[5.3em] mt-[3em] md:h-[24em] items-center content-animation">
+                <div className=" flex flex-col gap-[2.5em] mt-[2em] md:min-h-[16em] items-center content-animation">
                     <p className="font_juan_intro">
                         {`"${t('start.intro')}"`}
                     </p>
@@ -27,7 +27,7 @@ export default function Start() {
                 </div>
             </section>
 
-            <section className="section-blur animationBlurIn max-w-[31.25em] zoom-scale-root mt-10 md:mt-24">
+            <section className="section-blur animationBlurIn max-w-[31.25em] zoom-scale-root mt-4 md:mt-8">
                 <RecentProyectsContainer />
             </section>
 
