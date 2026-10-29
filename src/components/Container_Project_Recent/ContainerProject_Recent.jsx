@@ -337,7 +337,9 @@ const ContainerProject_Recent = ({ Projects }) => {
                             )}
                         >
                             <h2 className="font_juan_title_projects text-[1.5em]">{t(`projects.items.${activeProject.id}.title`)}</h2>
-                            <p className="text-red-400 dark:text-red-200 text-[1em] max-w-[35em]">{t(`projects.items.${activeProject.id}.description`)}</p>
+                            <div className="w-full h-[9em] sm:h-[6em] overflow-y-auto pr-[0.5em]">
+                                <p className="text-red-400 dark:text-red-200 text-[1em] max-w-[35em] mx-auto">{t(`projects.items.${activeProject.id}.description`)}</p>
+                            </div>
                             <div className="flex flex-row gap-[0.5em]">
                                 <ButtonProject url={activeProject.github}>
                                     <IoGitBranchOutline size="1.125em" />
