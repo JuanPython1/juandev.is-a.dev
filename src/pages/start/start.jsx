@@ -19,7 +19,7 @@ export default function Start() {
                     </h1>
                 </div>
 
-                <div className=" flex flex-col gap-[2.5em] mt-[2em] md:min-h-[16em] items-center content-animation">
+                <div className=" flex flex-col gap-[5.3em] mt-[4em] md:min-h-[27em] items-center justify-center content-animation">
                     <p className="font_juan_intro">
                         {`"${t('start.intro')}"`}
                     </p>
@@ -27,7 +27,7 @@ export default function Start() {
                 </div>
             </section>
 
-            <section className="section-blur animationBlurIn max-w-[31.25em] zoom-scale-root mt-4 md:mt-8">
+            <section className="section-blur animationBlurIn max-w-[31.25em] zoom-scale-root mt-16 md:mt-36">
                 <RecentProyectsContainer />
             </section>
 
