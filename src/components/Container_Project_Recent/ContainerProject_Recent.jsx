@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { IoGitBranchOutline } from "react-icons/io5";
@@ -9,12 +9,14 @@ import ButtonProject from "@components/buttonProject/ButtonProject";
 const AUTO_ADVANCE_MS = 8000;
 
 const ContainerProject_Recent = ({ Projects }) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [theme, setTheme] = useState(document.documentElement.classList.contains("dark") ? "dark" : "light");
     const [fade, setFade] = useState(false);
     const [autoPlay, setAutoPlay] = useState(true);
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+    const [restartTick, setRestartTick] = useState(0);
+    const descRef = useRef(null);
 
     const activeProject = Projects[selectedIndex];
     const imageSrc = theme === "dark" ? activeProject.imgLight : activeProject.img;
@@ -69,8 +71,136 @@ const ContainerProject_Recent = ({ Projects }) => {
         };
     }, [isLightboxOpen]);
 
+    // Si la descripción desborda su recuadro: espera, baja lento, espera
+    // abajo, vuelve arriba y repite. Solo corre con el proyecto ya visible
+    // (después del fade de cambio) y solo se detiene si haces scroll en ella.
+    useEffect(() => {
+        const el = descRef.current;
+        if (!el || isLightboxOpen || fade) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        el.scrollTop = 0;
+
+        const WAIT_TOP_MS = 3000;
+        const WAIT_BOTTOM_MS = 2500;
+        const SPEED_PX_S = 14;
+
+        let raf = 0;
+        let stopped = false;
+        let cancelled = false;
+        let pos = 0;
+        let inView = true;
+        let last = performance.now();
+        let phase = "wait-top";
+        let phaseStart = last;
+
+        const maxScroll = () => el.scrollHeight - el.clientHeight;
+
+        // El usuario hizo scroll en la descripción: frena la rotación
+        // de proyectos y apaga el auto-scroll de la descripción.
+        const stopOnInteract = () => {
+            if (maxScroll() <= 1 || stopped) return;
+            stopped = true;
+            cancelAnimationFrame(raf);
+            raf = 0;
+            setAutoPlay(false);
+        };
+
+        el.addEventListener("wheel", stopOnInteract, { passive: true });
+        el.addEventListener("touchmove", stopOnInteract, { passive: true });
+
+        const io = new IntersectionObserver(
+            ([entry]) => {
+                inView = entry.isIntersecting;
+            },
+            { threshold: 0 }
+        );
+        io.observe(el);
+
+        const step = (now) => {
+            if (inView) {
+                const dt = Math.min(now - last, 100);
+                if (phase === "wait-top") {
+                    if (now - phaseStart >= WAIT_TOP_MS && maxScroll() > 1) {
+                        phase = "scroll";
+                        phaseStart = now;
+                    }
+                } else if (phase === "scroll") {
+                    const max = maxScroll();
+                    if (max <= 1) {
+                        pos = 0;
+                        el.scrollTop = 0;
+                        phase = "wait-top";
+                        phaseStart = now;
+                    } else {
+                        pos = Math.min(max, pos + (SPEED_PX_S * dt) / 1000);
+                        el.scrollTop = pos;
+                        if (pos >= max) {
+                            phase = "wait-bottom";
+                            phaseStart = now;
+                        }
+                    }
+                } else if (phase === "wait-bottom") {
+                    if (now - phaseStart >= WAIT_BOTTOM_MS) {
+                        phase = "done";
+                    }
+                }
+            }
+            last = now;
+            if (phase === "done") {
+                raf = 0;
+                return;
+            }
+            raf = requestAnimationFrame(step);
+        };
+
+        const ensureRunning = () => {
+            if (cancelled || stopped) return;
+            pos = 0;
+            el.scrollTop = 0;
+            phase = "wait-top";
+            phaseStart = performance.now();
+            last = phaseStart;
+            if (maxScroll() > 1 && !raf) {
+                raf = requestAnimationFrame(step);
+            }
+        };
+
+        ensureRunning();
+
+        const onResize = () => {
+            if (stopped) return;
+            if (maxScroll() <= 1 && raf) {
+                cancelAnimationFrame(raf);
+                raf = 0;
+            } else {
+                ensureRunning();
+            }
+        };
+        window.addEventListener("resize", onResize);
+
+        // Las fuentes cargan tarde y cambian la altura del texto:
+        // revalida el desborde cuando estén listas.
+        if (document.fonts?.ready) {
+            document.fonts.ready.then(() => {
+                if (!cancelled && !stopped && maxScroll() > 1 && !raf) {
+                    ensureRunning();
+                }
+            });
+        }
+
+        return () => {
+            cancelled = true;
+            cancelAnimationFrame(raf);
+            io.disconnect();
+            window.removeEventListener("resize", onResize);
+            el.removeEventListener("wheel", stopOnInteract);
+            el.removeEventListener("touchmove", stopOnInteract);
+        };
+    }, [selectedIndex, isLightboxOpen, fade, restartTick, i18n.resolvedLanguage]);
+
     const handleSelect = (index) => {
         setAutoPlay(false);
+        setRestartTick((tick) => tick + 1);
         if (index === selectedIndex) return;
         setFade(true);
         setTimeout(() => {
@@ -146,7 +276,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                         <h2 className="font_juan_title_projects">{t(`projects.items.${activeProject.id}.title`)}</h2>
                     </div>
                     {/* Descripción */}
-                    <div className="flex flex-col justify-start items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[15.75em] mt-0 mb-0 sm:mb-[0.5em] overflow-y-auto pr-[0.5em]">
+                    <div ref={descRef} className="flex flex-col justify-start items-center text-justify sm:text-start sm:items-center h-auto w-[80%] sm:w-full sm:h-[15.75em] mt-0 mb-0 sm:mb-[0.5em] overflow-y-auto pr-[0.5em]">
                         <p className="text-red-400 dark:text-red-200 text-[0.875em]">{t(`projects.items.${activeProject.id}.description`)}</p>
                     </div>
                     {/* Botones */}
