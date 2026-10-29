@@ -219,13 +219,13 @@ const ContainerProject_Recent = ({ Projects }) => {
                     aria-current={index === selectedIndex}
                     className={cn(
                         "relative overflow-hidden flex items-center justify-center px-[0.625em] py-[0.375em] w-[8.5em] sm:w-[12em] min-h-[2em] text-center break-words rounded-[0.375em] border-[0.09375em] border-red-300 dark:border-red-200 font_juan_title_projects leading-snug transition-colors duration-300",
-                        attached && "sm:justify-start sm:min-h-[3em] sm:text-start sm:rounded-l-none sm:rounded-r-[0.5em] sm:border-l-0",
+                        attached && "flex-1 min-w-0 sm:flex-none sm:justify-start sm:min-h-[3em] sm:text-start sm:rounded-l-none sm:rounded-r-[0.5em] sm:border-l-0",
                         index === selectedIndex
                             ? "bg-brick dark:bg-red-300"
                             : "bg-charcoal dark:bg-brick hover:bg-red-300 dark:hover:bg-red-400"
                     )}
                 >
-                    <h2>{t(`projects.items.${project.id}.title`)}</h2>
+                    <h2 className="text-[0.8em] sm:text-[1em]">{t(`projects.items.${project.id}.title`)}</h2>
                     {index === selectedIndex && autoPlay && !isLightboxOpen && (
                         <span
                             aria-hidden="true"
@@ -240,7 +240,7 @@ const ContainerProject_Recent = ({ Projects }) => {
 
     return (
         <>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-[1em] sm:gap-0">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-[1em] sm:gap-0 w-[88%] sm:w-auto">
             {/* Recuadro del Proyecto */}
             <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red surface-panel rounded-[0.5em] p-[1em]">
                 {/* Imagen del Proyecto con Transición */}
@@ -294,7 +294,7 @@ const ContainerProject_Recent = ({ Projects }) => {
             </div>
 
             {/* Selector de Proyectos */}
-            {renderProjectSelector("flex sm:flex-col flex-row gap-[1em] sm:gap-[0.375em]")}
+            {renderProjectSelector("flex sm:flex-col flex-row gap-[0.5em] sm:gap-[0.375em]")}
         </div>
 
         {isLightboxOpen &&
