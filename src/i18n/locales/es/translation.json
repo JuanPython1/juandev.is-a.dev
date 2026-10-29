@@ -9,7 +9,7 @@
   },
   "start": {
     "greeting": "Hola, este es el sitio web de Juan 🐋",
-    "intro": "¡Hola! Soy Juan, Ingeniero de Sistemas y desarrollador Full Stack con experiencia desarrollando software para una empresa multinacional. Me especializo principalmente en el desarrollo de aplicaciones web con Nuxt y Vue, y aplicaciones móviles con React Native y Expo. También desarrollo APIs con Express.js y MongoDB, e integro soluciones de inteligencia artificial para crear software escalable y optimizar procesos.",
+    "intro": "Ingeniero de Sistemas con experiencia en desarrollo Full Stack para empresas multinacionales. Especializado en arquitectura de software, soluciones cloud y orquestación de IA para la construcción de productos escalables y automatización de procesos.",
     "trajectoryTitle": "Trayectoria de aprendizaje"
   },
   "projects": {
