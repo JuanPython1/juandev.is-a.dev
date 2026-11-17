@@ -17,6 +17,7 @@ Shell visual que envuelve todas las páginas. Estructura:
 ```
 
 - El fondo usa un patrón de puntos radiales vía `bg-[radial-gradient(...)]` de Tailwind arbitrary values, y cambia de color con `dark:` (`#242424` claro → `#c04b4b` oscuro — los nombres de las clases usan las convenciones de Tailwind pero los colores están invertidos respecto a lo que sugiere "modo claro/oscuro"; es una decisión de diseño, no un bug).
+- Sobre el fondo va `SideRays` (copiado de React Bits en `src/components/reactbits/SideRays/`, licencia MIT + Commons Clause), una capa fija de rayos de luz WebGL en tonos rojo claro/crema (`z-index: -1`, sin eventos de puntero). Se pausa solo fuera de pantalla y respeta `prefers-reduced-motion`.
 - El `Suspense` interno es lo que permite que cada página cargada con `lazy()` muestre `Loading` mientras se descarga su chunk.
 
 ## `Loading.jsx`
