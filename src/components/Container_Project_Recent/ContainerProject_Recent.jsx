@@ -249,7 +249,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                         src={imageSrc}
                         alt={t(`projects.items.${activeProject.id}.title`)}
                         className={cn(
-                            "w-full h-full object-cover transition-[opacity,transform] duration-500 motion-safe:group-hover:scale-[1.03]",
+                            "w-full h-full object-cover transition-opacity duration-300",
                             fade ? "opacity-0" : "opacity-100"
                         )}
                     />
