@@ -23,7 +23,7 @@ Shell visual que envuelve todas las páginas. Estructura:
 
 **Archivo:** [`src/Loading.jsx`](../src/Loading.jsx)
 
-Fallback de `Suspense`. Actualmente es solo un `<div className='flex h-screen'></div>` vacío — ocupa la pantalla pero no muestra ningún spinner, texto ni indicador visual. Ver pendiente en [08-pendientes-roadmap.md](08-pendientes-roadmap.md).
+Fallback de `Suspense`. Muestra un spinner rojo centrado (`motion-safe:animate-spin`) con `role="status"` y un texto oculto traducido (`loading.label`). Usa `zoom-scale-root` para escalar igual que el resto del sitio.
 
 ## Sistema de tema claro/oscuro
 
@@ -42,4 +42,4 @@ Flujo:
 ## Qué falta
 
 - No existe un Context/Provider de tema — cada componente que necesita saber el tema actual repite la misma lógica de lectura de `localStorage`/`classList` (hoy solo pasa en `ButtonThemeMode` y `ContainerProject_Recent`, pero no escala si se agregan más componentes theme-aware).
-- `Loading.jsx` no tiene contenido visual real.
+

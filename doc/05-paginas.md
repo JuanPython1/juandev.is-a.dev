@@ -7,7 +7,7 @@ Carpeta: [`src/pages/`](../src/pages/)
 **Estado: ✅ Completa.** Es la página principal y la única con contenido real. Se compone de 3 secciones:
 
 ### 1. Hero
-Título animado (`title-animation`) con el texto `Hi, it's Juan's website 🐋`, superpuesto sobre un párrafo de introducción (`content-animation`) que describe el perfil de Juan (estudiante de Ingeniería de Sistemas, especializado en React/Next.js y React Native/Expo, explorando IA). Debajo, el componente [`FrameworksCube`](#frameworkscubejsx).
+Título animado (`title-animation`) con el texto `Hi, it's Juan's website 🐋`, superpuesto sobre un párrafo de introducción (`content-animation`) que describe el perfil de Juan (estudiante de Ingeniería de Sistemas, especializado en React/Next.js y React Native/Expo, explorando IA). Debajo, el cubo 3D de frameworks [`FrameworksCube`](#frameworkscubejsx).
 
 ### 2. Proyectos recientes
 Renderiza [`RecentProjectsContainer`](#recentprojectscontainerjsx) dentro de una sección con animación de entrada (`animationBlurIn`).
@@ -19,7 +19,8 @@ Título `Learning Trajectory` + componente [`Trajectory`](#trajectoryjsx).
 
 ### `FrameworksCube.jsx`
 
-Cubo 3D construido **100% en CSS** (transforms, `styles/FrameworksCube.css`) que rota mostrando 4 caras con iconos de tecnologías (React, Next.js, TypeScript vía `SvgExpo`/`react-icons`, Expo) y una quinta cara (`top`) con JavaScript. Cada cara tiene un tooltip con el nombre de la tecnología al hover. La cara `bottom` está vacía (sin ícono ni tooltip) — es intencional porque esa cara no queda visible en la rotación por defecto, pero queda como posible espacio para una 6ta tecnología.
+Cubo 3D construido 100% en CSS (`styles/FrameworksCube.css`) que rota mostrando caras con iconos de tecnologías (React, Next.js, Nuxt.js, Expo, JavaScript). Cada cara tiene un tooltip con el nombre al pasar el cursor (`Tooltip3D.jsx`). La cara `bottom` queda vacía. Se envuelve en `.cube-wrap`, que tiene un resplandor que respira detrás y se levanta suavemente al pasar el cursor; las caras tienen brillo diagonal y los iconos saltan al pasar el cursor. El tamaño y el giro original no cambian. Con `prefers-reduced-motion` se desactiva el resplandor animado.
+
 
 ### `RecentProjectsContainer.jsx`
 

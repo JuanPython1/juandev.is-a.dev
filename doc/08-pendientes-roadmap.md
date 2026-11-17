@@ -11,7 +11,7 @@ Lista consolidada de todo lo que falta o está incompleto, ordenada por priorida
 
 ## 🟠 Media prioridad — features incompletas / UX
 
-5. **`Loading.jsx` sin contenido visual.** El fallback de `Suspense` es un `div` vacío; durante la carga de un chunk lazy no hay feedback visual (spinner, skeleton, etc.) ([03-layout-y-tema.md](03-layout-y-tema.md#loadingjsx)).
+5. ~~**`Loading.jsx` sin contenido visual.**~~ — ✅ **Completada** (spinner con la escala de zoom del sitio, `role="status"` y texto oculto traducido) ([03-layout-y-tema.md](03-layout-y-tema.md#loadingjsx)).
 6. **Ruta 404 sin componente ni diseño.** Devuelve texto plano `Page not found` sin estilos ni layout consistente con el resto del sitio ([02-routing.md](02-routing.md#qué-falta)).
 7. **Sin Open Graph / Twitter Card ni favicon propio** en `index.html` — afecta cómo se ve el link al compartirlo ([07-configuracion-build.md](07-configuracion-build.md#seo--indexhtml)).
 

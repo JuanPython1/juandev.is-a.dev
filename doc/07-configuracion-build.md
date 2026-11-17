@@ -24,7 +24,7 @@ Reglas estándar de Create-React-App/Vite: `eslint:recommended` + `plugin:react/
 ## Fuentes e imágenes
 
 - `src/assets/fonts/`: `IosevkaNerdFont-Italic.woff2` + `stylesheet.css` (declaración `@font-face`).
-- `public/iconSvg/`: SVGs de tecnologías usados en `Trajectory.json` y `FrameworksCube`.
+- `public/iconSvg/`: SVGs de tecnologías usados en `Trajectory.json`.
 - `public/imgProjects/`: capturas de proyectos usadas en `Projects.json`.
 
 ## SEO / `index.html`
