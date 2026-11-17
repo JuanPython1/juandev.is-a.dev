@@ -41,6 +41,8 @@
   "experience": {
     "sectionTitle": "Experiencia laboral",
     "current": "Actualidad",
+    "showMore": "Ver más",
+    "close": "Cerrar",
     "items": {
       "popul": {
         "role": "Fundador y Desarrollador Full Stack",

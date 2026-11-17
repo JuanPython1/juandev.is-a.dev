@@ -72,7 +72,9 @@
           "Research Assistant at the DGI (General Directorate of Research) as a Laravel web developer."
         ]
       }
-    }
+    },
+    "showMore": "Show more",
+    "close": "Close"
   },
   "trajectory": {
     "2018": {

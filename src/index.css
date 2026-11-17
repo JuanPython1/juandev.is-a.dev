@@ -176,6 +176,27 @@
   }
 }
 
+/* Modal de experiencia: sin padding ni fondo propios (los pone el contenido);
+   el layout solo aplica en abierto para no pisar el estado cerrado */
+.exp-dialog {
+  padding: 0;
+  border: none;
+  background: transparent;
+  overscroll-behavior: contain;
+}
+
+.exp-dialog[open] {
+  display: flex;
+}
+
+.exp-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
 /* Barra flotante: fondo translúcido con desenfoque y borde rojo para separarla de la página */
 .nav-bar {
   background-color: rgb(36 36 36 / 0.82);
