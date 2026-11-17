@@ -17,7 +17,7 @@ export default function Contact() {
     return (
         <main className="flex-grow">
 
-            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-14 md:mt-20">
+            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-[2.35em] md:mt-[3.35em]">
                 <h1 className="about-name text-center text-cream font-bold text-[2em] md:text-[2.5em] leading-tight tracking-tight">
                     {t('contact.greeting')}
                 </h1>

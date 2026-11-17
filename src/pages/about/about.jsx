@@ -52,7 +52,7 @@ export default function About() {
         <main className="flex-grow">
 
             {/* Sección 1: Intro */}
-            <section className="reveal flex flex-col gap-[1.5em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-14 md:mt-20">
+            <section className="reveal flex flex-col gap-[1.5em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-[2.35em] md:mt-[3.35em]">
 
                 {/* Nombre grande */}
                 <h1 className="about-name text-center text-cream font-bold text-[2em] md:text-[2.5em] leading-tight tracking-tight">
@@ -106,7 +106,7 @@ export default function About() {
             </section>
 
             {/* Sección 2: Skills */}
-            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-8 md:mt-16">
+            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-[1.35em] md:mt-[2.7em]">
                 <h2 className="text-center font_juan_tittle">{t('about.skillsTitle')}</h2>
                 <div className="flex flex-col gap-[0.625em] w-full">
                     {categories.map((category) => {
@@ -143,7 +143,7 @@ export default function About() {
             </section>
 
             {/* Sección 3: Filosofía — separada y destacada */}
-            <div className="reveal zoom-scale-root mt-16 md:mt-28 mb-14 md:mb-24 px-[2.5em]">
+            <div className="reveal zoom-scale-root mt-[2.7em] md:mt-[4.7em] mb-[2.35em] md:mb-[4em] px-[2.5em]">
                 <blockquote className="philosophy-block flex flex-col items-center gap-[1em] py-[1.5em] mx-auto max-w-[31.25em] text-center">
                     <span className="text-cream text-[1.5em] leading-none font-bold">"</span>
                     <p className="font_juan_intro">{t('about.philosophy')}</p>

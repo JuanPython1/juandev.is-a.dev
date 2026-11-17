@@ -34,16 +34,16 @@ export default function Start() {
                 </div>
             </section>
 
-            <section className="reveal section-blur max-w-[31.25em] zoom-scale-root mt-16 md:mt-36">
+            <section className="reveal section-blur max-w-[31.25em] zoom-scale-root mt-[2.75em] md:mt-[6em]">
                 <RecentProyectsContainer />
             </section>
 
-            <section className="reveal section-blur max-w-[50em] zoom-scale-root mt-16 md:mt-40">
+            <section className="reveal section-blur max-w-[50em] zoom-scale-root mt-[2.75em] md:mt-[6.75em]">
                 <h2 className="text-center font_juan_tittle">{t('experience.sectionTitle')}</h2>
                 <WorkExperience />
             </section>
 
-            <section className="reveal section-blur max-w-[62.5em] zoom-scale-root mt-16 md:mt-40">
+            <section className="reveal section-blur max-w-[62.5em] zoom-scale-root mt-[2.75em] md:mt-[6.75em]">
                 <h2 className="text-center font_juan_tittle">{t('start.trajectoryTitle')}</h2>
                 <Trajectory />
             </section>
