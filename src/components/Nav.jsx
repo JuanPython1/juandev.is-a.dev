@@ -1,5 +1,5 @@
 import { BookUser, TentTree, UserSearch } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -22,13 +22,8 @@ export default function Nav() {
     const location = useLocation();
     const navigate = useNavigate();
     const navRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
     const lastNavigate = useRef(0);
-
-    useEffect(() => {
-        const currentLinkIndex = links.findIndex(link => link.to === location.pathname);
-        setActiveIndex(currentLinkIndex);
-    }, [location]);
+    const activeIndex = links.findIndex(link => link.to === location.pathname);
 
     const handleWheel = useCallback((e) => {
         if (Math.abs(e.deltaX) < Math.abs(e.deltaY) * 1.5) return;
@@ -57,7 +52,7 @@ export default function Nav() {
         //Componente de Navegacion — barra horizontal fina y ancha
         <nav
             ref={navRef}
-            className="flex flex-row items-center gap-[0.625em] fixed bottom-[5%] left-1/2 transform -translate-x-1/2 rounded-[0.5em] py-[0.4375em] px-[0.875em] surface-panel nav-shadow z-10"
+            className="flex flex-row items-center gap-[0.625em] fixed bottom-[5%] left-1/2 transform -translate-x-1/2 rounded-[0.5em] py-[0.4375em] px-[0.875em] surface-panel nav-bar z-10"
             style={{ fontSize: 'var(--zoom-scale)' }}
         >
 
@@ -65,11 +60,12 @@ export default function Nav() {
             <div className="relative flex flex-row items-center gap-[0.375em]">
                 <div
                     //backgroud modo claro: bg-red-500
-                    className="absolute left-0 top-0 transition-all duration-300 ease-in-out bg-zinc-700 dark:bg-red-300 rounded-[0.375em] z-10"
+                    className="nav-indicator absolute left-0 top-0 bg-zinc-600 dark:bg-red-300 rounded-[0.375em] z-10"
                     style={{
                         width: `${BUTTON_SIZE}em`,
                         height: `${BUTTON_SIZE}em`,
-                        transform: `translateX(${activeIndex === -1 ? 0 : activeIndex * INDICATOR_STEP}em)`,
+                        opacity: activeIndex === -1 ? 0 : 1,
+                        transform: `translateX(${Math.max(activeIndex, 0) * INDICATOR_STEP}em)`,
                     }}
                 ></div>
 
@@ -78,6 +74,7 @@ export default function Nav() {
                         key={to}
                         to={to}
                         aria-label={t(altKey)}
+                        aria-current={location.pathname === to ? 'page' : undefined}
                         className={cn(
                             'flex flex-row p-[0.5em] relative z-10 rounded-[0.375em] dark:hover:text-red-500 hover:text-red-300 hover:underline',
                             location.pathname === to ? 'text-red-300 dark:text-red-500 underline' : 'text-cream'
@@ -95,7 +92,7 @@ export default function Nav() {
             <div className="flex flex-row items-center justify-center gap-[0.625em]">
                 <ButtonLanguage />
                 <div className='flex items-center justify-center min-w-[3.75em]'>
-                    <h3 className="font_juan_name whitespace-nowrap">
+                    <h3 key={location.pathname} className="nav-label font_juan_name whitespace-nowrap">
                     {links[activeIndex] ? (links[activeIndex].labelKey ? t(links[activeIndex].labelKey) : links[activeIndex].label) : '???'}
                 </h3>
                 </div>

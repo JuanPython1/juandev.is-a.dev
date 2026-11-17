@@ -1,6 +1,6 @@
 .cube {
   --cube-size: 4.4em;
-  --cube-radius: 0.4em;
+  --cube-radius: 0;
   --cube-face-bg: blanchedalmond;
   --cube-overlap: 2px;
   display: flex;
@@ -20,6 +20,8 @@
      caras queda cubierta de verdad y no depende de un color de borde. */
   inset: calc(var(--cube-overlap) / -2);
   background-color: var(--cube-face-bg);
+  background-image: linear-gradient(135deg, rgb(255 255 255 / 0.4) 0%, rgb(255 255 255 / 0) 45%, rgb(0 0 0 / 0.14) 100%);
+  box-shadow: inset 0 0 0 0.06em rgb(98 47 47 / 0.3);
   border-radius: var(--cube-radius);
   transition: background-color 0.3s ease;
 }
@@ -142,5 +144,60 @@ img {
   }
   to {
     transform: rotateX(-30deg) rotateY(-390deg);
+  }
+}
+
+/* Contenedor del cubo: resplandor que respira detrás y un levantamiento suave al pasar el cursor */
+.cube-wrap {
+  position: relative;
+  width: 4.4em;
+  height: 4.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cube-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -55%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(255 235 205 / 0.2), transparent 60%);
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .cube-wrap:hover {
+    transform: translateY(-0.4em);
+  }
+}
+
+/* Iconos con sombra suave y salto al pasar el cursor sobre la cara */
+.cube-icon {
+  filter: drop-shadow(0 0.08em 0 rgb(0 0 0 / 0.18));
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.face:hover > .cube-icon {
+  transform: scale(1.15);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cube-wrap::before {
+    animation: cube-glow 4s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes cube-glow {
+  from {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.06);
   }
 }

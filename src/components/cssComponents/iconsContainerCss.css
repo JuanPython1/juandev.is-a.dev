@@ -15,3 +15,9 @@
     transform-style: preserve-3d; /* Asegura que el elemento preserve el contexto 3D */
     perspective: 1000px; /* Da profundidad para el efecto 3D */
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-jump {
+        animation: none;
+    }
+}

@@ -17,7 +17,7 @@ export default function Contact() {
     return (
         <main className="flex-grow">
 
-            <section className="flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] animationBlurIn zoom-scale-root mt-14 md:mt-20">
+            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-14 md:mt-20">
                 <h1 className="about-name text-center text-cream font-bold text-[2em] md:text-[2.5em] leading-tight tracking-tight">
                     {t('contact.greeting')}
                 </h1>
@@ -39,7 +39,7 @@ export default function Contact() {
                                     }
                                     : {})}
                                 className={cn(
-                                    "group flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em] transition-colors duration-300 hover:border-red-400 dark:hover:border-red-300",
+                                    "group spotlight flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em] hover:border-red-400 dark:hover:border-red-300",
                                     full && "sm:col-span-2 sm:flex-row sm:items-center sm:justify-center sm:gap-[0.75em]"
                                 )}
                             >

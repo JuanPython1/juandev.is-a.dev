@@ -8,6 +8,7 @@ import Tooltip3D from './Tooltip3D';
 export default function FrameworksCuber() {
     return (
 
+        <div className="cube-wrap">
         <div className="cube">
             <div className="face front relative group ">
                 <div className="face front flex justify-center items-center">
@@ -42,6 +43,7 @@ export default function FrameworksCuber() {
 
 
             <div className="face bottom"></div>
+        </div>
         </div>
 
     )

@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { MdOutlineLightMode } from "react-icons/md";
 import { cn } from '@/lib/utils';
 import "./iconThemeMode.css";
@@ -7,6 +8,7 @@ import "./iconThemeMode.css";
 const THEME_KEY = 'theme';
 
 export default function ButtonThemeMode() {
+    const { t } = useTranslation();
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -34,8 +36,12 @@ export default function ButtonThemeMode() {
 
     return (
         <button
-            aria-label='toggle theme'
+            type="button"
+            aria-label={t('theme.toggle')}
+            aria-pressed={isDarkMode}
+            title={t('theme.toggle')}
             onClick={toggleTheme}
+            className="transition-transform duration-200 active:scale-90"
         >
             <MdOutlineLightMode className={cn(isAnimating && 'animate-spin', 'icon-brick-toggle')} />
         </button>

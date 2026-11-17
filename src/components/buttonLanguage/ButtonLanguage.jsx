@@ -10,8 +10,8 @@ export default function ButtonLanguage() {
     const currentLanguage = LANGUAGES.includes(i18n.resolvedLanguage) ? i18n.resolvedLanguage : 'en';
 
     return (
-        <div className="relative group" aria-label={t('language.toggle')}>
-            <IoLanguageOutline className="icon-brick-toggle" size="1.25em" />
+        <div className="relative group" role="group" aria-label={t('language.toggle')}>
+            <IoLanguageOutline className="icon-brick-toggle" size="1.25em" aria-hidden="true" />
 
             {/* Puente invisible: mantiene el hover activo en el espacio entre el ícono y el tooltip */}
             <div className="absolute z-10 bottom-full left-1/2 -translate-x-1/2 w-[2.5em] h-[0.75em]"></div>

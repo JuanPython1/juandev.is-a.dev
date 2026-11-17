@@ -7,6 +7,12 @@
   "language": {
     "toggle": "Cambiar idioma"
   },
+  "theme": {
+    "toggle": "Cambiar tema"
+  },
+  "loading": {
+    "label": "Cargando"
+  },
   "start": {
     "greeting": "Hola, este es el sitio web de Juan 🐋",
     "intro": "¡Hola! Soy Juan, Ingeniero de Sistemas con experiencia en desarrollo de software para empresas multinacionales. Uso esta web para presentar mis proyectos y mi trayectoria profesional. Me especializo en arquitectura de software, soluciones cloud y orquestación de IA para construir productos escalables y automatizar procesos.",

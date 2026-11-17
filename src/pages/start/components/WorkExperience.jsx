@@ -21,7 +21,7 @@ export default function WorkExperience() {
                 return (
                     <article
                         key={exp.id}
-                        className="relative flex flex-col gap-[0.875em] surface-panel frame-red rounded-[0.5em] p-[1.25em]"
+                        className="spotlight relative flex flex-col gap-[0.875em] surface-panel frame-red rounded-[0.5em] p-[1.25em]"
                     >
                         {exp.current && (
                             <span className="absolute -top-[0.75em] right-[1.5em] flex items-center gap-[0.375em] px-[0.75em] py-[0.25em] rounded-full surface-panel frame-red text-cream text-[0.75em]">

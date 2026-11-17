@@ -52,7 +52,7 @@ export default function About() {
         <main className="flex-grow">
 
             {/* Sección 1: Intro */}
-            <section className="flex flex-col gap-[1.5em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] animationBlurIn zoom-scale-root mt-14 md:mt-20">
+            <section className="reveal flex flex-col gap-[1.5em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-14 md:mt-20">
 
                 {/* Nombre grande */}
                 <h1 className="about-name text-center text-cream font-bold text-[2em] md:text-[2.5em] leading-tight tracking-tight">
@@ -88,7 +88,7 @@ export default function About() {
                         return (
                             <article
                                 key={index}
-                                className="flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em]"
+                                className="spotlight flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em]"
                             >
                                 <header className="flex items-center gap-[0.5em]">
                                     <span className="flex shrink-0 items-center justify-center w-[1.75em] h-[1.75em] rounded-[0.25em] bg-brick dark:bg-red-300 text-cream">
@@ -106,15 +106,15 @@ export default function About() {
             </section>
 
             {/* Sección 2: Skills */}
-            <section className="flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] animationBlurIn zoom-scale-root mt-8 md:mt-16">
-                <h1 className="text-center font_juan_tittle">{t('about.skillsTitle')}</h1>
+            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-8 md:mt-16">
+                <h2 className="text-center font_juan_tittle">{t('about.skillsTitle')}</h2>
                 <div className="flex flex-col gap-[0.625em] w-full">
                     {categories.map((category) => {
                         const CatIcon = CATEGORY_ICONS[category.id];
                         return (
                             <article
                                 key={category.id}
-                                className="flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em]"
+                                className="spotlight flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em]"
                             >
                                 <h3 className="font_juan_title_projects flex items-center gap-[0.375em]">
                                     <span className="flex shrink-0 items-center justify-center w-[1.25em] h-[1.25em] text-cream">
@@ -143,7 +143,7 @@ export default function About() {
             </section>
 
             {/* Sección 3: Filosofía — separada y destacada */}
-            <div className="animationBlurIn zoom-scale-root mt-16 md:mt-28 mb-14 md:mb-24 px-[2.5em]">
+            <div className="reveal zoom-scale-root mt-16 md:mt-28 mb-14 md:mb-24 px-[2.5em]">
                 <blockquote className="philosophy-block flex flex-col items-center gap-[1em] py-[1.5em] mx-auto max-w-[31.25em] text-center">
                     <span className="text-cream text-[1.5em] leading-none font-bold">"</span>
                     <p className="font_juan_intro">{t('about.philosophy')}</p>

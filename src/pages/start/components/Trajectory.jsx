@@ -208,14 +208,14 @@ export default function Trajectory() {
             )}
 
             {events.map((event, index) => (
-                <div key={index} className={cn('relative flex md:w-3/4 py-[1.25em]', index % 2 === 0 ? 'justify-start' : 'justify-end')}>
+                <div key={index} className={cn('reveal relative flex md:w-3/4 py-[1.25em]', index % 2 === 0 ? 'justify-start' : 'justify-end')}>
 
 
                     {/* Tarjeta de evento */}
                     <div
                         className="flex flex-col gap-[0.5em] justify-center items-center my-[0.75em] md:my-[1.25em] p-[0.75em] w-[15.625em] h-[15.625em] min-h-[15.625em] min-w-[15.625em]"
                     >
-                        <h1 className="font_juan_tittle_trajectory">{event.year}</h1>
+                        <h3 className="font_juan_tittle_trajectory">{event.year}</h3>
                         <div className="flex h-1/2 items-center">
                             <p className="font_juan_text_trajectory">{t(`trajectory.${event.year}.description`)}</p>
                         </div>

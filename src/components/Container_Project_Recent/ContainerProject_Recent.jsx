@@ -216,7 +216,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                     key={project.id}
                     type="button"
                     onClick={() => handleSelect(index)}
-                    aria-current={index === selectedIndex}
+                    aria-current={index === selectedIndex ? "true" : undefined}
                     className={cn(
                         "relative overflow-hidden flex items-center justify-center px-[0.625em] py-[0.375em] w-[8.5em] sm:w-[12em] min-h-[2em] text-center break-words rounded-[0.375em] border-[0.09375em] border-red-300 dark:border-red-200 font_juan_title_projects leading-snug transition-colors duration-300",
                         attached && "flex-1 min-w-0 sm:flex-none sm:justify-start sm:min-h-[3em] sm:text-start sm:rounded-l-none sm:rounded-r-[0.5em] sm:border-l-0",
@@ -225,7 +225,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                             : "bg-charcoal dark:bg-brick hover:bg-red-300 dark:hover:bg-red-400"
                     )}
                 >
-                    <h2 className="text-[0.8em] sm:text-[1em]">{t(`projects.items.${project.id}.title`)}</h2>
+                    <span className="text-[0.8em] sm:text-[1em]">{t(`projects.items.${project.id}.title`)}</span>
                     {index === selectedIndex && autoPlay && !isLightboxOpen && (
                         <span
                             aria-hidden="true"
@@ -242,14 +242,14 @@ const ContainerProject_Recent = ({ Projects }) => {
         <>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-[1em] sm:gap-0 w-[88%] sm:w-auto">
             {/* Recuadro del Proyecto */}
-            <div className="flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red surface-panel rounded-[0.5em] p-[1em]">
+            <div className="spotlight flex sm:flex-row flex-col justify-center gap-[1.5em] items-center sm:w-[42em] sm:h-[26.5em] w-full h-auto frame-red surface-panel rounded-[0.5em] p-[1em]">
                 {/* Imagen del Proyecto con Transición */}
-                <div className="relative flex justify-center items-center sm:w-[35.625em] w-full aspect-[1.62] frame-red rounded-[0.375em] overflow-hidden">
+                <div className="group relative flex justify-center items-center sm:w-[35.625em] w-full aspect-[1.62] frame-red rounded-[0.375em] overflow-hidden">
                     <img
                         src={imageSrc}
                         alt={t(`projects.items.${activeProject.id}.title`)}
                         className={cn(
-                            "w-full h-full object-cover transition-opacity duration-300",
+                            "w-full h-full object-cover transition-[opacity,transform] duration-500 motion-safe:group-hover:scale-[1.03]",
                             fade ? "opacity-0" : "opacity-100"
                         )}
                     />
@@ -273,7 +273,7 @@ const ContainerProject_Recent = ({ Projects }) => {
                 >
                     {/* Título */}
                     <div className="flex flex-col justify-center items-center sm:items-start h-[3.125em] sm:h-auto sm:mb-[0.25em]">
-                        <h2 className="font_juan_title_projects">{t(`projects.items.${activeProject.id}.title`)}</h2>
+                        <h3 className="font_juan_title_projects">{t(`projects.items.${activeProject.id}.title`)}</h3>
                     </div>
                     {/* Descripción */}
                     <div ref={descRef} className="flex flex-col justify-start items-center text-justify sm:text-start sm:items-center h-[10em] w-[80%] sm:w-full sm:h-[15.75em] mt-0 mb-0 sm:mb-[0.5em] overflow-y-auto pr-[0.5em]">

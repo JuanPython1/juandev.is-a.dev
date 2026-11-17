@@ -1,55 +1,110 @@
 @keyframes fadeMoveUp {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
+  0% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @keyframes fadeUpAppear {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
   }
-  
-  .title-animation {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  100% {
     opacity: 0;
-    animation: fadeMoveUp 1.5s ease-in-out forwards;
+    transform: translateY(-50px);
   }
-  
-  @media (max-width: 768px) {
-    .title-animation {
-      top: 40%;
-      transform: translate(-50%, -40%);
-    }
-  }
-  
-  @media (max-width: 368px) {
-    .title-animation {
-      top: 30%;
-      transform: translate(-50%, -30%);
-    }   
-  }
-  
+}
 
-  .content-animation {
+@keyframes fadeUpAppear {
+  0% {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeUpAppear 1s ease-in-out forwards;
-    animation-delay: 1.5s;
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-animation {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeMoveUp 1.5s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  .title-animation {
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+}
+
+@media (max-width: 368px) {
+  .title-animation {
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
+}
+
+.content-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpAppear 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Saludo: cada palabra entra con desenfoque escalonado */
+@keyframes wordBlurIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.6em);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+.title-word {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .title-word {
+    opacity: 0;
+    animation: wordBlurIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    animation-delay: calc(var(--i) * 0.08s + 0.1s);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-animation {
+    animation-name: fadeOnlyTitle;
+  }
+
+  .content-animation {
+    animation-name: fadeOnlyContent;
+    transform: none;
+  }
+}
+
+@keyframes fadeOnlyTitle {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOnlyContent {
+  to {
+    opacity: 1;
+  }
+}

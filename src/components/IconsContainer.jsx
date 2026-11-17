@@ -21,6 +21,7 @@ export default function IconsContainer(props) {
         >
             {Icon ? (
                 <Icon
+                    role="img"
                     aria-label={alt}
                     className={cn('w-[1.75em] h-[1.75em] transform text-cream', isAnimating && 'animate-jump')}
                 />

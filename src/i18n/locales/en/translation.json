@@ -7,6 +7,12 @@
   "language": {
     "toggle": "Change language"
   },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "loading": {
+    "label": "Loading"
+  },
   "start": {
     "greeting": "Hi, it's Juan's website 🐋",
     "intro": "Hi! I'm Juan, a Systems Engineer with experience in software development for multinational companies. I use this website to present my projects and my professional background. I specialize in software architecture, cloud solutions and AI orchestration for building scalable products and automating processes.",
