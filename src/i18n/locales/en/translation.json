@@ -108,51 +108,18 @@
   },
   "about": {
     "name": "Juan Camilo Rodriguez P.",
-    "bio": "A slightly different person who spends too much time coding and analyzing the latest on how AI models are imitating our brains. I enjoy pixel art, coconut lemonade and building things that actually work. Introspective by nature, more of an observer than a talker, analyzing how the world works.",
-    "intro": [
-      "24 years old — Cali, Colombia",
-      "Systems Engineering — USC",
-      "League of Legends player",
-      "I like pixel art",
-      "I like coconut lemonade"
+    "bio": "Systems Engineer. I'm into web, AI and thinking about how models imitate the brain. I use this site to share stuff I build and opinions on what I see.",
+    "nowTitle": "Now",
+    "now": "Building Popul and meeting new people.",
+    "stackTitle": "Current stack",
+    "stack": "Nuxt, React, Express, Go, PostgreSQL, MongoDB and Docker. I use Claude Code and Opencode to orchestrate the repetitive stuff and ship faster.",
+    "outsideTitle": "Outside the code",
+    "outside": [
+      "Pixel art",
+      "LoL"
     ],
-    "whatIDoTitle": "What I Do",
-    "whatIDo": {
-      "items": [
-        {
-          "icon": "🌐",
-          "title": "Web Development",
-          "description": "Web apps that look good and actually work. Nuxt, Vue, Next.js — the usual suspects."
-        },
-        {
-          "icon": "📱",
-          "title": "Mobile Apps",
-          "description": "Curious mobile apps with React Native and Expo. I like exploring what's possible on a phone screen."
-        },
-        {
-          "icon": "🔌",
-          "title": "Backend & APIs",
-          "description": "REST APIs with Express.js and MongoDB. Still improving, but they get the job done."
-        },
-        {
-          "icon": "🤖",
-          "title": "AI Integration",
-          "description": "Slowly becoming a robot. Integrating AI into workflows even though I don't fully trust it yet."
-        }
-      ]
-    },
-    "skillsTitle": "Skills & Tech Stack",
-    "skills": {
-      "categories": {
-        "frontend": "Frontend",
-        "mobile": "Mobile",
-        "backend": "Backend",
-        "tools": "Tools & Workflow",
-        "ai": "AI & Automation"
-      }
-    },
-    "philosophyTitle": "My Philosophy",
-    "philosophy": "I believe good software is built with empathy — understanding the user's needs, writing code that others can maintain, and always staying curious about better ways to solve problems."
+    "cta": "Got a project or idea?",
+    "ctaLink": "let's talk →"
   },
   "contact": {
     "greeting": "Let's Talk",

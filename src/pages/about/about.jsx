@@ -1,155 +1,56 @@
 import { useTranslation } from "react-i18next";
-import { SiNuxtdotjs, SiReact, SiExpress, SiMongodb, SiTypescript, SiNextdotjs, SiGit, SiOpenai, SiVuedotjs, SiTailwindcss, SiExpo, SiNodedotjs, SiDocker, SiGithub } from "react-icons/si";
-import { MdWeb, MdPhoneIphone, MdAccountTree, MdAutoAwesome, MdLocationOn, MdSchool, MdLocalDrink, MdGridOn } from "react-icons/md";
-import { SiRiotgames } from "react-icons/si";
-import skillsData from "@data/Skills.json";
-
-const SKILL_ICONS = {
-    "Nuxt": SiNuxtdotjs,
-    "Vue": SiVuedotjs,
-    "Next.js": SiNextdotjs,
-    "React": SiReact,
-    "TypeScript": SiTypescript,
-    "Tailwind CSS": SiTailwindcss,
-    "HTML/CSS": SiNodedotjs,
-    "React Native": SiReact,
-    "Expo": SiExpo,
-    "JavaScript": SiNodedotjs,
-    "Express.js": SiExpress,
-    "Node.js": SiNodedotjs,
-    "MongoDB": SiMongodb,
-    "REST APIs": SiExpress,
-    "Google OAuth": SiNodedotjs,
-    "Git": SiGit,
-    "GitHub": SiGithub,
-    "CI/CD": SiGit,
-    "Notion": SiNodedotjs,
-    "Scrum": SiNodedotjs,
-    "Docker": SiDocker,
-    "OpenAI API": SiOpenai,
-    "Claude": SiOpenai,
-    "AI Integration": SiOpenai,
-    "Automation": SiNodedotjs,
-};
-
-const CATEGORY_ICONS = {
-    "frontend": SiNuxtdotjs,
-    "mobile": SiReact,
-    "backend": SiNodedotjs,
-    "tools": SiGit,
-    "ai": SiOpenai,
-};
-
-const WHATIDO_ICONS = [MdWeb, MdPhoneIphone, MdAccountTree, MdAutoAwesome];
-
-const INTRO_ICONS = [MdLocationOn, MdSchool, SiRiotgames, MdGridOn, MdLocalDrink];
+import { Link } from "react-router-dom";
 
 export default function About() {
     const { t } = useTranslation();
-    const categories = skillsData.categories;
+    const outside = t("about.outside", { returnObjects: true });
 
     return (
         <main className="flex-grow">
-
-            {/* Sección 1: Intro */}
-            <section className="reveal flex flex-col gap-[1.5em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-[2.35em] md:mt-[3.35em]">
-
-                {/* Nombre grande */}
-                <h1 className="about-name text-center text-cream font-bold text-[2em] md:text-[2.5em] leading-tight tracking-tight">
-                    {t('about.name')}
+            <section className="mx-auto max-w-[38em] px-[1.5em] py-[2em] zoom-scale-root mt-[2em] md:mt-[3em] mb-[3em] flex flex-col gap-[1.25em]">
+                <h1 className="text-cream font-bold text-[1.5em] md:text-[1.75em] leading-tight tracking-tight">
+                    {t("about.name")}
                 </h1>
 
-                <div className="flex flex-col md:flex-row gap-[2em] w-full items-start">
-                    {/* Izquierda — bio */}
-                    <p className="font_juan_intro flex-1">{t('about.bio')}</p>
+                <p className="text-red-100 dark:text-red-100 text-[0.9em] leading-relaxed">
+                    {t("about.bio")}
+                </p>
 
-                    {/* Derecha — datos */}
-                    <ul className="relative flex flex-col gap-[0.75em] flex-1">
-                        {t('about.intro', { returnObjects: true }).map((point, index) => {
-                            const IntroIcon = INTRO_ICONS[index];
-                            return (
-                                <li
-                                    key={index}
-                                    className="about-item relative flex items-center gap-[0.625em]"
-                                >
-                                    <span className="flex shrink-0 items-center justify-center w-[1.5em] h-[1.5em] rounded-full bg-charcoal dark:bg-brick border-[0.0625em] border-red-300 dark:border-red-200 text-cream transition-transform duration-300 hover:scale-110">
-                                        {IntroIcon && <IntroIcon size="0.75em" />}
-                                    </span>
-                                    <span className="text-red-400 dark:text-red-200 text-[0.75em]">{point}</span>
-                                </li>
-                            );
-                        })}
+                <hr className="border-red-300/40 dark:border-red-200/40" />
+
+                <div className="flex flex-col gap-[0.35em]">
+                    <h2 className="text-cream text-[1em] font-bold">{t("about.nowTitle")}</h2>
+                    <p className="text-red-100 dark:text-red-100 text-[0.85em] leading-relaxed">
+                        {t("about.now")}
+                    </p>
+                </div>
+
+                <div className="flex flex-col gap-[0.35em]">
+                    <h2 className="text-cream text-[1em] font-bold">{t("about.stackTitle")}</h2>
+                    <p className="text-red-100 dark:text-red-100 text-[0.85em] leading-relaxed">
+                        {t("about.stack")}
+                    </p>
+                </div>
+
+                <div className="flex flex-col gap-[0.35em]">
+                    <h2 className="text-cream text-[1em] font-bold">{t("about.outsideTitle")}</h2>
+                    <ul className="flex flex-col gap-[0.25em]">
+                        {Array.isArray(outside) && outside.map((item, i) => (
+                            <li key={i} className="text-red-100 dark:text-red-100 text-[0.85em]">
+                                <span className="text-red-300 dark:text-red-200 mr-[0.5em]">-</span>
+                                {item}
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[0.75em] w-full">
-                    {t('about.whatIDo.items', { returnObjects: true }).map((item, index) => {
-                        const WhatIcon = WHATIDO_ICONS[index];
-                        return (
-                            <article
-                                key={index}
-                                className="spotlight flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em]"
-                            >
-                                <header className="flex items-center gap-[0.5em]">
-                                    <span className="flex shrink-0 items-center justify-center w-[1.75em] h-[1.75em] rounded-[0.25em] bg-brick dark:bg-red-300 text-cream">
-                                        <WhatIcon size="1em" />
-                                    </span>
-                                    <h3 className="font_juan_title_projects">{item.title}</h3>
-                                </header>
-                                <p className="text-red-400 dark:text-red-200 text-[0.75em] text-justify leading-relaxed">
-                                    {item.description}
-                                </p>
-                            </article>
-                        );
-                    })}
-                </div>
+                <p className="text-[0.85em] text-red-100 dark:text-red-100">
+                    {t("about.cta")}{" "}
+                    <Link to="/contact" className="underline underline-offset-4 text-cream hover:text-red-200 transition-colors">
+                        {t("about.ctaLink")}
+                    </Link>
+                </p>
             </section>
-
-            {/* Sección 2: Skills */}
-            <section className="reveal flex flex-col gap-[1.25em] justify-center items-center p-[1.5em] mx-auto max-w-[50em] zoom-scale-root mt-[1.35em] md:mt-[2.7em]">
-                <h2 className="text-center font_juan_tittle">{t('about.skillsTitle')}</h2>
-                <div className="flex flex-col gap-[0.625em] w-full">
-                    {categories.map((category) => {
-                        const CatIcon = CATEGORY_ICONS[category.id];
-                        return (
-                            <article
-                                key={category.id}
-                                className="spotlight flex flex-col gap-[0.375em] surface-panel frame-red rounded-[0.375em] p-[0.875em]"
-                            >
-                                <h3 className="font_juan_title_projects flex items-center gap-[0.375em]">
-                                    <span className="flex shrink-0 items-center justify-center w-[1.25em] h-[1.25em] text-cream">
-                                        {CatIcon && <CatIcon size="1em" />}
-                                    </span>
-                                    {t(`about.skills.categories.${category.id}`)}
-                                </h3>
-                                <div className="flex flex-wrap gap-[0.375em]">
-                                    {category.skills.map((skill) => {
-                                        const Icon = SKILL_ICONS[skill];
-                                        return (
-                                            <span
-                                                key={skill}
-                                                className="flex items-center gap-[0.25em] px-[0.5em] py-[0.125em] rounded-full border-[0.0625em] border-red-300 dark:border-red-200 text-red-400 dark:text-red-200 text-[0.7em]"
-                                            >
-                                                {Icon && <Icon size="0.7em" className="shrink-0 text-cream" />}
-                                                {skill}
-                                            </span>
-                                        );
-                                    })}
-                                </div>
-                            </article>
-                        );
-                    })}
-                </div>
-            </section>
-
-            {/* Sección 3: Filosofía — separada y destacada */}
-            <div className="reveal zoom-scale-root mt-[2.7em] md:mt-[4.7em] mb-[2.35em] md:mb-[4em] px-[2.5em]">
-                <blockquote className="philosophy-block flex flex-col items-center gap-[1em] py-[1.5em] mx-auto max-w-[31.25em] text-center">
-                    <span className="text-cream text-[1.5em] leading-none font-bold">"</span>
-                    <p className="font_juan_intro">{t('about.philosophy')}</p>
-                </blockquote>
-            </div>
-
         </main>
     );
 }
