@@ -112,7 +112,7 @@
     "nowTitle": "Ahora",
     "now": "Levantando Popul y conociendo contactos.",
     "stackTitle": "Stack actual",
-    "stack": "Nuxt, React, Express, Go, PostgreSQL, MongoDB y Docker. Uso Claude Code y Opencode para orquestar lo repetitivo y salir a producción más rápido.",
+    "stack": "Nuxt, React, Express, Go, PostgreSQL, MongoDB y Docker. Uso Claude Code y Opencode para orquestar lo repetitivo con DevOps y salir a producción más rápido.",
     "outsideTitle": "Fuera del código",
     "outside": [
       "Pixel art",
@@ -126,7 +126,7 @@
     "intro": "Mi buzón siempre está abierto. Si tienes un proyecto en mente, una duda, o solo quieres saludar, escríbeme y te responderé lo antes posible.",
     "whatsapp": {
       "label": "WhatsApp",
-      "value": "3185731148"
+      "value": "+57 3185731148"
     },
     "email": {
       "label": "Correo",
@@ -146,6 +146,6 @@
     }
   },
   "footer": {
-    "copyright": "©{{year}} SrJuan.dev - Desarrollador Web y Móvil. Todos los derechos reservados."
+    "copyright": "©{{year}} SrJuan.dev"
   }
 }
